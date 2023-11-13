@@ -5,6 +5,7 @@ struct SwiftSampleApp: App {
     var body: some Scene {
         WindowGroup {
             LoginView()
+                .preferredColorScheme(.dark)
         }
     }
 }
