@@ -21,6 +21,7 @@ Temporary Items
 ### Swift ###
 # Xcode
 xcuserdata/
+*.xcuserstate
 *.xcscmblueprint
 *.xccheckout
 build/
