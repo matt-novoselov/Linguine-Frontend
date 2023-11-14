@@ -1,6 +1,6 @@
 import Auth0
 
-extension LoginView {
+extension Bootstrap {
     func login() {
         Auth0
             .webAuth()

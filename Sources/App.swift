@@ -4,7 +4,7 @@ import SwiftUI
 struct SwiftSampleApp: App {
     var body: some Scene {
         WindowGroup {
-            LoginView()
+            Bootstrap()
                 .preferredColorScheme(.dark)
         }
     }

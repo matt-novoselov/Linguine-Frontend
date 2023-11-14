@@ -1,49 +1,31 @@
 import SwiftUI
+import Auth0
 
 struct LoginView: View {
-    @State var user: User?
-    //@State private var joke: String = ""
-
+    @Binding var user: User?
+    
     var body: some View {
-
-        VStack{
-            if let user = self.user {
-                //Profile page
-                VStack {
-                    Text("User id: \(user.id)")
-                    Text("User email: \(user.email)")
-                    Text("User nickname: @\(user.nickname)")
-                    HStack{
-                        Text("User score: \(120)XP")
-                        Button("Fetch", action: {})
-                    }
-                    HStack{
-                        Text("Add score")
-                        Button("Fetch", action: {})
-                    }
-                    
-                    Spacer()
-                    
-                    Button("Logout", action: self.logout)
-                    
-
-                }
-                //Profile page
-            }
-            
-            else {
-                //Login page
-                VStack {
-                    Text("This is login page")
-                    Button("Login", action: self.login)
-                    UILottieView(lottieName: "test_anim")
-                }
-                //Login page
-            }
+        VStack {
+            UILottieView(lottieName: "test_anim")
+            Text("This is a login page")
+            Button("Login", action: login_hmm)
         }
+    }
+    
+    func login_hmm() {
+        Auth0
+            .webAuth()
+            .start { result in
+                switch result {
+                case .success(let credentials):
+                    self.user = User(from: credentials.idToken)
+                case .failure(let error):
+                    print("Failed with: \(error)")
+                }
+            }
     }
 }
 
 #Preview {
-    LoginView(user: nil)
+    LoginView(user: Bootstrap().$user)
 }
