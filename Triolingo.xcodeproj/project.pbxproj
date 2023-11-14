@@ -7,7 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A2CDD2F2B039C7F002044D0 /* test_anim.lottie in Resources */ = {isa = PBXBuildFile; fileRef = 1A2CDD2C2B039BF5002044D0 /* test_anim.lottie */; };
+		1A2CDD342B039D6E002044D0 /* UIElements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2CDD332B039D6E002044D0 /* UIElements.swift */; };
 		1AD8C5EF2B02C8FB004CE188 /* Auth0Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD8C5EE2B02C8FB004CE188 /* Auth0Extension.swift */; };
+		1AD8C5F32B035A8F004CE188 /* APITestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD8C5F22B035A8F004CE188 /* APITestView.swift */; };
+		1ADE793E2B03801200F0E915 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 1ADE793D2B03801200F0E915 /* Lottie */; };
+		1ADE79402B03802400F0E915 /* LottieModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ADE793F2B03802400F0E915 /* LottieModelView.swift */; };
 		5C5DBE83277210B400E19935 /* Auth0 in Frameworks */ = {isa = PBXBuildFile; productRef = 5C5DBE82277210B400E19935 /* Auth0 */; };
 		5C5DBE88277212E000E19935 /* Auth0.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5C5DBE87277212E000E19935 /* Auth0.plist */; };
 		5C6537272772F5EE0035759D /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6537262772F5EE0035759D /* UserModel.swift */; };
@@ -17,7 +22,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1A2CDD2C2B039BF5002044D0 /* test_anim.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = test_anim.lottie; sourceTree = "<group>"; };
+		1A2CDD332B039D6E002044D0 /* UIElements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIElements.swift; sourceTree = "<group>"; };
 		1AD8C5EE2B02C8FB004CE188 /* Auth0Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Auth0Extension.swift; sourceTree = "<group>"; };
+		1AD8C5F22B035A8F004CE188 /* APITestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APITestView.swift; sourceTree = "<group>"; };
+		1ADE793F2B03802400F0E915 /* LottieModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieModelView.swift; sourceTree = "<group>"; };
 		5C5DBE87277212E000E19935 /* Auth0.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Auth0.plist; sourceTree = "<group>"; };
 		5C6537262772F5EE0035759D /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		5CDD8855277102DA00052307 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
@@ -32,12 +41,38 @@
 			buildActionMask = 2147483647;
 			files = (
 				5C5DBE83277210B400E19935 /* Auth0 in Frameworks */,
+				1ADE793E2B03801200F0E915 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1A2CDD302B039CFB002044D0 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1A2CDD312B039D1A002044D0 /* DotLotties */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		1A2CDD312B039D1A002044D0 /* DotLotties */ = {
+			isa = PBXGroup;
+			children = (
+				1A2CDD2C2B039BF5002044D0 /* test_anim.lottie */,
+			);
+			path = DotLotties;
+			sourceTree = "<group>";
+		};
+		1A2CDD322B039D47002044D0 /* Model View */ = {
+			isa = PBXGroup;
+			children = (
+				1ADE793F2B03802400F0E915 /* LottieModelView.swift */,
+				1A2CDD332B039D6E002044D0 /* UIElements.swift */,
+			);
+			path = "Model View";
+			sourceTree = "<group>";
+		};
 		1AD8C5EB2B02C08F004CE188 /* Auth0 */ = {
 			isa = PBXGroup;
 			children = (
@@ -51,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				5CDD8856277102DA00052307 /* LoginView.swift */,
+				1AD8C5F22B035A8F004CE188 /* APITestView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -69,6 +105,8 @@
 				5CDD8855277102DA00052307 /* App.swift */,
 				1AD8C5EC2B02C5A5004CE188 /* Views */,
 				1AD8C5ED2B02C8C9004CE188 /* Models */,
+				1A2CDD322B039D47002044D0 /* Model View */,
+				1A2CDD302B039CFB002044D0 /* Resources */,
 				1AD8C5EB2B02C08F004CE188 /* Auth0 */,
 				5CDD8857277102DC00052307 /* Assets.xcassets */,
 			);
@@ -110,6 +148,7 @@
 			name = "Triolingo (iOS)";
 			packageProductDependencies = (
 				5C5DBE82277210B400E19935 /* Auth0 */,
+				1ADE793D2B03801200F0E915 /* Lottie */,
 			);
 			productName = "SwiftSample (iOS)";
 			productReference = 5CDD885C277102DC00052307 /* Triolingo.app */;
@@ -142,6 +181,7 @@
 			packageReferences = (
 				5C5DBE81277210B400E19935 /* XCRemoteSwiftPackageReference "Auth0.swift" */,
 				5CD3A4622784F5F900B67D88 /* XCRemoteSwiftPackageReference "ViewInspector" */,
+				1ADE793C2B03801200F0E915 /* XCRemoteSwiftPackageReference "lottie-spm" */,
 			);
 			productRefGroup = 5CDD885D277102DC00052307 /* Products */;
 			projectDirPath = "";
@@ -159,6 +199,7 @@
 			files = (
 				5CDD8869277102DC00052307 /* Assets.xcassets in Resources */,
 				5C5DBE88277212E000E19935 /* Auth0.plist in Resources */,
+				1A2CDD2F2B039C7F002044D0 /* test_anim.lottie in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -192,9 +233,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				5CDD8867277102DC00052307 /* LoginView.swift in Sources */,
+				1AD8C5F32B035A8F004CE188 /* APITestView.swift in Sources */,
 				5C6537272772F5EE0035759D /* UserModel.swift in Sources */,
 				1AD8C5EF2B02C8FB004CE188 /* Auth0Extension.swift in Sources */,
 				5CDD8865277102DC00052307 /* App.swift in Sources */,
+				1A2CDD342B039D6E002044D0 /* UIElements.swift in Sources */,
+				1ADE79402B03802400F0E915 /* LottieModelView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -407,6 +451,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		1ADE793C2B03801200F0E915 /* XCRemoteSwiftPackageReference "lottie-spm" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-spm";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.3.3;
+			};
+		};
 		5C5DBE81277210B400E19935 /* XCRemoteSwiftPackageReference "Auth0.swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/auth0/Auth0.swift.git";
@@ -426,6 +478,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		1ADE793D2B03801200F0E915 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1ADE793C2B03801200F0E915 /* XCRemoteSwiftPackageReference "lottie-spm" */;
+			productName = Lottie;
+		};
 		5C5DBE82277210B400E19935 /* Auth0 */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 5C5DBE81277210B400E19935 /* XCRemoteSwiftPackageReference "Auth0.swift" */;

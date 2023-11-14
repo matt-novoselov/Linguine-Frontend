@@ -19,6 +19,15 @@
       }
     },
     {
+      "identity" : "lottie-spm",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/airbnb/lottie-spm",
+      "state" : {
+        "revision" : "3e7eb8281ff9ac67e64a3a58a80c0aa9fa388b04",
+        "version" : "4.3.3"
+      }
+    },
+    {
       "identity" : "simplekeychain",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/auth0/SimpleKeychain.git",
