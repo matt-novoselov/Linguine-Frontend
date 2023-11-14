@@ -30,11 +30,14 @@ struct ProfileView: View {
     }
     
     func logout() {
+        let credentialsManager = CredentialsManager(authentication: Auth0.authentication())
+        
         Auth0
             .webAuth()
             .clearSession { result in
                 switch result {
                 case .success:
+                    credentialsManager.clear()
                     self.user = nil
                 case .failure(let error):
                     print("Failed with: \(error)")

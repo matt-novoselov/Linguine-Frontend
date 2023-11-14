@@ -13,11 +13,24 @@ struct LoginView: View {
     }
 
     func login() {
+        let credentialsManager = CredentialsManager(authentication: Auth0.authentication())
+        
+        credentialsManager.credentials { result in
+            switch result {
+            case .success(let credentials):
+                self.user = User(from: credentials.idToken)
+            case .failure(let error):
+                print("Failed with: \(error)")
+            }
+        }
+        
         Auth0
             .webAuth()
             .start { result in
                 switch result {
                 case .success(let credentials):
+                    print(credentials)
+                    credentialsManager.store(credentials: credentials)
                     self.user = User(from: credentials.idToken)
                 case .failure(let error):
                     print("Failed with: \(error)")
