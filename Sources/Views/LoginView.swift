@@ -8,11 +8,11 @@ struct LoginView: View {
         VStack {
             UILottieView(lottieName: "test_anim")
             Text("This is a login page")
-            Button("Login", action: login_hmm)
+            Button("Login", action: self.login)
         }
     }
-    
-    func login_hmm() {
+
+    func login() {
         Auth0
             .webAuth()
             .start { result in

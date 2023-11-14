@@ -24,12 +24,12 @@ struct ProfileView: View {
             
             Spacer()
             
-            Button("Logout", action: logout_hmm)
+            Button("Logout", action: self.logout)
         }
         
     }
     
-    func logout_hmm() {
+    func logout() {
         Auth0
             .webAuth()
             .clearSession { result in
@@ -41,6 +41,7 @@ struct ProfileView: View {
                 }
             }
     }
+
 }
 
 #Preview {
