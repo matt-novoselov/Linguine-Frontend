@@ -1,3 +1,3 @@
-# Triolingo-SwiftUI
+# Linguine SwiftUI
 
-SwiftUI Frontend for Triolingo
+SwiftUI Frontend for Linguine
