@@ -11,6 +11,7 @@
 		1A2CDD342B039D6E002044D0 /* UIElements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2CDD332B039D6E002044D0 /* UIElements.swift */; };
 		1A2CDD362B03A09A002044D0 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2CDD352B03A09A002044D0 /* ProfileView.swift */; };
 		1A2CDD382B03F186002044D0 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2CDD372B03F186002044D0 /* LoginView.swift */; };
+		1A5756532B055B9500A60DE7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A5756522B055B9500A60DE7 /* Assets.xcassets */; };
 		1AD8C5F32B035A8F004CE188 /* APITestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD8C5F22B035A8F004CE188 /* APITestView.swift */; };
 		1ADE793E2B03801200F0E915 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 1ADE793D2B03801200F0E915 /* Lottie */; };
 		1ADE79402B03802400F0E915 /* LottieModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ADE793F2B03802400F0E915 /* LottieModelView.swift */; };
@@ -19,7 +20,6 @@
 		5C6537272772F5EE0035759D /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6537262772F5EE0035759D /* UserModel.swift */; };
 		5CDD8865277102DC00052307 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDD8855277102DA00052307 /* App.swift */; };
 		5CDD8867277102DC00052307 /* Bootstrap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CDD8856277102DA00052307 /* Bootstrap.swift */; };
-		5CDD8869277102DC00052307 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5CDD8857277102DC00052307 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,14 +27,14 @@
 		1A2CDD332B039D6E002044D0 /* UIElements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIElements.swift; sourceTree = "<group>"; };
 		1A2CDD352B03A09A002044D0 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		1A2CDD372B03F186002044D0 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		1A5756522B055B9500A60DE7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1AD8C5F22B035A8F004CE188 /* APITestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APITestView.swift; sourceTree = "<group>"; };
 		1ADE793F2B03802400F0E915 /* LottieModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieModelView.swift; sourceTree = "<group>"; };
 		5C5DBE87277212E000E19935 /* Auth0.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Auth0.plist; sourceTree = "<group>"; };
 		5C6537262772F5EE0035759D /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		5CDD8855277102DA00052307 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		5CDD8856277102DA00052307 /* Bootstrap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bootstrap.swift; sourceTree = "<group>"; };
-		5CDD8857277102DC00052307 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		5CDD885C277102DC00052307 /* Triolingo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Triolingo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5CDD885C277102DC00052307 /* Linguine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Linguine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,7 +101,7 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		5C5DBE8A277217D800E19935 /* Sources */ = {
+		5C5DBE8A277217D800E19935 /* Linguine */ = {
 			isa = PBXGroup;
 			children = (
 				5CDD8855277102DA00052307 /* App.swift */,
@@ -111,15 +111,15 @@
 				1A2CDD322B039D47002044D0 /* Model View */,
 				1A2CDD302B039CFB002044D0 /* Resources */,
 				1AD8C5EB2B02C08F004CE188 /* Auth0 */,
-				5CDD8857277102DC00052307 /* Assets.xcassets */,
 			);
-			path = Sources;
+			path = Linguine;
 			sourceTree = "<group>";
 		};
 		5CDD884F277102DA00052307 = {
 			isa = PBXGroup;
 			children = (
-				5C5DBE8A277217D800E19935 /* Sources */,
+				1A5756522B055B9500A60DE7 /* Assets.xcassets */,
+				5C5DBE8A277217D800E19935 /* Linguine */,
 				5CDD885D277102DC00052307 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -127,7 +127,7 @@
 		5CDD885D277102DC00052307 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5CDD885C277102DC00052307 /* Triolingo.app */,
+				5CDD885C277102DC00052307 /* Linguine.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -135,9 +135,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		5CDD885B277102DC00052307 /* Triolingo (iOS) */ = {
+		5CDD885B277102DC00052307 /* Linguine (iOS) */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5CDD886D277102DC00052307 /* Build configuration list for PBXNativeTarget "Triolingo (iOS)" */;
+			buildConfigurationList = 5CDD886D277102DC00052307 /* Build configuration list for PBXNativeTarget "Linguine (iOS)" */;
 			buildPhases = (
 				5CDD8858277102DC00052307 /* Sources */,
 				5CDD8859277102DC00052307 /* Frameworks */,
@@ -148,13 +148,13 @@
 			);
 			dependencies = (
 			);
-			name = "Triolingo (iOS)";
+			name = "Linguine (iOS)";
 			packageProductDependencies = (
 				5C5DBE82277210B400E19935 /* Auth0 */,
 				1ADE793D2B03801200F0E915 /* Lottie */,
 			);
 			productName = "SwiftSample (iOS)";
-			productReference = 5CDD885C277102DC00052307 /* Triolingo.app */;
+			productReference = 5CDD885C277102DC00052307 /* Linguine.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -172,7 +172,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 5CDD8853277102DA00052307 /* Build configuration list for PBXProject "Triolingo" */;
+			buildConfigurationList = 5CDD8853277102DA00052307 /* Build configuration list for PBXProject "Linguine" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -190,7 +190,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				5CDD885B277102DC00052307 /* Triolingo (iOS) */,
+				5CDD885B277102DC00052307 /* Linguine (iOS) */,
 			);
 		};
 /* End PBXProject section */
@@ -200,8 +200,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5CDD8869277102DC00052307 /* Assets.xcassets in Resources */,
 				5C5DBE88277212E000E19935 /* Auth0.plist in Resources */,
+				1A5756532B055B9500A60DE7 /* Assets.xcassets in Resources */,
 				1A2CDD2F2B039C7F002044D0 /* test_anim.lottie in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -286,7 +286,7 @@
 				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_TESTABILITY = YES;
+				ENABLE_TESTABILITY = NO;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -349,6 +349,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = NO;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -376,7 +377,7 @@
 				DEVELOPMENT_TEAM = GXDG2KXXXC;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "SwiftSample--iOS--Info.plist";
+				INFOPLIST_FILE = Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Linguine;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -391,7 +392,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mattnovoselov.Triolingo;
-				PRODUCT_NAME = Triolingo;
+				PRODUCT_NAME = Linguine;
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -409,7 +410,7 @@
 				DEVELOPMENT_TEAM = GXDG2KXXXC;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "SwiftSample--iOS--Info.plist";
+				INFOPLIST_FILE = Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Linguine;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -424,7 +425,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mattnovoselov.Triolingo;
-				PRODUCT_NAME = Triolingo;
+				PRODUCT_NAME = Linguine;
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -436,7 +437,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		5CDD8853277102DA00052307 /* Build configuration list for PBXProject "Triolingo" */ = {
+		5CDD8853277102DA00052307 /* Build configuration list for PBXProject "Linguine" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5CDD886B277102DC00052307 /* Debug */,
@@ -445,7 +446,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5CDD886D277102DC00052307 /* Build configuration list for PBXNativeTarget "Triolingo (iOS)" */ = {
+		5CDD886D277102DC00052307 /* Build configuration list for PBXNativeTarget "Linguine (iOS)" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5CDD886E277102DC00052307 /* Debug */,
