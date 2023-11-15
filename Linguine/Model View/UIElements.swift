@@ -2,10 +2,12 @@ import SwiftUI
 
 struct UILottieView: View {
     var lottieName: String
+    var playOnce: Bool = false
+    var animationSpeed: Double = 1.0
     
     var body: some View {
         if let fileURL = Bundle.main.url(forResource: lottieName, withExtension: "lottie"){
-            LottieView(url: fileURL)
+            LottieView(url: fileURL, playOnce: playOnce, animationSpeed: animationSpeed)
         }
         else{
             Text("Lottie not found")
@@ -36,7 +38,6 @@ struct dropButton: View {
                     RoundedRectangle(cornerRadius: 10)
                         .frame(height: 45)
                         .foregroundColor(Color.blue)
-                        
                     
                     Text(title)
                         .textCase(.uppercase)

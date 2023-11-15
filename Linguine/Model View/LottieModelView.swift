@@ -3,6 +3,8 @@ import Lottie
 
 struct LottieView: UIViewRepresentable {
     let url: URL
+    var playOnce: Bool = false
+    var animationSpeed: Double = 1.0
     
     func makeUIView(context: Context) -> some UIView{
         UIView()
@@ -22,8 +24,14 @@ struct LottieView: UIViewRepresentable {
             switch result{
             case .success(let success):
                 animationView.loadAnimation(from: success)
-                animationView.loopMode = .loop
+                if playOnce{
+                    animationView.loopMode = .playOnce
+                }
+                else{
+                    animationView.loopMode = .loop
+                }
                 animationView.play()
+                animationView.animationSpeed = animationSpeed
             case .failure(let failure):
                 print(failure)
             }
