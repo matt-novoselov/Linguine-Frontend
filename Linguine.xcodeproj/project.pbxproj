@@ -8,14 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		1A2CDD342B039D6E002044D0 /* UIElements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2CDD332B039D6E002044D0 /* UIElements.swift */; };
-		1A2CDD362B03A09A002044D0 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2CDD352B03A09A002044D0 /* ProfileView.swift */; };
-		1A2CDD382B03F186002044D0 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2CDD372B03F186002044D0 /* LoginView.swift */; };
+		1A2CDD362B03A09A002044D0 /* OLDProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2CDD352B03A09A002044D0 /* OLDProfileView.swift */; };
+		1A2CDD382B03F186002044D0 /* OLDLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2CDD372B03F186002044D0 /* OLDLoginView.swift */; };
 		1A5756532B055B9500A60DE7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A5756522B055B9500A60DE7 /* Assets.xcassets */; };
 		1A5756582B055F7900A60DE7 /* dog_walking.lottie in Resources */ = {isa = PBXBuildFile; fileRef = 1A5756542B055F7900A60DE7 /* dog_walking.lottie */; };
 		1A57565D2B05633A00A60DE7 /* dog_main.lottie in Resources */ = {isa = PBXBuildFile; fileRef = 1A57565C2B05633A00A60DE7 /* dog_main.lottie */; };
 		1A57565F2B0565FA00A60DE7 /* confetti.lottie in Resources */ = {isa = PBXBuildFile; fileRef = 1A57565E2B0565FA00A60DE7 /* confetti.lottie */; };
+		1A9EA3782B06572B002CFE18 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9EA3772B06572B002CFE18 /* LoginView.swift */; };
 		1AB574FC2B057F7600AB46FC /* cup.lottie in Resources */ = {isa = PBXBuildFile; fileRef = 1AB574FB2B057F7600AB46FC /* cup.lottie */; };
-		1AD8C5F32B035A8F004CE188 /* APITestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD8C5F22B035A8F004CE188 /* APITestView.swift */; };
+		1AB574FE2B06172700AB46FC /* APICallModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB574FD2B06172700AB46FC /* APICallModel.swift */; };
 		1ADE793E2B03801200F0E915 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 1ADE793D2B03801200F0E915 /* Lottie */; };
 		1ADE79402B03802400F0E915 /* LottieModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ADE793F2B03802400F0E915 /* LottieModelView.swift */; };
 		5C5DBE83277210B400E19935 /* Auth0 in Frameworks */ = {isa = PBXBuildFile; productRef = 5C5DBE82277210B400E19935 /* Auth0 */; };
@@ -27,14 +28,15 @@
 
 /* Begin PBXFileReference section */
 		1A2CDD332B039D6E002044D0 /* UIElements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIElements.swift; sourceTree = "<group>"; };
-		1A2CDD352B03A09A002044D0 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
-		1A2CDD372B03F186002044D0 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		1A2CDD352B03A09A002044D0 /* OLDProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OLDProfileView.swift; sourceTree = "<group>"; };
+		1A2CDD372B03F186002044D0 /* OLDLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OLDLoginView.swift; sourceTree = "<group>"; };
 		1A5756522B055B9500A60DE7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1A5756542B055F7900A60DE7 /* dog_walking.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = dog_walking.lottie; sourceTree = "<group>"; };
 		1A57565C2B05633A00A60DE7 /* dog_main.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = dog_main.lottie; sourceTree = "<group>"; };
 		1A57565E2B0565FA00A60DE7 /* confetti.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = confetti.lottie; sourceTree = "<group>"; };
+		1A9EA3772B06572B002CFE18 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		1AB574FB2B057F7600AB46FC /* cup.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = cup.lottie; sourceTree = "<group>"; };
-		1AD8C5F22B035A8F004CE188 /* APITestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APITestView.swift; sourceTree = "<group>"; };
+		1AB574FD2B06172700AB46FC /* APICallModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICallModel.swift; sourceTree = "<group>"; };
 		1ADE793F2B03802400F0E915 /* LottieModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieModelView.swift; sourceTree = "<group>"; };
 		5C5DBE87277212E000E19935 /* Auth0.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Auth0.plist; sourceTree = "<group>"; };
 		5C6537262772F5EE0035759D /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
@@ -95,9 +97,9 @@
 		1AD8C5EC2B02C5A5004CE188 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				1A2CDD372B03F186002044D0 /* LoginView.swift */,
-				1A2CDD352B03A09A002044D0 /* ProfileView.swift */,
-				1AD8C5F22B035A8F004CE188 /* APITestView.swift */,
+				1A2CDD372B03F186002044D0 /* OLDLoginView.swift */,
+				1A2CDD352B03A09A002044D0 /* OLDProfileView.swift */,
+				1A9EA3772B06572B002CFE18 /* LoginView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -106,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				5C6537262772F5EE0035759D /* UserModel.swift */,
+				1AB574FD2B06172700AB46FC /* APICallModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -247,10 +250,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1A2CDD362B03A09A002044D0 /* ProfileView.swift in Sources */,
+				1A2CDD362B03A09A002044D0 /* OLDProfileView.swift in Sources */,
 				5CDD8867277102DC00052307 /* Bootstrap.swift in Sources */,
-				1AD8C5F32B035A8F004CE188 /* APITestView.swift in Sources */,
-				1A2CDD382B03F186002044D0 /* LoginView.swift in Sources */,
+				1AB574FE2B06172700AB46FC /* APICallModel.swift in Sources */,
+				1A9EA3782B06572B002CFE18 /* LoginView.swift in Sources */,
+				1A2CDD382B03F186002044D0 /* OLDLoginView.swift in Sources */,
 				5C6537272772F5EE0035759D /* UserModel.swift in Sources */,
 				5CDD8865277102DC00052307 /* App.swift in Sources */,
 				1A2CDD342B039D6E002044D0 /* UIElements.swift in Sources */,
@@ -383,6 +387,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -416,6 +421,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;

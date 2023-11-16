@@ -32,18 +32,18 @@ struct dropButton: View {
             ZStack(alignment: .top){
                 RoundedRectangle(cornerRadius: 10)
                     .frame(height: 49)
-                    .foregroundColor(.green)
+                    .foregroundColor(.lgDropPinkButton)
                     
                 ZStack{
                     RoundedRectangle(cornerRadius: 10)
                         .frame(height: 45)
-                        .foregroundColor(Color.blue)
+                        .foregroundColor(.lgPinkButton)
                     
                     Text(title)
                         .textCase(.uppercase)
                         .font(.system(size: 16))
                         .fontWeight(.bold)
-                        .foregroundColor(.red)
+                        .foregroundColor(.lgBackground)
                 }
             }
         }

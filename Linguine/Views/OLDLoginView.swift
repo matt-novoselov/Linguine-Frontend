@@ -1,26 +1,18 @@
 import SwiftUI
 import Auth0
 
-struct LoginView: View {
+struct OLDLoginView: View {
     @Binding var user: User?
     
     var body: some View {
-        VStack{
-            VStack {
-                UILottieView(lottieName: "dog_main", animationSpeed: 0.4)
-                
-                Text("linguine")
-                    .font(.system(size: 40))
-                
-                Text("Learn languages. Open worlds.")
-                    .font(.system(size: 18))
-                
-                dropButton(title: "Get started", action: self.login)
-                    .padding(.bottom)
-            }
-            .padding(.horizontal)
+        VStack {
+            UILottieView(lottieName: "dog_walking")
+            UILottieView(lottieName: "dog_main", animationSpeed: 0.4)
+            UILottieView(lottieName: "confetti", playOnce: true)
+            UILottieView(lottieName: "cup", playOnce: true, animationSpeed: 0.8)
+            Text("This is a login page")
+            Button("Login", action: self.login)
         }
-        .background(Color.lgBackground.ignoresSafeArea())
     }
 
     func login() {
@@ -50,5 +42,5 @@ struct LoginView: View {
 }
 
 #Preview {
-    LoginView(user: Bootstrap().$user)
+    OLDLoginView(user: Bootstrap().$user)
 }
