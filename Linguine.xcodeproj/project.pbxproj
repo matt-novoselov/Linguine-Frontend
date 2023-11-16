@@ -12,9 +12,16 @@
 		1A2CDD382B03F186002044D0 /* OLDLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2CDD372B03F186002044D0 /* OLDLoginView.swift */; };
 		1A5756532B055B9500A60DE7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A5756522B055B9500A60DE7 /* Assets.xcassets */; };
 		1A5756582B055F7900A60DE7 /* dog_walking.lottie in Resources */ = {isa = PBXBuildFile; fileRef = 1A5756542B055F7900A60DE7 /* dog_walking.lottie */; };
-		1A57565D2B05633A00A60DE7 /* dog_main.lottie in Resources */ = {isa = PBXBuildFile; fileRef = 1A57565C2B05633A00A60DE7 /* dog_main.lottie */; };
 		1A57565F2B0565FA00A60DE7 /* confetti.lottie in Resources */ = {isa = PBXBuildFile; fileRef = 1A57565E2B0565FA00A60DE7 /* confetti.lottie */; };
 		1A9EA3782B06572B002CFE18 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9EA3772B06572B002CFE18 /* LoginView.swift */; };
+		1A9EA37F2B065C24002CFE18 /* DINNextRoundedLTPro-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1A9EA37A2B065C24002CFE18 /* DINNextRoundedLTPro-Bold.otf */; };
+		1A9EA3802B065C24002CFE18 /* DINNextRoundedLTPro-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1A9EA37B2B065C24002CFE18 /* DINNextRoundedLTPro-Regular.otf */; };
+		1A9EA3812B065C24002CFE18 /* Feather.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1A9EA37C2B065C24002CFE18 /* Feather.ttf */; };
+		1A9EA3822B065C24002CFE18 /* DINNextRoundedLTPro-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1A9EA37D2B065C24002CFE18 /* DINNextRoundedLTPro-Light.otf */; };
+		1A9EA3832B065C24002CFE18 /* DINNextRoundedLTPro-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1A9EA37E2B065C24002CFE18 /* DINNextRoundedLTPro-Medium.otf */; };
+		1A9EA3892B066649002CFE18 /* dog_main.lottie in Resources */ = {isa = PBXBuildFile; fileRef = 1A9EA3882B066649002CFE18 /* dog_main.lottie */; };
+		1A9EA38B2B0667E2002CFE18 /* LessonCompleteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9EA38A2B0667E2002CFE18 /* LessonCompleteView.swift */; };
+		1A9EA3902B06719C002CFE18 /* CustomSVGModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9EA38F2B06719C002CFE18 /* CustomSVGModelView.swift */; };
 		1AB574FC2B057F7600AB46FC /* cup.lottie in Resources */ = {isa = PBXBuildFile; fileRef = 1AB574FB2B057F7600AB46FC /* cup.lottie */; };
 		1AB574FE2B06172700AB46FC /* APICallModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB574FD2B06172700AB46FC /* APICallModel.swift */; };
 		1ADE793E2B03801200F0E915 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 1ADE793D2B03801200F0E915 /* Lottie */; };
@@ -32,9 +39,16 @@
 		1A2CDD372B03F186002044D0 /* OLDLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OLDLoginView.swift; sourceTree = "<group>"; };
 		1A5756522B055B9500A60DE7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1A5756542B055F7900A60DE7 /* dog_walking.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = dog_walking.lottie; sourceTree = "<group>"; };
-		1A57565C2B05633A00A60DE7 /* dog_main.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = dog_main.lottie; sourceTree = "<group>"; };
 		1A57565E2B0565FA00A60DE7 /* confetti.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = confetti.lottie; sourceTree = "<group>"; };
 		1A9EA3772B06572B002CFE18 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		1A9EA37A2B065C24002CFE18 /* DINNextRoundedLTPro-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DINNextRoundedLTPro-Bold.otf"; sourceTree = "<group>"; };
+		1A9EA37B2B065C24002CFE18 /* DINNextRoundedLTPro-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DINNextRoundedLTPro-Regular.otf"; sourceTree = "<group>"; };
+		1A9EA37C2B065C24002CFE18 /* Feather.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Feather.ttf; sourceTree = "<group>"; };
+		1A9EA37D2B065C24002CFE18 /* DINNextRoundedLTPro-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DINNextRoundedLTPro-Light.otf"; sourceTree = "<group>"; };
+		1A9EA37E2B065C24002CFE18 /* DINNextRoundedLTPro-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DINNextRoundedLTPro-Medium.otf"; sourceTree = "<group>"; };
+		1A9EA3882B066649002CFE18 /* dog_main.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = dog_main.lottie; sourceTree = "<group>"; };
+		1A9EA38A2B0667E2002CFE18 /* LessonCompleteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonCompleteView.swift; sourceTree = "<group>"; };
+		1A9EA38F2B06719C002CFE18 /* CustomSVGModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSVGModelView.swift; sourceTree = "<group>"; };
 		1AB574FB2B057F7600AB46FC /* cup.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = cup.lottie; sourceTree = "<group>"; };
 		1AB574FD2B06172700AB46FC /* APICallModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICallModel.swift; sourceTree = "<group>"; };
 		1ADE793F2B03802400F0E915 /* LottieModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieModelView.swift; sourceTree = "<group>"; };
@@ -61,6 +75,7 @@
 		1A2CDD302B039CFB002044D0 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				1A9EA3792B065C24002CFE18 /* Fonts */,
 				1A2CDD312B039D1A002044D0 /* DotLotties */,
 			);
 			path = Resources;
@@ -70,7 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				1AB574FB2B057F7600AB46FC /* cup.lottie */,
-				1A57565C2B05633A00A60DE7 /* dog_main.lottie */,
+				1A9EA3882B066649002CFE18 /* dog_main.lottie */,
 				1A57565E2B0565FA00A60DE7 /* confetti.lottie */,
 				1A5756542B055F7900A60DE7 /* dog_walking.lottie */,
 			);
@@ -82,8 +97,21 @@
 			children = (
 				1ADE793F2B03802400F0E915 /* LottieModelView.swift */,
 				1A2CDD332B039D6E002044D0 /* UIElements.swift */,
+				1A9EA38F2B06719C002CFE18 /* CustomSVGModelView.swift */,
 			);
 			path = "Model View";
+			sourceTree = "<group>";
+		};
+		1A9EA3792B065C24002CFE18 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				1A9EA37A2B065C24002CFE18 /* DINNextRoundedLTPro-Bold.otf */,
+				1A9EA37B2B065C24002CFE18 /* DINNextRoundedLTPro-Regular.otf */,
+				1A9EA37C2B065C24002CFE18 /* Feather.ttf */,
+				1A9EA37D2B065C24002CFE18 /* DINNextRoundedLTPro-Light.otf */,
+				1A9EA37E2B065C24002CFE18 /* DINNextRoundedLTPro-Medium.otf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		1AD8C5EB2B02C08F004CE188 /* Auth0 */ = {
@@ -100,6 +128,7 @@
 				1A2CDD372B03F186002044D0 /* OLDLoginView.swift */,
 				1A2CDD352B03A09A002044D0 /* OLDProfileView.swift */,
 				1A9EA3772B06572B002CFE18 /* LoginView.swift */,
+				1A9EA38A2B0667E2002CFE18 /* LessonCompleteView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -213,9 +242,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				5C5DBE88277212E000E19935 /* Auth0.plist in Resources */,
-				1A57565D2B05633A00A60DE7 /* dog_main.lottie in Resources */,
+				1A9EA3832B065C24002CFE18 /* DINNextRoundedLTPro-Medium.otf in Resources */,
+				1A9EA3802B065C24002CFE18 /* DINNextRoundedLTPro-Regular.otf in Resources */,
+				1A9EA37F2B065C24002CFE18 /* DINNextRoundedLTPro-Bold.otf in Resources */,
+				1A9EA3812B065C24002CFE18 /* Feather.ttf in Resources */,
 				1A5756532B055B9500A60DE7 /* Assets.xcassets in Resources */,
 				1AB574FC2B057F7600AB46FC /* cup.lottie in Resources */,
+				1A9EA3822B065C24002CFE18 /* DINNextRoundedLTPro-Light.otf in Resources */,
+				1A9EA3892B066649002CFE18 /* dog_main.lottie in Resources */,
 				1A5756582B055F7900A60DE7 /* dog_walking.lottie in Resources */,
 				1A57565F2B0565FA00A60DE7 /* confetti.lottie in Resources */,
 			);
@@ -257,6 +291,8 @@
 				1A2CDD382B03F186002044D0 /* OLDLoginView.swift in Sources */,
 				5C6537272772F5EE0035759D /* UserModel.swift in Sources */,
 				5CDD8865277102DC00052307 /* App.swift in Sources */,
+				1A9EA3902B06719C002CFE18 /* CustomSVGModelView.swift in Sources */,
+				1A9EA38B2B0667E2002CFE18 /* LessonCompleteView.swift in Sources */,
 				1A2CDD342B039D6E002044D0 /* UIElements.swift in Sources */,
 				1ADE79402B03802400F0E915 /* LottieModelView.swift in Sources */,
 			);
@@ -399,7 +435,6 @@
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UIRequiresFullScreen = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
@@ -433,7 +468,6 @@
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UIRequiresFullScreen = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;

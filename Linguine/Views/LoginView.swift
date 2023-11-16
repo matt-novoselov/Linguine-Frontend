@@ -6,19 +6,24 @@ struct LoginView: View {
     
     var body: some View {
         VStack{
-            VStack {
+            VStack(spacing: 20) {
                 UILottieView(lottieName: "dog_main", animationSpeed: 0.4)
+                    .frame(height: 140)
                 
                 Text("linguine")
-                    .font(.system(size: 40))
+                    .font(Font.custom("Feather", size: 40))
+                    .foregroundColor(.lgPinkTitle)
                 
                 Text("Learn languages. Open worlds.")
-                    .font(.system(size: 18))
+                    .font(Font.custom("DINNextRoundedLTPro-Regular", size: 18))
+                
+                Spacer()
                 
                 dropButton(title: "Get started", action: self.login)
                     .padding(.bottom)
             }
             .padding(.horizontal)
+            .padding(.top, 150)
         }
         .background(Color.lgBackground.ignoresSafeArea())
     }

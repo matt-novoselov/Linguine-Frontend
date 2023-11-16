@@ -33,7 +33,7 @@ struct dropButton: View {
                 RoundedRectangle(cornerRadius: 10)
                     .frame(height: 49)
                     .foregroundColor(.lgDropPinkButton)
-                    
+                
                 ZStack{
                     RoundedRectangle(cornerRadius: 10)
                         .frame(height: 45)
@@ -41,8 +41,7 @@ struct dropButton: View {
                     
                     Text(title)
                         .textCase(.uppercase)
-                        .font(.system(size: 16))
-                        .fontWeight(.bold)
+                        .font(Font.custom("DINNextRoundedLTPro-Bold", size: 16))
                         .foregroundColor(.lgBackground)
                 }
             }
@@ -52,7 +51,55 @@ struct dropButton: View {
     }
 }
 
+struct summuryBox: View {
+    var title: String = "total xp"
+    var earnedXP: Int = 0
+    let frameHeight: Double = 85
+    
+    var body: some View {
+        ZStack{
+            RoundedRectangle(cornerRadius: 17)
+                .frame(height: frameHeight)
+                .foregroundColor(.lgPinkButton)
+            
+            VStack{
+                Text(title)
+                    .textCase(.uppercase)
+                    .font(Font.custom("DINNextRoundedLTPro-Bold", size: 14))
+                    .foregroundColor(.lgBackground)
+                    .padding(.top, 6)
+                
+                Spacer()
+            }
+            .frame(maxHeight: frameHeight)
+            
+            VStack{
+                Spacer()
+                
+                ZStack{
+                    RoundedRectangle(cornerRadius: 15)
+                        .frame(height: 60)
+                        .foregroundColor(.lgBackground)
+                    
+                    HStack(spacing: 5){
+                        LightningIcon()
+                            .frame(width: 15,height: 18)
+                            .foregroundColor(.lgPinkButton)
+                        
+                        Text("\(earnedXP)")
+                            .textCase(.uppercase)
+                            .font(Font.custom("DINNextRoundedLTPro-Bold", size: 20))
+                            .foregroundColor(.lgPinkButton)
+                    }
+                }
+            }
+            .padding(.all, 2)
+            .frame(maxHeight: frameHeight)
+        }
+    }
+}
+
 #Preview {
-    dropButton(title: "get started", action: {print("Test tap")})
+    summuryBox(earnedXP: 130)
         .padding(.horizontal)
 }

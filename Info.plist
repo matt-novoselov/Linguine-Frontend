@@ -17,7 +17,17 @@
 	</array>
 	<key>UIAppFonts</key>
 	<array>
+		<string>DINNextRoundedLTPro-Bold.otf</string>
+		<string>DINNextRoundedLTPro-Regular.otf</string>
+		<string>DINNextRoundedLTPro-Medium.otf</string>
+		<string>DINNextRoundedLTPro-Light.otf</string>
+		<string>Feather.ttf</string>
 		<string>SpaceGrotesk.ttf</string>
 	</array>
+	<key>UILaunchScreen</key>
+	<dict>
+		<key>UIColorName</key>
+		<string>LG_background</string>
+	</dict>
 </dict>
 </plist>
