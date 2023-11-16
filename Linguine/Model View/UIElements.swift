@@ -99,7 +99,66 @@ struct summuryBox: View {
     }
 }
 
+struct leaderboardParticipant: View {
+    var nickname: String = "example"
+    var xpAmount: Int = 0
+    var place: Int = 0
+    var isHighlighted: Bool = false
+    
+    var body: some View {
+        ZStack{
+            Rectangle()
+                .padding(.horizontal, -50)
+                .ignoresSafeArea()
+                .frame(height: 65)
+                .foregroundColor(.lgLeaderboardHighlight)
+                .opacity(isHighlighted ? 1 : 0)
+            
+            HStack(spacing: 20){
+                Text("\(place)")
+                    .font(Font.custom("DINNextRoundedLTPro-Bold", size: 16))
+                
+                ZStack{
+                    Circle()
+                        .frame(height: 45)
+                    
+                    Text(nickname.prefix(1))
+                        .textCase(.uppercase)
+                        .font(Font.custom("DINNextRoundedLTPro-Bold", size: 24))
+                        .foregroundColor(.lgBackground)
+                        .padding(.top, 4.5)
+                }
+                
+                Text("@\(nickname)")
+                    .font(Font.custom("DINNextRoundedLTPro-Bold", size: 18  ))
+                
+                Spacer()
+                
+                Text("\(xpAmount) XP")
+                    .font(Font.custom("DINNextRoundedLTPro-regular", size: 18))
+            }
+        }
+    }
+}
+
+struct ExtendedDevider: View {
+
+    var body: some View {
+        VStack {
+            Rectangle()
+                .frame(height: 3)
+                .foregroundColor(.lgLeaderboardHighlight)
+                .padding(.horizontal, -50)
+        }
+    }
+}
+
 #Preview {
-    summuryBox(earnedXP: 130)
-        .padding(.horizontal)
+    VStack{
+        ExtendedDevider()
+            .padding(.horizontal)
+        
+        Rectangle()
+    }
+
 }

@@ -9,9 +9,7 @@
 /* Begin PBXBuildFile section */
 		1A2CDD342B039D6E002044D0 /* UIElements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2CDD332B039D6E002044D0 /* UIElements.swift */; };
 		1A2CDD362B03A09A002044D0 /* OLDProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2CDD352B03A09A002044D0 /* OLDProfileView.swift */; };
-		1A2CDD382B03F186002044D0 /* OLDLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2CDD372B03F186002044D0 /* OLDLoginView.swift */; };
 		1A5756532B055B9500A60DE7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A5756522B055B9500A60DE7 /* Assets.xcassets */; };
-		1A5756582B055F7900A60DE7 /* dog_walking.lottie in Resources */ = {isa = PBXBuildFile; fileRef = 1A5756542B055F7900A60DE7 /* dog_walking.lottie */; };
 		1A57565F2B0565FA00A60DE7 /* confetti.lottie in Resources */ = {isa = PBXBuildFile; fileRef = 1A57565E2B0565FA00A60DE7 /* confetti.lottie */; };
 		1A9EA3782B06572B002CFE18 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9EA3772B06572B002CFE18 /* LoginView.swift */; };
 		1A9EA37F2B065C24002CFE18 /* DINNextRoundedLTPro-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1A9EA37A2B065C24002CFE18 /* DINNextRoundedLTPro-Bold.otf */; };
@@ -22,7 +20,9 @@
 		1A9EA3892B066649002CFE18 /* dog_main.lottie in Resources */ = {isa = PBXBuildFile; fileRef = 1A9EA3882B066649002CFE18 /* dog_main.lottie */; };
 		1A9EA38B2B0667E2002CFE18 /* LessonCompleteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9EA38A2B0667E2002CFE18 /* LessonCompleteView.swift */; };
 		1A9EA3902B06719C002CFE18 /* CustomSVGModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9EA38F2B06719C002CFE18 /* CustomSVGModelView.swift */; };
-		1AB574FC2B057F7600AB46FC /* cup.lottie in Resources */ = {isa = PBXBuildFile; fileRef = 1AB574FB2B057F7600AB46FC /* cup.lottie */; };
+		1A9EA3922B0674F3002CFE18 /* LeaderboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9EA3912B0674F3002CFE18 /* LeaderboardView.swift */; };
+		1A9EA3982B06A4DB002CFE18 /* dog_walking.lottie in Resources */ = {isa = PBXBuildFile; fileRef = 1A9EA3972B06A4DB002CFE18 /* dog_walking.lottie */; };
+		1A9EA39A2B06A606002CFE18 /* cup_demo.lottie in Resources */ = {isa = PBXBuildFile; fileRef = 1A9EA3992B06A606002CFE18 /* cup_demo.lottie */; };
 		1AB574FE2B06172700AB46FC /* APICallModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB574FD2B06172700AB46FC /* APICallModel.swift */; };
 		1ADE793E2B03801200F0E915 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 1ADE793D2B03801200F0E915 /* Lottie */; };
 		1ADE79402B03802400F0E915 /* LottieModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ADE793F2B03802400F0E915 /* LottieModelView.swift */; };
@@ -36,9 +36,7 @@
 /* Begin PBXFileReference section */
 		1A2CDD332B039D6E002044D0 /* UIElements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIElements.swift; sourceTree = "<group>"; };
 		1A2CDD352B03A09A002044D0 /* OLDProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OLDProfileView.swift; sourceTree = "<group>"; };
-		1A2CDD372B03F186002044D0 /* OLDLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OLDLoginView.swift; sourceTree = "<group>"; };
 		1A5756522B055B9500A60DE7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		1A5756542B055F7900A60DE7 /* dog_walking.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = dog_walking.lottie; sourceTree = "<group>"; };
 		1A57565E2B0565FA00A60DE7 /* confetti.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = confetti.lottie; sourceTree = "<group>"; };
 		1A9EA3772B06572B002CFE18 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		1A9EA37A2B065C24002CFE18 /* DINNextRoundedLTPro-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DINNextRoundedLTPro-Bold.otf"; sourceTree = "<group>"; };
@@ -49,7 +47,9 @@
 		1A9EA3882B066649002CFE18 /* dog_main.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = dog_main.lottie; sourceTree = "<group>"; };
 		1A9EA38A2B0667E2002CFE18 /* LessonCompleteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonCompleteView.swift; sourceTree = "<group>"; };
 		1A9EA38F2B06719C002CFE18 /* CustomSVGModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSVGModelView.swift; sourceTree = "<group>"; };
-		1AB574FB2B057F7600AB46FC /* cup.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = cup.lottie; sourceTree = "<group>"; };
+		1A9EA3912B0674F3002CFE18 /* LeaderboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardView.swift; sourceTree = "<group>"; };
+		1A9EA3972B06A4DB002CFE18 /* dog_walking.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = dog_walking.lottie; sourceTree = "<group>"; };
+		1A9EA3992B06A606002CFE18 /* cup_demo.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = cup_demo.lottie; sourceTree = "<group>"; };
 		1AB574FD2B06172700AB46FC /* APICallModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICallModel.swift; sourceTree = "<group>"; };
 		1ADE793F2B03802400F0E915 /* LottieModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieModelView.swift; sourceTree = "<group>"; };
 		5C5DBE87277212E000E19935 /* Auth0.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Auth0.plist; sourceTree = "<group>"; };
@@ -84,10 +84,10 @@
 		1A2CDD312B039D1A002044D0 /* DotLotties */ = {
 			isa = PBXGroup;
 			children = (
-				1AB574FB2B057F7600AB46FC /* cup.lottie */,
+				1A9EA3992B06A606002CFE18 /* cup_demo.lottie */,
 				1A9EA3882B066649002CFE18 /* dog_main.lottie */,
 				1A57565E2B0565FA00A60DE7 /* confetti.lottie */,
-				1A5756542B055F7900A60DE7 /* dog_walking.lottie */,
+				1A9EA3972B06A4DB002CFE18 /* dog_walking.lottie */,
 			);
 			path = DotLotties;
 			sourceTree = "<group>";
@@ -125,10 +125,10 @@
 		1AD8C5EC2B02C5A5004CE188 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				1A2CDD372B03F186002044D0 /* OLDLoginView.swift */,
 				1A2CDD352B03A09A002044D0 /* OLDProfileView.swift */,
 				1A9EA3772B06572B002CFE18 /* LoginView.swift */,
 				1A9EA38A2B0667E2002CFE18 /* LessonCompleteView.swift */,
+				1A9EA3912B0674F3002CFE18 /* LeaderboardView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -247,10 +247,10 @@
 				1A9EA37F2B065C24002CFE18 /* DINNextRoundedLTPro-Bold.otf in Resources */,
 				1A9EA3812B065C24002CFE18 /* Feather.ttf in Resources */,
 				1A5756532B055B9500A60DE7 /* Assets.xcassets in Resources */,
-				1AB574FC2B057F7600AB46FC /* cup.lottie in Resources */,
+				1A9EA39A2B06A606002CFE18 /* cup_demo.lottie in Resources */,
+				1A9EA3982B06A4DB002CFE18 /* dog_walking.lottie in Resources */,
 				1A9EA3822B065C24002CFE18 /* DINNextRoundedLTPro-Light.otf in Resources */,
 				1A9EA3892B066649002CFE18 /* dog_main.lottie in Resources */,
-				1A5756582B055F7900A60DE7 /* dog_walking.lottie in Resources */,
 				1A57565F2B0565FA00A60DE7 /* confetti.lottie in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -288,7 +288,7 @@
 				5CDD8867277102DC00052307 /* Bootstrap.swift in Sources */,
 				1AB574FE2B06172700AB46FC /* APICallModel.swift in Sources */,
 				1A9EA3782B06572B002CFE18 /* LoginView.swift in Sources */,
-				1A2CDD382B03F186002044D0 /* OLDLoginView.swift in Sources */,
+				1A9EA3922B0674F3002CFE18 /* LeaderboardView.swift in Sources */,
 				5C6537272772F5EE0035759D /* UserModel.swift in Sources */,
 				5CDD8865277102DC00052307 /* App.swift in Sources */,
 				1A9EA3902B06719C002CFE18 /* CustomSVGModelView.swift in Sources */,
