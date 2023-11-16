@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		1A2CDD342B039D6E002044D0 /* UIElements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2CDD332B039D6E002044D0 /* UIElements.swift */; };
-		1A2CDD362B03A09A002044D0 /* OLDProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2CDD352B03A09A002044D0 /* OLDProfileView.swift */; };
 		1A5756532B055B9500A60DE7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A5756522B055B9500A60DE7 /* Assets.xcassets */; };
 		1A57565F2B0565FA00A60DE7 /* confetti.lottie in Resources */ = {isa = PBXBuildFile; fileRef = 1A57565E2B0565FA00A60DE7 /* confetti.lottie */; };
 		1A9EA3782B06572B002CFE18 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9EA3772B06572B002CFE18 /* LoginView.swift */; };
@@ -35,7 +34,6 @@
 
 /* Begin PBXFileReference section */
 		1A2CDD332B039D6E002044D0 /* UIElements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIElements.swift; sourceTree = "<group>"; };
-		1A2CDD352B03A09A002044D0 /* OLDProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OLDProfileView.swift; sourceTree = "<group>"; };
 		1A5756522B055B9500A60DE7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1A57565E2B0565FA00A60DE7 /* confetti.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = confetti.lottie; sourceTree = "<group>"; };
 		1A9EA3772B06572B002CFE18 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -125,7 +123,6 @@
 		1AD8C5EC2B02C5A5004CE188 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				1A2CDD352B03A09A002044D0 /* OLDProfileView.swift */,
 				1A9EA3772B06572B002CFE18 /* LoginView.swift */,
 				1A9EA38A2B0667E2002CFE18 /* LessonCompleteView.swift */,
 				1A9EA3912B0674F3002CFE18 /* LeaderboardView.swift */,
@@ -284,7 +281,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1A2CDD362B03A09A002044D0 /* OLDProfileView.swift in Sources */,
 				5CDD8867277102DC00052307 /* Bootstrap.swift in Sources */,
 				1AB574FE2B06172700AB46FC /* APICallModel.swift in Sources */,
 				1A9EA3782B06572B002CFE18 /* LoginView.swift in Sources */,
