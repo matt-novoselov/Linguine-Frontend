@@ -26,23 +26,24 @@ struct PressEffectButtonStyle: ButtonStyle {
 struct dropButton: View {
     var title: String
     var action: () -> Void
+    var buttonActive: Bool = true
     
     var body: some View {
-        Button(action: action) {
+        Button(action: buttonActive ? action : {}) {
             ZStack(alignment: .top){
                 RoundedRectangle(cornerRadius: 10)
                     .frame(height: 49)
-                    .foregroundColor(.lgDropPinkButton)
+                    .foregroundColor(buttonActive ? .lgDropPinkButton : .lgDropDisabledButton)
                 
                 ZStack{
                     RoundedRectangle(cornerRadius: 10)
                         .frame(height: 45)
-                        .foregroundColor(.lgPinkButton)
+                        .foregroundColor(buttonActive ? .lgPinkButton : .lgDisabledButton)
                     
                     Text(title)
                         .textCase(.uppercase)
                         .font(Font.custom("DINNextRoundedLTPro-Bold", size: 16))
-                        .foregroundColor(.lgBackground)
+                        .foregroundColor(buttonActive ? .lgBackground : .lgDisabledTitle)
                 }
             }
         }
@@ -155,10 +156,8 @@ struct ExtendedDevider: View {
 
 #Preview {
     VStack{
-        ExtendedDevider()
+        dropButton(title: "check", action: {print("test_tap")}, buttonActive: true)
             .padding(.horizontal)
-        
-        Rectangle()
     }
 
 }
