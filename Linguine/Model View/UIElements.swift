@@ -111,7 +111,6 @@ struct leaderboardParticipant: View {
 }
 
 struct ExtendedDevider: View {
-    
     var body: some View {
         VStack {
             Rectangle()
@@ -122,37 +121,60 @@ struct ExtendedDevider: View {
     }
 }
 
+struct dropButtonCustomStyle {
+    var mainColor: Color
+    var dropColor: Color
+    var textColor: Color
+    var symbolColor: Color
+}
+
+enum Style: String, CaseIterable {
+    case standart
+    case mistake
+    case correct
+    case disabled
+
+    var color: dropButtonCustomStyle {
+        switch self {
+        case .standart: return dropButtonCustomStyle(mainColor: .lgPinkButton, dropColor: .lgDropPinkButton, textColor: .lgBackground, symbolColor: .white)
+        case .mistake: return dropButtonCustomStyle(mainColor: .lgRedButton, dropColor: .lgDropRedButton, textColor: .lgBackground, symbolColor: .lgBackground)
+        case .correct: return dropButtonCustomStyle(mainColor: .lgGreenButton, dropColor: .lgDropGreenButton, textColor: .lgBackground, symbolColor: .lgBackground)
+        case .disabled: return dropButtonCustomStyle(mainColor: .lgDisabledButton, dropColor: .lgDropDisabledButton, textColor: .lgDisabledTitle, symbolColor: .lgDisabledTitle)
+        }
+    }
+}
+
 struct dropButton: View {
     var title: String
     var action: () -> Void
-    var buttonActive: Bool = true
+    var style: Style
     
     struct dropButtonStyle: ButtonStyle {
         var title: String
-        var buttonActive: Bool = true
         let buttonHeight: Double = 45
         let shadowHeight: Double = 4
+        var style: Style
         
         func makeBody(configuration: Configuration) -> some View {
             ZStack(alignment: .top){
                 VStack{
                     RoundedRectangle(cornerRadius: 10)
                         .frame(height: buttonHeight)
-                        .foregroundColor(buttonActive ? .lgDropPinkButton : .lgDropDisabledButton)
+                        .foregroundColor(style.color.dropColor)
                         .padding(.top, !configuration.isPressed ? shadowHeight : 0)
                     
                     Spacer()
                 }
-
+                
                 ZStack{
                     RoundedRectangle(cornerRadius: 10)
                         .frame(height: buttonHeight)
-                        .foregroundColor(buttonActive ? .lgPinkButton : .lgDisabledButton)
+                        .foregroundColor(style.color.mainColor)
                     
                     Text(title)
                         .textCase(.uppercase)
                         .font(Font.custom("DINNextRoundedLTPro-Bold", size: 16))
-                        .foregroundColor(buttonActive ? .lgBackground : .lgDisabledTitle)
+                        .foregroundColor(style.color.textColor)
                 }
             }
             .frame(height: buttonHeight+shadowHeight)
@@ -160,9 +182,9 @@ struct dropButton: View {
     }
     
     var body: some View {
-        Button(action: buttonActive ? action : {}){}
+        Button(action: style != Style.disabled ? action : {}){}
             .buttonStyle(
-                dropButtonStyle(title: title, buttonActive: buttonActive)
+                dropButtonStyle(title: title, style: style)
             )
     }
 }
@@ -170,20 +192,20 @@ struct dropButton: View {
 struct dropButtonRound: View {
     var titleSymbol: String
     var action: () -> Void
-    var buttonActive: Bool = true
+    var style: Style
     
     struct dropButtonStyle: ButtonStyle {
         var titleSymbol: String
-        var buttonActive: Bool = true
         let buttonHeight: Double = 59
         let shadowHeight: Double = 7
+        var style: Style
         
         func makeBody(configuration: Configuration) -> some View {
             ZStack(alignment: .top){
                 VStack{
                     Ellipse()
                         .frame(width: 71, height: buttonHeight)
-                        .foregroundColor(buttonActive ? .lgDropPinkButton : .lgDropDisabledButton)
+                        .foregroundColor(style.color.dropColor)
                         .padding(.top, !configuration.isPressed ? shadowHeight : 0)
                     
                     Spacer()
@@ -192,31 +214,153 @@ struct dropButtonRound: View {
                 ZStack{
                     Ellipse()
                         .frame(width: 71, height: buttonHeight)
-                        .foregroundColor(buttonActive ? .lgPinkButton : .lgDisabledButton)
+                        .foregroundColor(style.color.mainColor)
                     
                     Image(systemName: titleSymbol)
-                        .font(Font.custom("DINNextRoundedLTPro-Bold", size: 26))
-                        .foregroundColor(buttonActive ? .white : .lgDisabledTitle)
+                        .font(.system(size: 26))
+                        .foregroundColor(style.color.symbolColor)
                 }
             }.frame(height: buttonHeight+shadowHeight)
         }
     }
     
     var body: some View {
-        Button(action: buttonActive ? action : {}){}
+        Button(action: style != Style.disabled ? action : {}){}
             .buttonStyle(
-                dropButtonStyle(titleSymbol: titleSymbol, buttonActive: buttonActive)
+                dropButtonStyle(titleSymbol: titleSymbol, style: style)
             )
     }
 }
 
+struct cardButton: View {
+    var title: String
+    var icon_name: String
+    var action: () -> Void
+    var style: Style
+    
+    struct dropButtonStyle: ButtonStyle {
+        var title: String
+        var icon_name: String
+        let buttonHeight: Double = 260
+        let shadowHeight: Double = 4
+        var style: Style
+        
+        func makeBody(configuration: Configuration) -> some View {
+            ZStack(alignment: .top){
+                VStack{
+                    RoundedRectangle(cornerRadius: 10)
+                        .frame(height: buttonHeight)
+                        .foregroundColor(style.color.dropColor)
+                        .padding(.top, !configuration.isPressed ? shadowHeight : 0)
+                    
+                    Spacer()
+                }
+                
+                ZStack{
+                    RoundedRectangle(cornerRadius: 10)
+                        .frame(height: buttonHeight)
+                        .foregroundColor(style != Style.disabled ? .lgBackground : .lgSelectedCardButton)
+                    
+                    RoundedRectangle(cornerRadius: 10)
+                        .stroke(style.color.mainColor, lineWidth: 2)
+                        .frame(height: buttonHeight)
+                    
+                    VStack(){
+                        Spacer()
+                        
+                        UILottieView(lottieName: icon_name, playOnce: true)
+                            .frame(height: 100)
+                        
+                        Spacer()
+                        
+                        Text(title)
+                            .textCase(.lowercase)
+                            .font(Font.custom("DINNextRoundedLTPro-Regular", size: 20))
+                            .foregroundColor(.white)
+                            .padding(.bottom)
+                    }
+                    .frame(maxHeight: buttonHeight, alignment: .bottom)
+                }
+            }
+            .frame(height: buttonHeight+shadowHeight)
+        }
+    }
+    
+    var body: some View {
+        Button(action: action){}
+            .buttonStyle(
+                dropButtonStyle(title: title, icon_name: icon_name, style: style)
+            )
+    }
+}
+
+struct levelResult: View {
+    var correctAnswers: String
+    var selectedAnswer: String
+    
+    var isCorrect: Bool {
+        return correctAnswers == selectedAnswer
+    }
+    
+    var body: some View {
+        ZStack{
+            UnevenRoundedRectangle(cornerRadii: .init(topLeading: 10.0, topTrailing: 10.0))
+            .foregroundStyle(.lgLeaderboardHighlight)
+            .padding(.horizontal, -15)
+            
+            VStack(alignment: .leading ,spacing: 20){
+                
+                if isCorrect{
+                    Group{
+                        HStack{
+                            Image(systemName: "checkmark.circle.fill")
+                                .font(.system(size: 24))
+                            
+                            Text("Excellent!")
+                                .font(Font.custom("DINNextRoundedLTPro-Bold", size: 24))
+                        }
+                    }
+                    .foregroundColor(.lgGreenButton)
+                }
+                else{
+                    Group{
+                        HStack{
+                            Image(systemName: "xmark.circle.fill")
+                                .font(.system(size: 24))
+                            
+                            Text("Incorrect")
+                                .font(Font.custom("DINNextRoundedLTPro-Bold", size: 24))
+                        }
+                        
+                        HStack(spacing:0){
+                            Text("Correct Answer: ")
+                                .font(Font.custom("DINNextRoundedLTPro-Bold", size: 20))
+                            
+                            Text(correctAnswers)
+                                .font(Font.custom("DINNextRoundedLTPro-Regular", size: 20))
+                        }
+                    }
+                    .foregroundColor(.lgRedButton)
+                }
+    
+                dropButton(title: isCorrect ? "continue" : "got it", action: {}, style: isCorrect ? .correct : .mistake)
+            }
+        }
+    }
+    
+}
+
 #Preview {
     VStack{
-//        dropButtonRound(titleSymbol: "star.fill", action: {print("test_tap")})
-//        
-//        dropButton(title: "hello world!", action: {})
+        dropButtonRound(titleSymbol: "star.fill", action: {print("test_tap")}, style: .standart)
         
-        leaderboardParticipant(isTemplate: true)
+        dropButton(title: "hello world!", action: {print("test_tap")}, style: .standart)
+        
+        cardButton(title: "Hello world!", icon_name: "dog_walking", action: {print("test_tap")}, style: .disabled)
+        
+        levelResult(correctAnswers: "watermelon", selectedAnswer: "ice cream")
     }
     .padding(.horizontal)
+    .frame(maxHeight: .infinity)
+    .background(Color.lgBackground.ignoresSafeArea())
 }

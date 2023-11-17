@@ -24,7 +24,7 @@ struct LessonCompleteView: View {
                 
                 Spacer()
                 
-                dropButton(title: "Continue", action: {})
+                dropButton(title: "Continue", action: {}, style: .standart)
                     .padding(.bottom)
             }
             .padding(.horizontal)
@@ -49,5 +49,5 @@ struct LessonCompleteView: View {
         id: "auth1|6552867564e79113efcb65f7",
         email: "example@gmail.com",
         nickname: "example"),
-    earnedXP: 800)
+    earnedXP: 0)
 }

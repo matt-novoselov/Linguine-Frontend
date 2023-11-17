@@ -19,7 +19,7 @@ struct LoginView: View {
                 
                 Spacer()
                 
-                dropButton(title: "Get started", action: self.login)
+                dropButton(title: "Get started", action: self.login, style: .standart)
                     .padding(.bottom)
             }
             .padding(.horizontal)
