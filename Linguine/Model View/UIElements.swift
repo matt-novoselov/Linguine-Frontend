@@ -259,7 +259,7 @@ struct cardButton: View {
                 ZStack{
                     RoundedRectangle(cornerRadius: 10)
                         .frame(height: buttonHeight)
-                        .foregroundColor(style != Style.disabled ? .lgBackground : .lgSelectedCardButton)
+                        .foregroundColor(style != Style.disabled ? .lgSelectedCardButton : .lgBackground)
                     
                     RoundedRectangle(cornerRadius: 10)
                         .stroke(style.color.mainColor, lineWidth: 2)
@@ -297,57 +297,80 @@ struct cardButton: View {
 struct levelResult: View {
     var correctAnswers: String
     var selectedAnswer: String
+    @State var size: CGSize = .zero
     
     var isCorrect: Bool {
         return correctAnswers == selectedAnswer
     }
     
     var body: some View {
-        ZStack{
-            UnevenRoundedRectangle(cornerRadii: .init(topLeading: 10.0, topTrailing: 10.0))
-            .foregroundStyle(.lgLeaderboardHighlight)
-            .padding(.horizontal, -15)
-            
-            VStack(alignment: .leading ,spacing: 20){
-                
-                if isCorrect{
-                    Group{
-                        HStack{
-                            Image(systemName: "checkmark.circle.fill")
-                                .font(.system(size: 24))
-                            
-                            Text("Excellent!")
-                                .font(Font.custom("DINNextRoundedLTPro-Bold", size: 24))
-                        }
-                    }
-                    .foregroundColor(.lgGreenButton)
-                }
-                else{
-                    Group{
-                        HStack{
-                            Image(systemName: "xmark.circle.fill")
-                                .font(.system(size: 24))
-                            
-                            Text("Incorrect")
-                                .font(Font.custom("DINNextRoundedLTPro-Bold", size: 24))
-                        }
+        VStack(alignment: .leading ,spacing: 20){
+            if isCorrect{
+                Group{
+                    HStack{
+                        Image(systemName: "checkmark.circle.fill")
+                            .font(.system(size: 24))
                         
-                        HStack(spacing:0){
-                            Text("Correct Answer: ")
-                                .font(Font.custom("DINNextRoundedLTPro-Bold", size: 20))
-                            
-                            Text(correctAnswers)
-                                .font(Font.custom("DINNextRoundedLTPro-Regular", size: 20))
-                        }
+                        Text("Excellent!")
+                            .font(Font.custom("DINNextRoundedLTPro-Bold", size: 24))
                     }
-                    .foregroundColor(.lgRedButton)
                 }
-    
-                dropButton(title: isCorrect ? "continue" : "got it", action: {}, style: isCorrect ? .correct : .mistake)
+                .foregroundColor(.lgGreenButton)
             }
+            else{
+                Group{
+                    HStack{
+                        Image(systemName: "xmark.circle.fill")
+                            .font(.system(size: 24))
+                        
+                        Text("Incorrect")
+                            .font(Font.custom("DINNextRoundedLTPro-Bold", size: 24))
+                    }
+                    
+                    HStack(spacing:0){
+                        Text("Correct Answer: ")
+                            .font(Font.custom("DINNextRoundedLTPro-Bold", size: 20))
+                        
+                        Text(correctAnswers)
+                            .font(Font.custom("DINNextRoundedLTPro-Regular", size: 20))
+                    }
+                }
+                .foregroundColor(.lgRedButton)
+            }
+
+            dropButton(title: isCorrect ? "continue" : "got it", action: {}, style: isCorrect ? .correct : .mistake)
+        }
+        .padding(.horizontal)
+        .padding(.top)
+    }
+}
+
+struct HeightPreferenceKey: PreferenceKey {
+    static var defaultValue: CGFloat?
+
+    static func reduce(value: inout CGFloat?, nextValue: () -> CGFloat?) {
+        guard let nextValue = nextValue() else { return }
+        value = nextValue
+    }
+}
+
+private struct ReadHeightModifier: ViewModifier {
+    private var sizeView: some View {
+        GeometryReader { geometry in
+            Color.clear.preference(key: HeightPreferenceKey.self, value: geometry.size.height)
         }
     }
-    
+
+    func body(content: Content) -> some View {
+        content.background(sizeView)
+    }
+}
+
+extension View {
+    func readHeight() -> some View {
+        self
+            .modifier(ReadHeightModifier())
+    }
 }
 
 #Preview {

@@ -3,6 +3,8 @@ import SwiftUI
 struct LessonView: View {
     var levelModel: LevelImage
     @State private var selectedButtonIndex: Int?
+    @State private var showingCredits = false
+    @State var detentHeight: CGFloat = 0
     
     var body: some View {
         let amountOfMenus = levelModel.variants.count
@@ -35,14 +37,28 @@ struct LessonView: View {
                     }
                 }
                 
-                dropButton(title: "check", action: {}, style: selectedButtonIndex != nil ? .standart : .disabled)
+                dropButton(title: "check", action: {showingCredits.toggle()}, style: selectedButtonIndex != nil ? .standart : .disabled)
                 .padding(.bottom)
             }
             .padding(.horizontal)
         }
         .background(Color.lgBackground.ignoresSafeArea())
+        .sheet(isPresented: $showingCredits) {
+            levelResult(correctAnswers: levelModel.correct_answer, selectedAnswer: levelModel.variants[selectedButtonIndex!].title)
+                .readHeight()
+                .onPreferenceChange(HeightPreferenceKey.self) { height in
+                    if let height {
+                        self.detentHeight = height
+                    }
+                }
+                .presentationDetents([.height(self.detentHeight)])
+                .background(.lgLeaderboardHighlight)
+                .interactiveDismissDisabled()
+        }
     }
 }
+
+
 
 #Preview {
     LessonView(levelModel: LevelImageLibrary().levels[0])
