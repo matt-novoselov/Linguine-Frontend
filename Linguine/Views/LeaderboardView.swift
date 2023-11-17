@@ -2,8 +2,9 @@ import SwiftUI
 import Auth0
 
 struct LeaderboardView: View {
-    @State private var listOfUsers: [UUIDSingleUser] = []
+    @State private var listOfUsers: [UUIDSingleUser] = leaderboardTemplate().listOfUsers
     var selected_user: User
+    @State private var dataLoaded = false
     
     var body: some View {
         VStack{
@@ -19,7 +20,7 @@ struct LeaderboardView: View {
                 
                 ScrollView {
                     ForEach(listOfUsers){ list_user in
-                        leaderboardParticipant(nickname: list_user.name, xpAmount: list_user.score, place: 0, isHighlighted: list_user.name==selected_user.nickname)
+                        leaderboardParticipant(nickname: list_user.name, xpAmount: list_user.score, place: 0, isHighlighted: list_user.name==selected_user.nickname, isTemplate: !dataLoaded)
                             .padding(.horizontal)
                     }
                 }
@@ -27,6 +28,7 @@ struct LeaderboardView: View {
                     Task {
                         do {
                             listOfUsers = try await get_stats()
+                            dataLoaded = true
                         } catch {
                             print(error)
                         }
@@ -38,6 +40,7 @@ struct LeaderboardView: View {
             Task {
                 do {
                     listOfUsers = try await get_stats()
+                    dataLoaded = true
                 } catch {
                     print(error)
                 }

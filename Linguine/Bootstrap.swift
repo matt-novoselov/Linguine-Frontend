@@ -6,16 +6,14 @@ struct Bootstrap: View {
     
     var body: some View {
         if let selected_user = self.user {
-//            LeaderboardView(selected_user: selected_user)
-            
             TabView {
-                LeaderboardView(selected_user: selected_user)
-                    .tabItem {
-                        Label("Learners", systemImage: "person.2.fill")
-                    }
                 LessonCompleteView(selected_user: selected_user, earnedXP: 0)
                     .tabItem {
-                        Label("Teams", systemImage: "person.3.fill")
+                        Label("Home", systemImage: "house.fill")
+                    }
+                LeaderboardView(selected_user: selected_user)
+                    .tabItem {
+                        Label("Leaderboard", systemImage: "trophy.fill")
                     }
             }
             

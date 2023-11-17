@@ -20,8 +20,9 @@
 		1A9EA38B2B0667E2002CFE18 /* LessonCompleteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9EA38A2B0667E2002CFE18 /* LessonCompleteView.swift */; };
 		1A9EA3902B06719C002CFE18 /* CustomSVGModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9EA38F2B06719C002CFE18 /* CustomSVGModelView.swift */; };
 		1A9EA3922B0674F3002CFE18 /* LeaderboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9EA3912B0674F3002CFE18 /* LeaderboardView.swift */; };
-		1A9EA3982B06A4DB002CFE18 /* dog_walking.lottie in Resources */ = {isa = PBXBuildFile; fileRef = 1A9EA3972B06A4DB002CFE18 /* dog_walking.lottie */; };
 		1A9EA39A2B06A606002CFE18 /* cup_demo.lottie in Resources */ = {isa = PBXBuildFile; fileRef = 1A9EA3992B06A606002CFE18 /* cup_demo.lottie */; };
+		1A9EA3AA2B0763AD002CFE18 /* dog_walking.lottie in Resources */ = {isa = PBXBuildFile; fileRef = 1A9EA3A92B0763AD002CFE18 /* dog_walking.lottie */; };
+		1A9EA3AC2B077C58002CFE18 /* LeaderboardTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9EA3AB2B077C58002CFE18 /* LeaderboardTemplate.swift */; };
 		1AB574FE2B06172700AB46FC /* APICallModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB574FD2B06172700AB46FC /* APICallModel.swift */; };
 		1ADE793E2B03801200F0E915 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 1ADE793D2B03801200F0E915 /* Lottie */; };
 		1ADE79402B03802400F0E915 /* LottieModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ADE793F2B03802400F0E915 /* LottieModelView.swift */; };
@@ -46,8 +47,9 @@
 		1A9EA38A2B0667E2002CFE18 /* LessonCompleteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonCompleteView.swift; sourceTree = "<group>"; };
 		1A9EA38F2B06719C002CFE18 /* CustomSVGModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSVGModelView.swift; sourceTree = "<group>"; };
 		1A9EA3912B0674F3002CFE18 /* LeaderboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardView.swift; sourceTree = "<group>"; };
-		1A9EA3972B06A4DB002CFE18 /* dog_walking.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = dog_walking.lottie; sourceTree = "<group>"; };
 		1A9EA3992B06A606002CFE18 /* cup_demo.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = cup_demo.lottie; sourceTree = "<group>"; };
+		1A9EA3A92B0763AD002CFE18 /* dog_walking.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = dog_walking.lottie; sourceTree = "<group>"; };
+		1A9EA3AB2B077C58002CFE18 /* LeaderboardTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardTemplate.swift; sourceTree = "<group>"; };
 		1AB574FD2B06172700AB46FC /* APICallModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICallModel.swift; sourceTree = "<group>"; };
 		1ADE793F2B03802400F0E915 /* LottieModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieModelView.swift; sourceTree = "<group>"; };
 		5C5DBE87277212E000E19935 /* Auth0.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Auth0.plist; sourceTree = "<group>"; };
@@ -85,7 +87,7 @@
 				1A9EA3992B06A606002CFE18 /* cup_demo.lottie */,
 				1A9EA3882B066649002CFE18 /* dog_main.lottie */,
 				1A57565E2B0565FA00A60DE7 /* confetti.lottie */,
-				1A9EA3972B06A4DB002CFE18 /* dog_walking.lottie */,
+				1A9EA3A92B0763AD002CFE18 /* dog_walking.lottie */,
 			);
 			path = DotLotties;
 			sourceTree = "<group>";
@@ -96,6 +98,7 @@
 				1ADE793F2B03802400F0E915 /* LottieModelView.swift */,
 				1A2CDD332B039D6E002044D0 /* UIElements.swift */,
 				1A9EA38F2B06719C002CFE18 /* CustomSVGModelView.swift */,
+				1A9EA3AB2B077C58002CFE18 /* LeaderboardTemplate.swift */,
 			);
 			path = "Model View";
 			sourceTree = "<group>";
@@ -245,7 +248,7 @@
 				1A9EA3812B065C24002CFE18 /* Feather.ttf in Resources */,
 				1A5756532B055B9500A60DE7 /* Assets.xcassets in Resources */,
 				1A9EA39A2B06A606002CFE18 /* cup_demo.lottie in Resources */,
-				1A9EA3982B06A4DB002CFE18 /* dog_walking.lottie in Resources */,
+				1A9EA3AA2B0763AD002CFE18 /* dog_walking.lottie in Resources */,
 				1A9EA3822B065C24002CFE18 /* DINNextRoundedLTPro-Light.otf in Resources */,
 				1A9EA3892B066649002CFE18 /* dog_main.lottie in Resources */,
 				1A57565F2B0565FA00A60DE7 /* confetti.lottie in Resources */,
@@ -289,6 +292,7 @@
 				5CDD8865277102DC00052307 /* App.swift in Sources */,
 				1A9EA3902B06719C002CFE18 /* CustomSVGModelView.swift in Sources */,
 				1A9EA38B2B0667E2002CFE18 /* LessonCompleteView.swift in Sources */,
+				1A9EA3AC2B077C58002CFE18 /* LeaderboardTemplate.swift in Sources */,
 				1A2CDD342B039D6E002044D0 /* UIElements.swift in Sources */,
 				1ADE79402B03802400F0E915 /* LottieModelView.swift in Sources */,
 			);
