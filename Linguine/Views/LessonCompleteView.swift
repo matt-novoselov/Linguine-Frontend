@@ -49,5 +49,5 @@ struct LessonCompleteView: View {
         id: "auth1|6552867564e79113efcb65f7",
         email: "example@gmail.com",
         nickname: "example"),
-    earnedXP: 0)
+    earnedXP: 220)
 }

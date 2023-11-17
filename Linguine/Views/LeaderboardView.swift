@@ -19,8 +19,8 @@ struct LeaderboardView: View {
                 ExtendedDevider()
                 
                 ScrollView {
-                    ForEach(listOfUsers){ list_user in
-                        leaderboardParticipant(nickname: list_user.name, xpAmount: list_user.score, place: 0, isHighlighted: list_user.name==selected_user.nickname, isTemplate: !dataLoaded)
+                    ForEach(Array(listOfUsers.enumerated()), id: \.element.id) { index, list_user in
+                        leaderboardParticipant(nickname: list_user.name, xpAmount: list_user.score, place: index, isHighlighted: list_user.name == selected_user.nickname, isTemplate: !dataLoaded)
                             .padding(.horizontal)
                     }
                 }
