@@ -10,6 +10,8 @@
 		1A2CDD342B039D6E002044D0 /* UIElements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2CDD332B039D6E002044D0 /* UIElements.swift */; };
 		1A5756532B055B9500A60DE7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A5756522B055B9500A60DE7 /* Assets.xcassets */; };
 		1A57565F2B0565FA00A60DE7 /* confetti.lottie in Resources */ = {isa = PBXBuildFile; fileRef = 1A57565E2B0565FA00A60DE7 /* confetti.lottie */; };
+		1A728AE82B08153C00FF937E /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A728AE72B08153C00FF937E /* TestView.swift */; };
+		1A728AEA2B09231000FF937E /* TestView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A728AE92B09231000FF937E /* TestView2.swift */; };
 		1A9EA3782B06572B002CFE18 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9EA3772B06572B002CFE18 /* LoginView.swift */; };
 		1A9EA37F2B065C24002CFE18 /* DINNextRoundedLTPro-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1A9EA37A2B065C24002CFE18 /* DINNextRoundedLTPro-Bold.otf */; };
 		1A9EA3802B065C24002CFE18 /* DINNextRoundedLTPro-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1A9EA37B2B065C24002CFE18 /* DINNextRoundedLTPro-Regular.otf */; };
@@ -33,6 +35,7 @@
 		1ADE793E2B03801200F0E915 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 1ADE793D2B03801200F0E915 /* Lottie */; };
 		1ADE79402B03802400F0E915 /* LottieModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ADE793F2B03802400F0E915 /* LottieModelView.swift */; };
 		1AE6DFB02B079F69005D98F7 /* LevelModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE6DFAF2B079F69005D98F7 /* LevelModelView.swift */; };
+		1AE6DFB42B07FC23005D98F7 /* LevelsSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE6DFB32B07FC23005D98F7 /* LevelsSelectionView.swift */; };
 		5C5DBE83277210B400E19935 /* Auth0 in Frameworks */ = {isa = PBXBuildFile; productRef = 5C5DBE82277210B400E19935 /* Auth0 */; };
 		5C5DBE88277212E000E19935 /* Auth0.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5C5DBE87277212E000E19935 /* Auth0.plist */; };
 		5C6537272772F5EE0035759D /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C6537262772F5EE0035759D /* UserModel.swift */; };
@@ -44,6 +47,8 @@
 		1A2CDD332B039D6E002044D0 /* UIElements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIElements.swift; sourceTree = "<group>"; };
 		1A5756522B055B9500A60DE7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1A57565E2B0565FA00A60DE7 /* confetti.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = confetti.lottie; sourceTree = "<group>"; };
+		1A728AE72B08153C00FF937E /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
+		1A728AE92B09231000FF937E /* TestView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView2.swift; sourceTree = "<group>"; };
 		1A9EA3772B06572B002CFE18 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		1A9EA37A2B065C24002CFE18 /* DINNextRoundedLTPro-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DINNextRoundedLTPro-Bold.otf"; sourceTree = "<group>"; };
 		1A9EA37B2B065C24002CFE18 /* DINNextRoundedLTPro-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DINNextRoundedLTPro-Regular.otf"; sourceTree = "<group>"; };
@@ -66,6 +71,7 @@
 		1AB574FD2B06172700AB46FC /* APICallModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICallModel.swift; sourceTree = "<group>"; };
 		1ADE793F2B03802400F0E915 /* LottieModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieModelView.swift; sourceTree = "<group>"; };
 		1AE6DFAF2B079F69005D98F7 /* LevelModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelModelView.swift; sourceTree = "<group>"; };
+		1AE6DFB32B07FC23005D98F7 /* LevelsSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelsSelectionView.swift; sourceTree = "<group>"; };
 		5C5DBE87277212E000E19935 /* Auth0.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Auth0.plist; sourceTree = "<group>"; };
 		5C6537262772F5EE0035759D /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		5CDD8855277102DA00052307 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
@@ -157,6 +163,9 @@
 				1A9EA38A2B0667E2002CFE18 /* LessonCompleteView.swift */,
 				1A9EA3912B0674F3002CFE18 /* LeaderboardView.swift */,
 				1A9EA3B82B07966B002CFE18 /* LessonView.swift */,
+				1AE6DFB32B07FC23005D98F7 /* LevelsSelectionView.swift */,
+				1A728AE72B08153C00FF937E /* TestView.swift */,
+				1A728AE92B09231000FF937E /* TestView2.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -321,9 +330,12 @@
 				5CDD8867277102DC00052307 /* Bootstrap.swift in Sources */,
 				1AB574FE2B06172700AB46FC /* APICallModel.swift in Sources */,
 				1A9EA3782B06572B002CFE18 /* LoginView.swift in Sources */,
+				1A728AE82B08153C00FF937E /* TestView.swift in Sources */,
 				1A9EA3B92B07966B002CFE18 /* LessonView.swift in Sources */,
 				1A9EA3922B0674F3002CFE18 /* LeaderboardView.swift in Sources */,
 				5C6537272772F5EE0035759D /* UserModel.swift in Sources */,
+				1A728AEA2B09231000FF937E /* TestView2.swift in Sources */,
+				1AE6DFB42B07FC23005D98F7 /* LevelsSelectionView.swift in Sources */,
 				5CDD8865277102DC00052307 /* App.swift in Sources */,
 				1A9EA3902B06719C002CFE18 /* CustomSVGModelView.swift in Sources */,
 				1A9EA38B2B0667E2002CFE18 /* LessonCompleteView.swift in Sources */,

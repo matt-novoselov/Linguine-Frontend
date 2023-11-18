@@ -20,7 +20,7 @@ struct LeaderboardView: View {
                 
                 ScrollView {
                     ForEach(Array(listOfUsers.enumerated()), id: \.element.id) { index, list_user in
-                        leaderboardParticipant(nickname: list_user.name, xpAmount: list_user.score, place: index, isHighlighted: list_user.name == selected_user.nickname, isTemplate: !dataLoaded)
+                        leaderboardParticipant(nickname: list_user.name, xpAmount: list_user.score, place: index+1, isHighlighted: list_user.name == selected_user.nickname, isTemplate: !dataLoaded)
                             .padding(.horizontal)
                     }
                 }

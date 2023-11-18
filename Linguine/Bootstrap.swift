@@ -7,7 +7,7 @@ struct Bootstrap: View {
     var body: some View {
         if let selected_user = self.user {
             TabView {
-                LessonCompleteView(selected_user: selected_user, earnedXP: 0)
+                LevelsSelectionView(user: $user, selected_user: selected_user)
                     .tabItem {
                         Label("Home", systemImage: "house.fill")
                     }

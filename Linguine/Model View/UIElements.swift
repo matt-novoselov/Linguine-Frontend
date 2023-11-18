@@ -133,10 +133,11 @@ enum Style: String, CaseIterable {
     case mistake
     case correct
     case disabled
+    case completed
 
     var color: dropButtonCustomStyle {
         switch self {
-        case .standart: return dropButtonCustomStyle(mainColor: .lgPinkButton, dropColor: .lgDropPinkButton, textColor: .lgBackground, symbolColor: .white)
+        case .standart, .completed: return dropButtonCustomStyle(mainColor: .lgPinkButton, dropColor: .lgDropPinkButton, textColor: .lgBackground, symbolColor: .white)
         case .mistake: return dropButtonCustomStyle(mainColor: .lgRedButton, dropColor: .lgDropRedButton, textColor: .lgBackground, symbolColor: .lgBackground)
         case .correct: return dropButtonCustomStyle(mainColor: .lgGreenButton, dropColor: .lgDropGreenButton, textColor: .lgBackground, symbolColor: .lgBackground)
         case .disabled: return dropButtonCustomStyle(mainColor: .lgDisabledButton, dropColor: .lgDropDisabledButton, textColor: .lgDisabledTitle, symbolColor: .lgDisabledTitle)
@@ -216,11 +217,14 @@ struct dropButtonRound: View {
                         .frame(width: 71, height: buttonHeight)
                         .foregroundColor(style.color.mainColor)
                     
-                    Image(systemName: titleSymbol)
+                    Image(systemName: style == Style.completed ? "checkmark" : titleSymbol)
                         .font(.system(size: 26))
                         .foregroundColor(style.color.symbolColor)
+                        .fontWeight(.black)
                 }
-            }.frame(height: buttonHeight+shadowHeight)
+            }
+            .frame(height: buttonHeight+shadowHeight)
+            .overlay(style == Style.standart ? ProgressBar() : nil, alignment: .center)
         }
     }
     
@@ -373,17 +377,88 @@ extension View {
     }
 }
 
+struct LevelsUpBar: View {
+    var action: () -> Void
+    var current_score: Int?
+    
+    var body: some View {
+        ZStack {
+            ///
+            Rectangle()
+                .frame(height: 25)
+                .foregroundColor(.green)
+                .opacity(0.2)
+            ///
+            
+            HStack(alignment: .center, spacing: 0){
+                Text("flag")
+                
+                Spacer()
+                
+                HStack(spacing: 5){
+                    Image(systemName: "bolt.fill")
+                        .font(.system(size: 16))
+                        .fontWeight(.heavy)
+                        .foregroundColor(.lgBlueIcon)
+                    
+                    Text("\(current_score == nil ? 0 : current_score!) XP")
+                        .font(Font.custom("DINNextRoundedLTPro-Bold", size: 18))
+                        .foregroundColor(.lgBlueIcon)
+                        .redacted(reason: current_score == nil ? .placeholder : .invalidated)
+                }
+                
+                Spacer()
+                
+                Button(action: action){
+                    Image(systemName: "rectangle.portrait.and.arrow.right")
+                        .font(.system(size: 18))
+                        .fontWeight(.heavy)
+                        .foregroundColor(.lgDropRedButton)
+                }
+            }
+        }
+    }
+}
+
+struct ProgressBar: View {
+    var body: some View {
+        ZStack {
+            Ellipse()
+                .stroke(lineWidth: 7.0)
+                .foregroundColor(.lgDisabledButton)
+            
+            Ellipse()
+                .trim(from: 0.75, to: 1.0)
+                .stroke(style: StrokeStyle(lineWidth: 15.0, lineCap: .round, lineJoin: .round))
+                .foregroundColor(.lgBackground)
+            
+            Ellipse()
+                .trim(from: 0.75, to: 1.0)
+                .stroke(style: StrokeStyle(lineWidth: 7.0, lineCap: .round, lineJoin: .round))
+                .foregroundColor(.lgPinkButton)
+        }
+        .frame(width: 90, height: 85)
+        .padding(.bottom, 8)
+        .overlay(StartBubble(), alignment: .top)
+    }
+}
+
+struct StartBubble: View {
+    var body: some View {
+        ZStack {
+            Text("START")
+                .font(Font.custom("DINNextRoundedLTPro-Bold", size: 16))
+//                .foregroundColor(.lgPinkButton)
+                .foregroundColor(.red)
+        }
+    }
+}
+
 #Preview {
     VStack{
-        dropButtonRound(titleSymbol: "star.fill", action: {print("test_tap")}, style: .standart)
-        
-        dropButton(title: "hello world!", action: {print("test_tap")}, style: .standart)
-        
-        cardButton(title: "Hello world!", icon_name: "dog_walking", action: {print("test_tap")}, style: .disabled)
-        
-        levelResult(correctAnswers: "watermelon", selectedAnswer: "ice cream")
+        dropButtonRound(titleSymbol: "star.fill", action: {}, style: .standart)
     }
     .padding(.horizontal)
-    .frame(maxHeight: .infinity)
+    .frame(maxWidth: .infinity, maxHeight: .infinity)
     .background(Color.lgBackground.ignoresSafeArea())
 }

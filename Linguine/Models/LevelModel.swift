@@ -1,6 +1,7 @@
 import Foundation
 
-struct LevelImage {
+struct LevelImage: Identifiable {
+    var id = UUID()
     var prompt: String
     var correct_answer: String
     var variants: [LevelImageVariants]
