@@ -4,6 +4,7 @@ struct LevelImage: Identifiable {
     var id = UUID()
     var prompt: String
     var correct_answer: String
+    var sfSymbol: String
     var variants: [LevelImageVariants]
 }
 

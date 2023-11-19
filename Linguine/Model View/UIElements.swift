@@ -383,12 +383,12 @@ struct LevelsUpBar: View {
     
     var body: some View {
         ZStack {
-            ///
-            Rectangle()
-                .frame(height: 25)
-                .foregroundColor(.green)
-                .opacity(0.2)
-            ///
+//            ///
+//            Rectangle()
+//                .frame(height: 25)
+//                .foregroundColor(.green)
+//                .opacity(0.2)
+//            ///
             
             HStack(alignment: .center, spacing: 0){
                 Text("flag")

@@ -5,9 +5,8 @@ struct LevelsSelectionView: View {
     @Binding var user: User?
     @State private var current_score = 0
     var selected_user: User
-    var levelsLibrary: [LevelImage] = LevelImageLibrary().levels
+    let levelsLibrary: [LevelImage] = LevelImageLibrary().levels
     let levels_completed: Int = 3
-    let wavePattern = generateWavePattern(length: 13)
     
     func lesson_type(index:Int) -> Style {
         switch index {
@@ -32,7 +31,7 @@ struct LevelsSelectionView: View {
                     VStack(alignment: .leading){
                         ForEach(Array(levelsLibrary.enumerated()), id: \.element.id) { index, levels in
                             VStack{
-                                dropButtonRound(titleSymbol: "star.fill", action: {print("test_tap")}, style: lesson_type(index: index))
+                                dropButtonRound(titleSymbol: levels.sfSymbol, action: {print("test_tap")}, style: lesson_type(index: index))
                                     .padding(.top)
                             }
                         }
