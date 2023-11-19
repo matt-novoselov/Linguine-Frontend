@@ -2,6 +2,7 @@ import SwiftUI
 import Auth0
 
 struct LessonCompleteView: View {
+    @Binding var path: [Int]
     var selected_user: User
     var earnedXP: Int
     
@@ -24,7 +25,7 @@ struct LessonCompleteView: View {
                 
                 Spacer()
                 
-                dropButton(title: "Continue", action: {}, style: .standart)
+                dropButton(title: "Continue", action: {path = []}, style: .standart)
                     .padding(.bottom)
             }
             .padding(.horizontal)
@@ -44,10 +45,10 @@ struct LessonCompleteView: View {
     }
 }
 
-#Preview {
-    LessonCompleteView(selected_user: User(
-        id: "auth1|6552867564e79113efcb65f7",
-        email: "example@gmail.com",
-        nickname: "example"),
-    earnedXP: 220)
-}
+//#Preview {
+//    LessonCompleteView(path: [], selected_user: User(
+//        id: "auth1|6552867564e79113efcb65f7",
+//        email: "example@gmail.com",
+//        nickname: "example"),
+//    earnedXP: 220)
+//}

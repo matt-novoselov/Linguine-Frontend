@@ -302,6 +302,9 @@ struct levelResult: View {
     var correctAnswers: String
     var selectedAnswer: String
     @State var size: CGSize = .zero
+    @Binding var path: [Int]
+    let count: Int
+    @Environment(\.dismiss) var dismiss
     
     var isCorrect: Bool {
         return correctAnswers == selectedAnswer
@@ -342,7 +345,10 @@ struct levelResult: View {
                 .foregroundColor(.lgRedButton)
             }
 
-            dropButton(title: isCorrect ? "continue" : "got it", action: {}, style: isCorrect ? .correct : .mistake)
+            dropButton(title: isCorrect ? "continue" : "got it", action: {
+                path.append(count + 1)
+                self.dismiss()
+            }, style: isCorrect ? .correct : .mistake)
         }
         .padding(.horizontal)
         .padding(.top)

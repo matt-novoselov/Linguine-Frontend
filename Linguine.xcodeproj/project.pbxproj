@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1A2CDD342B039D6E002044D0 /* UIElements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2CDD332B039D6E002044D0 /* UIElements.swift */; };
+		1A56642D2B0AB8C5007E58E4 /* LevelContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A56642C2B0AB8C5007E58E4 /* LevelContainer.swift */; };
 		1A5756532B055B9500A60DE7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A5756522B055B9500A60DE7 /* Assets.xcassets */; };
 		1A57565F2B0565FA00A60DE7 /* confetti.lottie in Resources */ = {isa = PBXBuildFile; fileRef = 1A57565E2B0565FA00A60DE7 /* confetti.lottie */; };
 		1A9EA3782B06572B002CFE18 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9EA3772B06572B002CFE18 /* LoginView.swift */; };
@@ -43,6 +44,7 @@
 
 /* Begin PBXFileReference section */
 		1A2CDD332B039D6E002044D0 /* UIElements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIElements.swift; sourceTree = "<group>"; };
+		1A56642C2B0AB8C5007E58E4 /* LevelContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelContainer.swift; sourceTree = "<group>"; };
 		1A5756522B055B9500A60DE7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1A57565E2B0565FA00A60DE7 /* confetti.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = confetti.lottie; sourceTree = "<group>"; };
 		1A9EA3772B06572B002CFE18 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -160,6 +162,7 @@
 				1A9EA3912B0674F3002CFE18 /* LeaderboardView.swift */,
 				1A9EA3B82B07966B002CFE18 /* LessonView.swift */,
 				1AE6DFB32B07FC23005D98F7 /* LevelsSelectionView.swift */,
+				1A56642C2B0AB8C5007E58E4 /* LevelContainer.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -330,6 +333,7 @@
 				1AE6DFB42B07FC23005D98F7 /* LevelsSelectionView.swift in Sources */,
 				5CDD8865277102DC00052307 /* App.swift in Sources */,
 				1A9EA3902B06719C002CFE18 /* CustomSVGModelView.swift in Sources */,
+				1A56642D2B0AB8C5007E58E4 /* LevelContainer.swift in Sources */,
 				1A9EA38B2B0667E2002CFE18 /* LessonCompleteView.swift in Sources */,
 				1A9EA3AC2B077C58002CFE18 /* LeaderboardTemplate.swift in Sources */,
 				1A2CDD342B039D6E002044D0 /* UIElements.swift in Sources */,

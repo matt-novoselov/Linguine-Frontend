@@ -20,7 +20,7 @@ class LevelImageLibrary{
             correct_answer: "watermelon",
             sfSymbol: "book.fill",
             variants: [
-                LevelImageVariants(title: "watermelon"),
+                LevelImageVariants(title: "w2termelon"),
                 LevelImageVariants(title: "tomato"),
                 LevelImageVariants(title: "pizza"),
                 LevelImageVariants(title: "ice cream"),

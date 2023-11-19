@@ -5,17 +5,22 @@ struct LessonView: View {
     @State private var selectedButtonIndex: Int?
     @State private var showingCredits = false
     @State var detentHeight: CGFloat = 0
+    @Binding var path: [Int]
+    let count: Int
+    var levels: [String]
     
     var body: some View {
         let amountOfMenus = levelModel.variants.count
         
         VStack{
-            VStack(alignment: .leading ,spacing: 20){
-                Image(systemName: "xmark")
-                    .font(.system(size: 30))
-                    .fontWeight(.medium)
-                    .foregroundColor(.lgDisabledTitle)
-                    .padding(.top)
+            VStack(alignment: .leading ,spacing: 20){                
+                Button(action:{path = []}){
+                    Image(systemName: "xmark")
+                        .font(.system(size: 30))
+                        .fontWeight(.medium)
+                        .foregroundColor(.lgDisabledTitle)
+                        .padding(.top)
+                }
                 
                 Text("Select the correct image")
                     .font(Font.custom("DINNextRoundedLTPro-Bold", size: 24))
@@ -44,7 +49,7 @@ struct LessonView: View {
         }
         .background(Color.lgBackground.ignoresSafeArea())
         .sheet(isPresented: $showingCredits) {
-            levelResult(correctAnswers: levelModel.correct_answer, selectedAnswer: levelModel.variants[selectedButtonIndex!].title)
+            levelResult(correctAnswers: levelModel.correct_answer, selectedAnswer: levelModel.variants[selectedButtonIndex!].title, path: $path, count: count)
                 .readHeight()
                 .onPreferenceChange(HeightPreferenceKey.self) { height in
                     if let height {
@@ -60,6 +65,6 @@ struct LessonView: View {
 
 
 
-#Preview {
-    LessonView(levelModel: LevelImageLibrary().levels[0])
-}
+//#Preview {
+//    LessonView(levelModel: <#T##LevelImage#>, path: <#T##[Int]#>, count: <#T##Int#>, levels: <#T##[String]#>)
+//}

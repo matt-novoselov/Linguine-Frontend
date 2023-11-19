@@ -7,6 +7,8 @@ struct LevelsSelectionView: View {
     var selected_user: User
     let levelsLibrary: [LevelImage] = LevelImageLibrary().levels
     let levels_completed: Int = 3
+    var levels: [String] = ["One","Two","Three","Results"]
+    @State private var path: [Int] = []
     
     func lesson_type(index:Int) -> Style {
         switch index {
@@ -27,17 +29,28 @@ struct LevelsSelectionView: View {
                 LevelsUpBar(action: self.logout, current_score: current_score)
                     .padding(.top)
                 
-                ScrollView() {
-                    VStack(alignment: .leading){
-                        ForEach(Array(levelsLibrary.enumerated()), id: \.element.id) { index, levels in
-                            VStack{
-                                dropButtonRound(titleSymbol: levels.sfSymbol, action: {print("test_tap")}, style: lesson_type(index: index))
-                                    .padding(.top)
-                            }
-                        }
-                        .frame(maxWidth: .infinity)
+                NavigationStack(path: $path) {
+                    
+                    Button("Start") {
+                        path.append(0)
+                    }
+                    
+                    .navigationDestination(for: Int.self) { int in
+                        LevelContainer(path: $path, count: int, levels: levels, selected_user: selected_user)
                     }
                 }
+                
+//                ScrollView() {
+//                    VStack(alignment: .leading){
+//                        ForEach(Array(levelsLibrary.enumerated()), id: \.element.id) { index, levels in
+//                            VStack{
+//                                dropButtonRound(titleSymbol: levels.sfSymbol, action: {print("test_tap")}, style: lesson_type(index: index))
+//                                    .padding(.top)
+//                            }
+//                        }
+//                        .frame(maxWidth: .infinity)
+//                    }
+//                }
                 
             }.padding(.horizontal)
         }
