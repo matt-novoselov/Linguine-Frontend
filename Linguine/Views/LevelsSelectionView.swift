@@ -25,35 +25,30 @@ struct LevelsSelectionView: View {
     
     var body: some View {
         VStack{
-            VStack{
-                LevelsUpBar(action: self.logout, current_score: current_score)
-                    .padding(.top)
-                
-                NavigationStack(path: $path) {
-                    
-                    Button("Start") {
-                        path.append(0)
-                    }
-                    
-                    .navigationDestination(for: Int.self) { int in
+            NavigationStack(path: $path) {
+                VStack{
+                    LevelsUpBar(action: self.logout, current_score: current_score)
+                        .padding(.top)
+
+                    ScrollView() {
+                        VStack(alignment: .leading){
+                            ForEach(Array(levelsLibrary.enumerated()), id: \.element.id) { index, levels in
+                                VStack{
+                                    dropButtonRound(titleSymbol: levels.sfSymbol, action: {path.append(0)}, style: lesson_type(index: index))
+                                        .padding(.top)
+                                }
+                            }
+                            .frame(maxWidth: .infinity)
+                        }
+                    }.navigationDestination(for: Int.self) { int in
                         LevelContainer(path: $path, count: int, levels: levels, selected_user: selected_user)
                     }
                 }
-                
-//                ScrollView() {
-//                    VStack(alignment: .leading){
-//                        ForEach(Array(levelsLibrary.enumerated()), id: \.element.id) { index, levels in
-//                            VStack{
-//                                dropButtonRound(titleSymbol: levels.sfSymbol, action: {print("test_tap")}, style: lesson_type(index: index))
-//                                    .padding(.top)
-//                            }
-//                        }
-//                        .frame(maxWidth: .infinity)
-//                    }
-//                }
-                
-            }.padding(.horizontal)
+                .padding(.horizontal)
+                .background(Color.lgBackground.ignoresSafeArea())
+            }
         }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
         .onAppear(){
             Task {
                 do {
@@ -64,8 +59,6 @@ struct LevelsSelectionView: View {
                 }
             }
         }
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(Color.lgBackground.ignoresSafeArea())
     }
     
     func logout() {

@@ -7,6 +7,7 @@ struct LevelContainer: View {
     var levels: [String]
     var selected_user: User
     
+    
     var body: some View {
         VStack{
             if path.count == levels.count && !isShown{
@@ -21,5 +22,6 @@ struct LevelContainer: View {
 
         }
         .navigationBarBackButtonHidden(true)
+        .toolbar(.hidden, for: .tabBar)
     }
 }
