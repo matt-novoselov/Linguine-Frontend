@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1A2CDD342B039D6E002044D0 /* UIElements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2CDD332B039D6E002044D0 /* UIElements.swift */; };
 		1A56642D2B0AB8C5007E58E4 /* LevelContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A56642C2B0AB8C5007E58E4 /* LevelContainer.swift */; };
+		1A5664312B0B6D21007E58E4 /* LessonBuilderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5664302B0B6D21007E58E4 /* LessonBuilderModel.swift */; };
 		1A5756532B055B9500A60DE7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A5756522B055B9500A60DE7 /* Assets.xcassets */; };
 		1A57565F2B0565FA00A60DE7 /* confetti.lottie in Resources */ = {isa = PBXBuildFile; fileRef = 1A57565E2B0565FA00A60DE7 /* confetti.lottie */; };
 		1A9EA3782B06572B002CFE18 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9EA3772B06572B002CFE18 /* LoginView.swift */; };
@@ -45,6 +46,7 @@
 /* Begin PBXFileReference section */
 		1A2CDD332B039D6E002044D0 /* UIElements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIElements.swift; sourceTree = "<group>"; };
 		1A56642C2B0AB8C5007E58E4 /* LevelContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelContainer.swift; sourceTree = "<group>"; };
+		1A5664302B0B6D21007E58E4 /* LessonBuilderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonBuilderModel.swift; sourceTree = "<group>"; };
 		1A5756522B055B9500A60DE7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1A57565E2B0565FA00A60DE7 /* confetti.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = confetti.lottie; sourceTree = "<group>"; };
 		1A9EA3772B06572B002CFE18 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 				1A9EA38F2B06719C002CFE18 /* CustomSVGModelView.swift */,
 				1A9EA3AB2B077C58002CFE18 /* LeaderboardTemplate.swift */,
 				1AE6DFAF2B079F69005D98F7 /* LevelModelView.swift */,
+				1A5664302B0B6D21007E58E4 /* LessonBuilderModel.swift */,
 			);
 			path = "Model View";
 			sourceTree = "<group>";
@@ -324,6 +327,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A9EA3B72B0795E2002CFE18 /* LevelModel.swift in Sources */,
+				1A5664312B0B6D21007E58E4 /* LessonBuilderModel.swift in Sources */,
 				5CDD8867277102DC00052307 /* Bootstrap.swift in Sources */,
 				1AB574FE2B06172700AB46FC /* APICallModel.swift in Sources */,
 				1A9EA3782B06572B002CFE18 /* LoginView.swift in Sources */,

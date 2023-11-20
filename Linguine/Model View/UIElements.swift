@@ -394,15 +394,8 @@ struct LevelsUpBar: View {
     
     var body: some View {
         ZStack {
-            ///
-            Rectangle()
-                .frame(height: 25)
-                .foregroundColor(.green)
-                .opacity(0.2)
-            ///
-            
             HStack(alignment: .center, spacing: 0){
-                Text("flag")
+                ItalianFlag()
                 
                 Spacer()
                 
@@ -458,9 +451,39 @@ struct StartBubble: View {
         ZStack {
             Text("START")
                 .font(Font.custom("DINNextRoundedLTPro-Bold", size: 16))
-//                .foregroundColor(.lgPinkButton)
+                .foregroundColor(.lgPinkButton)
                 .foregroundColor(.red)
         }
+    }
+}
+
+struct ItalianFlag: View {
+    var body: some View {
+        ZStack {
+            RoundedRectangle(cornerRadius: 5)
+                .fill(.white)
+                .frame(width: 39, height: 25)
+            
+            HStack{
+                RoundedRectangle(cornerRadius: 3)
+                    .fill(.green)
+                    .frame(width: 12, height: 20)
+                    .padding(.leading, 3)
+                
+                Spacer()
+                
+                RoundedRectangle(cornerRadius: 3)
+                    .fill(.lgRedButton)
+                    .frame(width: 12, height: 20)
+                    .padding(.trailing, 3)
+            }
+            
+            Rectangle()
+                .fill(.white)
+                .frame(width: 12, height: 20)
+
+        }
+        .frame(width: 30)
     }
 }
 

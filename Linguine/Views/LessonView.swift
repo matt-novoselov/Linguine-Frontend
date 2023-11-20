@@ -7,7 +7,7 @@ struct LessonView: View {
     @State var detentHeight: CGFloat = 0
     @Binding var path: [Int]
     let count: Int
-    var levels: [String]
+    var selected_level: [LevelImage]
     @Binding var totalScore: Int
     
     var body: some View {

@@ -7,9 +7,10 @@ struct LevelsSelectionView: View {
     var selected_user: User
     let levelsLibrary: [LevelImage] = LevelImageLibrary().levels
     let levels_completed: Int = 3
-    var levels: [String] = ["One","Two","Three","Results"]
+    var lessonBuilderModel: LessonBuilderModel = LessonBuilderModel()
     @State private var path: [Int] = []
     @State var totalScore: Int = 0
+    @State var selectedLevelIndex: Int = 0
     
     func lesson_type(index:Int) -> Style {
         switch index {
@@ -35,14 +36,17 @@ struct LevelsSelectionView: View {
                         VStack(alignment: .leading){
                             ForEach(Array(levelsLibrary.enumerated()), id: \.element.id) { index, levels in
                                 VStack{
-                                    dropButtonRound(titleSymbol: levels.sfSymbol, action: {path.append(0)}, style: lesson_type(index: index))
+                                    dropButtonRound(titleSymbol: levels.sfSymbol, action: {
+                                        path.append(0)
+                                        selectedLevelIndex = index
+                                    }, style: lesson_type(index: index))
                                         .padding(.top)
                                 }
                             }
                             .frame(maxWidth: .infinity)
                         }
                     }.navigationDestination(for: Int.self) { int in
-                        LevelContainer(path: $path, count: int, levels: levels, selected_user: selected_user, totalScore: $totalScore)
+                        LevelContainer(path: $path, count: int, selected_level: lessonBuilderModel.lessons[selectedLevelIndex], selected_user: selected_user, totalScore: $totalScore)
                     }
                 }
                 .padding(.horizontal)
