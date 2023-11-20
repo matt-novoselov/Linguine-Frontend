@@ -15,8 +15,17 @@ struct Bootstrap: View {
                     .tabItem {
                         Label("Leaderboard", systemImage: "trophy.fill")
                     }
+            }.onAppear(){
+                Task {
+                    do {
+                        print(selected_user.id)
+                        print(selected_user.nickname)
+                        try await add_user_to_database(user_id: selected_user.id, nickname: selected_user.nickname)
+                    } catch {
+                        print(error)
+                    }
+                }
             }
-            
         }
         else {
             LoginView(user: $user)
