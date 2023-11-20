@@ -10,7 +10,7 @@ struct LevelsSelectionView: View {
     var lessonBuilderModel: LessonBuilderModel = LessonBuilderModel()
     @State private var path: [Int] = []
     @State var totalScore: Int = 0
-    @State var selectedLevelIndex: Int = 0
+    @State var selectedLevelIndex: Int?
     
     func lesson_type(index:Int) -> Style {
         switch index {
@@ -31,14 +31,16 @@ struct LevelsSelectionView: View {
                 VStack{
                     LevelsUpBar(action: self.logout, current_score: current_score)
                         .padding(.top)
+                    
+                    Text(selectedLevelIndex?.description ?? "No level selected")
 
                     ScrollView() {
                         VStack(alignment: .leading){
                             ForEach(Array(levelsLibrary.enumerated()), id: \.element.id) { index, levels in
                                 VStack{
                                     dropButtonRound(titleSymbol: levels.sfSymbol, action: {
-                                        path.append(0)
                                         selectedLevelIndex = index
+                                        path.append(0)
                                     }, style: lesson_type(index: index))
                                         .padding(.top)
                                 }
@@ -46,7 +48,7 @@ struct LevelsSelectionView: View {
                             .frame(maxWidth: .infinity)
                         }
                     }.navigationDestination(for: Int.self) { int in
-                        LevelContainer(path: $path, count: int, selected_level: lessonBuilderModel.lessons[selectedLevelIndex], selected_user: selected_user, totalScore: $totalScore)
+                        LevelContainer(path: $path, count: int, selected_level: lessonBuilderModel.lessons[selectedLevelIndex!], selected_user: selected_user, totalScore: $totalScore)
                     }
                 }
                 .padding(.horizontal)

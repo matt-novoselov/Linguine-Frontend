@@ -10,6 +10,49 @@
 		1A2CDD342B039D6E002044D0 /* UIElements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2CDD332B039D6E002044D0 /* UIElements.swift */; };
 		1A56642D2B0AB8C5007E58E4 /* LevelContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A56642C2B0AB8C5007E58E4 /* LevelContainer.swift */; };
 		1A5664312B0B6D21007E58E4 /* LessonBuilderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5664302B0B6D21007E58E4 /* LessonBuilderModel.swift */; };
+		1A56645D2B0B7E9C007E58E4 /* taco.lottie in Resources */ = {isa = PBXBuildFile; fileRef = 1A5664322B0B7E9A007E58E4 /* taco.lottie */; };
+		1A56645E2B0B7E9C007E58E4 /* fries.lottie in Resources */ = {isa = PBXBuildFile; fileRef = 1A5664332B0B7E9A007E58E4 /* fries.lottie */; };
+		1A56645F2B0B7E9C007E58E4 /* croissant.lottie in Resources */ = {isa = PBXBuildFile; fileRef = 1A5664342B0B7E9A007E58E4 /* croissant.lottie */; };
+		1A5664602B0B7E9C007E58E4 /* fried_eggs.lottie in Resources */ = {isa = PBXBuildFile; fileRef = 1A5664352B0B7E9A007E58E4 /* fried_eggs.lottie */; };
+		1A5664612B0B7E9C007E58E4 /* cracker.lottie in Resources */ = {isa = PBXBuildFile; fileRef = 1A5664362B0B7E9A007E58E4 /* cracker.lottie */; };
+		1A5664622B0B7E9C007E58E4 /* cheese.lottie in Resources */ = {isa = PBXBuildFile; fileRef = 1A5664372B0B7E9A007E58E4 /* cheese.lottie */; };
+		1A5664632B0B7E9C007E58E4 /* cupcake.lottie in Resources */ = {isa = PBXBuildFile; fileRef = 1A5664382B0B7E9A007E58E4 /* cupcake.lottie */; };
+		1A5664642B0B7E9C007E58E4 /* bananas.lottie in Resources */ = {isa = PBXBuildFile; fileRef = 1A5664392B0B7E9A007E58E4 /* bananas.lottie */; };
+		1A5664652B0B7E9C007E58E4 /* pudding.lottie in Resources */ = {isa = PBXBuildFile; fileRef = 1A56643A2B0B7E9A007E58E4 /* pudding.lottie */; };
+		1A5664662B0B7E9C007E58E4 /* cherry.lottie in Resources */ = {isa = PBXBuildFile; fileRef = 1A56643B2B0B7E9A007E58E4 /* cherry.lottie */; };
+		1A5664672B0B7E9C007E58E4 /* donut.lottie in Resources */ = {isa = PBXBuildFile; fileRef = 1A56643C2B0B7E9B007E58E4 /* donut.lottie */; };
+		1A5664682B0B7E9C007E58E4 /* pear.lottie in Resources */ = {isa = PBXBuildFile; fileRef = 1A56643D2B0B7E9B007E58E4 /* pear.lottie */; };
+		1A5664692B0B7E9C007E58E4 /* carrot.lottie in Resources */ = {isa = PBXBuildFile; fileRef = 1A56643E2B0B7E9B007E58E4 /* carrot.lottie */; };
+		1A56646A2B0B7E9C007E58E4 /* lemon.lottie in Resources */ = {isa = PBXBuildFile; fileRef = 1A56643F2B0B7E9B007E58E4 /* lemon.lottie */; };
+		1A56646B2B0B7E9C007E58E4 /* toaster.lottie in Resources */ = {isa = PBXBuildFile; fileRef = 1A5664402B0B7E9B007E58E4 /* toaster.lottie */; };
+		1A56646C2B0B7E9C007E58E4 /* burger.lottie in Resources */ = {isa = PBXBuildFile; fileRef = 1A5664412B0B7E9B007E58E4 /* burger.lottie */; };
+		1A56646D2B0B7E9C007E58E4 /* egg.lottie in Resources */ = {isa = PBXBuildFile; fileRef = 1A5664422B0B7E9B007E58E4 /* egg.lottie */; };
+		1A56646E2B0B7E9C007E58E4 /* hot_dog.lottie in Resources */ = {isa = PBXBuildFile; fileRef = 1A5664432B0B7E9B007E58E4 /* hot_dog.lottie */; };
+		1A56646F2B0B7E9C007E58E4 /* water.lottie in Resources */ = {isa = PBXBuildFile; fileRef = 1A5664442B0B7E9B007E58E4 /* water.lottie */; };
+		1A5664702B0B7E9C007E58E4 /* lemonade.lottie in Resources */ = {isa = PBXBuildFile; fileRef = 1A5664452B0B7E9B007E58E4 /* lemonade.lottie */; };
+		1A5664712B0B7E9C007E58E4 /* olive.lottie in Resources */ = {isa = PBXBuildFile; fileRef = 1A5664462B0B7E9B007E58E4 /* olive.lottie */; };
+		1A5664722B0B7E9C007E58E4 /* fish.lottie in Resources */ = {isa = PBXBuildFile; fileRef = 1A5664472B0B7E9B007E58E4 /* fish.lottie */; };
+		1A5664732B0B7E9C007E58E4 /* eggplant.lottie in Resources */ = {isa = PBXBuildFile; fileRef = 1A5664482B0B7E9B007E58E4 /* eggplant.lottie */; };
+		1A5664742B0B7E9C007E58E4 /* honey.lottie in Resources */ = {isa = PBXBuildFile; fileRef = 1A5664492B0B7E9B007E58E4 /* honey.lottie */; };
+		1A5664752B0B7E9C007E58E4 /* soup.lottie in Resources */ = {isa = PBXBuildFile; fileRef = 1A56644A2B0B7E9B007E58E4 /* soup.lottie */; };
+		1A5664762B0B7E9C007E58E4 /* menu.lottie in Resources */ = {isa = PBXBuildFile; fileRef = 1A56644B2B0B7E9B007E58E4 /* menu.lottie */; };
+		1A5664772B0B7E9C007E58E4 /* pepper.lottie in Resources */ = {isa = PBXBuildFile; fileRef = 1A56644C2B0B7E9B007E58E4 /* pepper.lottie */; };
+		1A5664782B0B7E9C007E58E4 /* mixer.lottie in Resources */ = {isa = PBXBuildFile; fileRef = 1A56644D2B0B7E9B007E58E4 /* mixer.lottie */; };
+		1A5664792B0B7E9C007E58E4 /* strawberry.lottie in Resources */ = {isa = PBXBuildFile; fileRef = 1A56644E2B0B7E9B007E58E4 /* strawberry.lottie */; };
+		1A56647A2B0B7E9C007E58E4 /* cake.lottie in Resources */ = {isa = PBXBuildFile; fileRef = 1A56644F2B0B7E9B007E58E4 /* cake.lottie */; };
+		1A56647B2B0B7E9C007E58E4 /* mashroom.lottie in Resources */ = {isa = PBXBuildFile; fileRef = 1A5664502B0B7E9B007E58E4 /* mashroom.lottie */; };
+		1A56647C2B0B7E9C007E58E4 /* chocolate.lottie in Resources */ = {isa = PBXBuildFile; fileRef = 1A5664512B0B7E9B007E58E4 /* chocolate.lottie */; };
+		1A56647D2B0B7E9C007E58E4 /* tea.lottie in Resources */ = {isa = PBXBuildFile; fileRef = 1A5664522B0B7E9B007E58E4 /* tea.lottie */; };
+		1A56647E2B0B7E9C007E58E4 /* melon.lottie in Resources */ = {isa = PBXBuildFile; fileRef = 1A5664532B0B7E9B007E58E4 /* melon.lottie */; };
+		1A56647F2B0B7E9C007E58E4 /* candy.lottie in Resources */ = {isa = PBXBuildFile; fileRef = 1A5664542B0B7E9B007E58E4 /* candy.lottie */; };
+		1A5664802B0B7E9C007E58E4 /* canned_food.lottie in Resources */ = {isa = PBXBuildFile; fileRef = 1A5664552B0B7E9B007E58E4 /* canned_food.lottie */; };
+		1A5664812B0B7E9C007E58E4 /* apple.lottie in Resources */ = {isa = PBXBuildFile; fileRef = 1A5664562B0B7E9B007E58E4 /* apple.lottie */; };
+		1A5664822B0B7E9C007E58E4 /* corn.lottie in Resources */ = {isa = PBXBuildFile; fileRef = 1A5664572B0B7E9C007E58E4 /* corn.lottie */; };
+		1A5664832B0B7E9C007E58E4 /* leaf.lottie in Resources */ = {isa = PBXBuildFile; fileRef = 1A5664582B0B7E9C007E58E4 /* leaf.lottie */; };
+		1A5664842B0B7E9C007E58E4 /* beer.lottie in Resources */ = {isa = PBXBuildFile; fileRef = 1A5664592B0B7E9C007E58E4 /* beer.lottie */; };
+		1A5664852B0B7E9C007E58E4 /* shrimp.lottie in Resources */ = {isa = PBXBuildFile; fileRef = 1A56645A2B0B7E9C007E58E4 /* shrimp.lottie */; };
+		1A5664862B0B7E9C007E58E4 /* sushi.lottie in Resources */ = {isa = PBXBuildFile; fileRef = 1A56645B2B0B7E9C007E58E4 /* sushi.lottie */; };
+		1A5664872B0B7E9C007E58E4 /* cancer.lottie in Resources */ = {isa = PBXBuildFile; fileRef = 1A56645C2B0B7E9C007E58E4 /* cancer.lottie */; };
 		1A5756532B055B9500A60DE7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A5756522B055B9500A60DE7 /* Assets.xcassets */; };
 		1A57565F2B0565FA00A60DE7 /* confetti.lottie in Resources */ = {isa = PBXBuildFile; fileRef = 1A57565E2B0565FA00A60DE7 /* confetti.lottie */; };
 		1A9EA3782B06572B002CFE18 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9EA3772B06572B002CFE18 /* LoginView.swift */; };
@@ -47,6 +90,49 @@
 		1A2CDD332B039D6E002044D0 /* UIElements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIElements.swift; sourceTree = "<group>"; };
 		1A56642C2B0AB8C5007E58E4 /* LevelContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelContainer.swift; sourceTree = "<group>"; };
 		1A5664302B0B6D21007E58E4 /* LessonBuilderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonBuilderModel.swift; sourceTree = "<group>"; };
+		1A5664322B0B7E9A007E58E4 /* taco.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = taco.lottie; sourceTree = "<group>"; };
+		1A5664332B0B7E9A007E58E4 /* fries.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = fries.lottie; sourceTree = "<group>"; };
+		1A5664342B0B7E9A007E58E4 /* croissant.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = croissant.lottie; sourceTree = "<group>"; };
+		1A5664352B0B7E9A007E58E4 /* fried_eggs.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = fried_eggs.lottie; sourceTree = "<group>"; };
+		1A5664362B0B7E9A007E58E4 /* cracker.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = cracker.lottie; sourceTree = "<group>"; };
+		1A5664372B0B7E9A007E58E4 /* cheese.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = cheese.lottie; sourceTree = "<group>"; };
+		1A5664382B0B7E9A007E58E4 /* cupcake.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = cupcake.lottie; sourceTree = "<group>"; };
+		1A5664392B0B7E9A007E58E4 /* bananas.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = bananas.lottie; sourceTree = "<group>"; };
+		1A56643A2B0B7E9A007E58E4 /* pudding.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = pudding.lottie; sourceTree = "<group>"; };
+		1A56643B2B0B7E9A007E58E4 /* cherry.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = cherry.lottie; sourceTree = "<group>"; };
+		1A56643C2B0B7E9B007E58E4 /* donut.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = donut.lottie; sourceTree = "<group>"; };
+		1A56643D2B0B7E9B007E58E4 /* pear.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = pear.lottie; sourceTree = "<group>"; };
+		1A56643E2B0B7E9B007E58E4 /* carrot.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = carrot.lottie; sourceTree = "<group>"; };
+		1A56643F2B0B7E9B007E58E4 /* lemon.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = lemon.lottie; sourceTree = "<group>"; };
+		1A5664402B0B7E9B007E58E4 /* toaster.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = toaster.lottie; sourceTree = "<group>"; };
+		1A5664412B0B7E9B007E58E4 /* burger.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = burger.lottie; sourceTree = "<group>"; };
+		1A5664422B0B7E9B007E58E4 /* egg.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = egg.lottie; sourceTree = "<group>"; };
+		1A5664432B0B7E9B007E58E4 /* hot_dog.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = hot_dog.lottie; sourceTree = "<group>"; };
+		1A5664442B0B7E9B007E58E4 /* water.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = water.lottie; sourceTree = "<group>"; };
+		1A5664452B0B7E9B007E58E4 /* lemonade.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = lemonade.lottie; sourceTree = "<group>"; };
+		1A5664462B0B7E9B007E58E4 /* olive.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = olive.lottie; sourceTree = "<group>"; };
+		1A5664472B0B7E9B007E58E4 /* fish.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = fish.lottie; sourceTree = "<group>"; };
+		1A5664482B0B7E9B007E58E4 /* eggplant.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = eggplant.lottie; sourceTree = "<group>"; };
+		1A5664492B0B7E9B007E58E4 /* honey.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = honey.lottie; sourceTree = "<group>"; };
+		1A56644A2B0B7E9B007E58E4 /* soup.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = soup.lottie; sourceTree = "<group>"; };
+		1A56644B2B0B7E9B007E58E4 /* menu.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = menu.lottie; sourceTree = "<group>"; };
+		1A56644C2B0B7E9B007E58E4 /* pepper.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = pepper.lottie; sourceTree = "<group>"; };
+		1A56644D2B0B7E9B007E58E4 /* mixer.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = mixer.lottie; sourceTree = "<group>"; };
+		1A56644E2B0B7E9B007E58E4 /* strawberry.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = strawberry.lottie; sourceTree = "<group>"; };
+		1A56644F2B0B7E9B007E58E4 /* cake.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = cake.lottie; sourceTree = "<group>"; };
+		1A5664502B0B7E9B007E58E4 /* mashroom.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = mashroom.lottie; sourceTree = "<group>"; };
+		1A5664512B0B7E9B007E58E4 /* chocolate.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = chocolate.lottie; sourceTree = "<group>"; };
+		1A5664522B0B7E9B007E58E4 /* tea.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = tea.lottie; sourceTree = "<group>"; };
+		1A5664532B0B7E9B007E58E4 /* melon.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = melon.lottie; sourceTree = "<group>"; };
+		1A5664542B0B7E9B007E58E4 /* candy.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = candy.lottie; sourceTree = "<group>"; };
+		1A5664552B0B7E9B007E58E4 /* canned_food.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = canned_food.lottie; sourceTree = "<group>"; };
+		1A5664562B0B7E9B007E58E4 /* apple.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = apple.lottie; sourceTree = "<group>"; };
+		1A5664572B0B7E9C007E58E4 /* corn.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = corn.lottie; sourceTree = "<group>"; };
+		1A5664582B0B7E9C007E58E4 /* leaf.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = leaf.lottie; sourceTree = "<group>"; };
+		1A5664592B0B7E9C007E58E4 /* beer.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = beer.lottie; sourceTree = "<group>"; };
+		1A56645A2B0B7E9C007E58E4 /* shrimp.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = shrimp.lottie; sourceTree = "<group>"; };
+		1A56645B2B0B7E9C007E58E4 /* sushi.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = sushi.lottie; sourceTree = "<group>"; };
+		1A56645C2B0B7E9C007E58E4 /* cancer.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = cancer.lottie; sourceTree = "<group>"; };
 		1A5756522B055B9500A60DE7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1A57565E2B0565FA00A60DE7 /* confetti.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = confetti.lottie; sourceTree = "<group>"; };
 		1A9EA3772B06572B002CFE18 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -145,6 +231,49 @@
 				1A9EA3B22B0794AE002CFE18 /* tomato.lottie */,
 				1A9EA3B12B0794AE002CFE18 /* ice_cream.lottie */,
 				1A9EA3AD2B0791C9002CFE18 /* watermelon.lottie */,
+				1A5664562B0B7E9B007E58E4 /* apple.lottie */,
+				1A5664392B0B7E9A007E58E4 /* bananas.lottie */,
+				1A5664592B0B7E9C007E58E4 /* beer.lottie */,
+				1A5664412B0B7E9B007E58E4 /* burger.lottie */,
+				1A56644F2B0B7E9B007E58E4 /* cake.lottie */,
+				1A56645C2B0B7E9C007E58E4 /* cancer.lottie */,
+				1A5664542B0B7E9B007E58E4 /* candy.lottie */,
+				1A5664552B0B7E9B007E58E4 /* canned_food.lottie */,
+				1A56643E2B0B7E9B007E58E4 /* carrot.lottie */,
+				1A5664372B0B7E9A007E58E4 /* cheese.lottie */,
+				1A56643B2B0B7E9A007E58E4 /* cherry.lottie */,
+				1A5664512B0B7E9B007E58E4 /* chocolate.lottie */,
+				1A5664572B0B7E9C007E58E4 /* corn.lottie */,
+				1A5664362B0B7E9A007E58E4 /* cracker.lottie */,
+				1A5664342B0B7E9A007E58E4 /* croissant.lottie */,
+				1A5664382B0B7E9A007E58E4 /* cupcake.lottie */,
+				1A56643C2B0B7E9B007E58E4 /* donut.lottie */,
+				1A5664422B0B7E9B007E58E4 /* egg.lottie */,
+				1A5664482B0B7E9B007E58E4 /* eggplant.lottie */,
+				1A5664472B0B7E9B007E58E4 /* fish.lottie */,
+				1A5664352B0B7E9A007E58E4 /* fried_eggs.lottie */,
+				1A5664332B0B7E9A007E58E4 /* fries.lottie */,
+				1A5664492B0B7E9B007E58E4 /* honey.lottie */,
+				1A5664432B0B7E9B007E58E4 /* hot_dog.lottie */,
+				1A5664582B0B7E9C007E58E4 /* leaf.lottie */,
+				1A56643F2B0B7E9B007E58E4 /* lemon.lottie */,
+				1A5664452B0B7E9B007E58E4 /* lemonade.lottie */,
+				1A5664502B0B7E9B007E58E4 /* mashroom.lottie */,
+				1A5664532B0B7E9B007E58E4 /* melon.lottie */,
+				1A56644B2B0B7E9B007E58E4 /* menu.lottie */,
+				1A56644D2B0B7E9B007E58E4 /* mixer.lottie */,
+				1A5664462B0B7E9B007E58E4 /* olive.lottie */,
+				1A56643D2B0B7E9B007E58E4 /* pear.lottie */,
+				1A56644C2B0B7E9B007E58E4 /* pepper.lottie */,
+				1A56643A2B0B7E9A007E58E4 /* pudding.lottie */,
+				1A56645A2B0B7E9C007E58E4 /* shrimp.lottie */,
+				1A56644A2B0B7E9B007E58E4 /* soup.lottie */,
+				1A56644E2B0B7E9B007E58E4 /* strawberry.lottie */,
+				1A56645B2B0B7E9C007E58E4 /* sushi.lottie */,
+				1A5664322B0B7E9A007E58E4 /* taco.lottie */,
+				1A5664522B0B7E9B007E58E4 /* tea.lottie */,
+				1A5664402B0B7E9B007E58E4 /* toaster.lottie */,
+				1A5664442B0B7E9B007E58E4 /* water.lottie */,
 			);
 			path = SVGs;
 			sourceTree = "<group>";
@@ -280,20 +409,63 @@
 			buildActionMask = 2147483647;
 			files = (
 				5C5DBE88277212E000E19935 /* Auth0.plist in Resources */,
+				1A5664752B0B7E9C007E58E4 /* soup.lottie in Resources */,
+				1A5664662B0B7E9C007E58E4 /* cherry.lottie in Resources */,
+				1A56647D2B0B7E9C007E58E4 /* tea.lottie in Resources */,
+				1A5664712B0B7E9C007E58E4 /* olive.lottie in Resources */,
+				1A5664622B0B7E9C007E58E4 /* cheese.lottie in Resources */,
+				1A56645D2B0B7E9C007E58E4 /* taco.lottie in Resources */,
+				1A5664852B0B7E9C007E58E4 /* shrimp.lottie in Resources */,
 				1A9EA3832B065C24002CFE18 /* DINNextRoundedLTPro-Medium.otf in Resources */,
+				1A5664602B0B7E9C007E58E4 /* fried_eggs.lottie in Resources */,
+				1A5664632B0B7E9C007E58E4 /* cupcake.lottie in Resources */,
+				1A5664792B0B7E9C007E58E4 /* strawberry.lottie in Resources */,
+				1A5664722B0B7E9C007E58E4 /* fish.lottie in Resources */,
+				1A5664762B0B7E9C007E58E4 /* menu.lottie in Resources */,
 				1A9EA3802B065C24002CFE18 /* DINNextRoundedLTPro-Regular.otf in Resources */,
+				1A56646E2B0B7E9C007E58E4 /* hot_dog.lottie in Resources */,
 				1A9EA37F2B065C24002CFE18 /* DINNextRoundedLTPro-Bold.otf in Resources */,
+				1A5664772B0B7E9C007E58E4 /* pepper.lottie in Resources */,
+				1A5664782B0B7E9C007E58E4 /* mixer.lottie in Resources */,
+				1A5664832B0B7E9C007E58E4 /* leaf.lottie in Resources */,
+				1A56647F2B0B7E9C007E58E4 /* candy.lottie in Resources */,
+				1A56646F2B0B7E9C007E58E4 /* water.lottie in Resources */,
+				1A5664672B0B7E9C007E58E4 /* donut.lottie in Resources */,
+				1A5664652B0B7E9C007E58E4 /* pudding.lottie in Resources */,
+				1A56646B2B0B7E9C007E58E4 /* toaster.lottie in Resources */,
 				1A9EA3B42B0794AE002CFE18 /* ice_cream.lottie in Resources */,
 				1A9EA3812B065C24002CFE18 /* Feather.ttf in Resources */,
+				1A5664732B0B7E9C007E58E4 /* eggplant.lottie in Resources */,
+				1A5664612B0B7E9C007E58E4 /* cracker.lottie in Resources */,
 				1A5756532B055B9500A60DE7 /* Assets.xcassets in Resources */,
 				1A9EA3AE2B0791C9002CFE18 /* watermelon.lottie in Resources */,
 				1A9EA39A2B06A606002CFE18 /* cup_demo.lottie in Resources */,
 				1A9EA3B52B0794AE002CFE18 /* tomato.lottie in Resources */,
+				1A56645E2B0B7E9C007E58E4 /* fries.lottie in Resources */,
+				1A56647B2B0B7E9C007E58E4 /* mashroom.lottie in Resources */,
+				1A56647A2B0B7E9C007E58E4 /* cake.lottie in Resources */,
+				1A5664702B0B7E9C007E58E4 /* lemonade.lottie in Resources */,
 				1A9EA3AA2B0763AD002CFE18 /* dog_walking.lottie in Resources */,
 				1A9EA3822B065C24002CFE18 /* DINNextRoundedLTPro-Light.otf in Resources */,
+				1A56647E2B0B7E9C007E58E4 /* melon.lottie in Resources */,
 				1A9EA3892B066649002CFE18 /* dog_main.lottie in Resources */,
+				1A5664802B0B7E9C007E58E4 /* canned_food.lottie in Resources */,
 				1A57565F2B0565FA00A60DE7 /* confetti.lottie in Resources */,
+				1A5664812B0B7E9C007E58E4 /* apple.lottie in Resources */,
+				1A5664692B0B7E9C007E58E4 /* carrot.lottie in Resources */,
 				1A9EA3B32B0794AE002CFE18 /* pizza.lottie in Resources */,
+				1A56647C2B0B7E9C007E58E4 /* chocolate.lottie in Resources */,
+				1A5664682B0B7E9C007E58E4 /* pear.lottie in Resources */,
+				1A56646C2B0B7E9C007E58E4 /* burger.lottie in Resources */,
+				1A56646D2B0B7E9C007E58E4 /* egg.lottie in Resources */,
+				1A56645F2B0B7E9C007E58E4 /* croissant.lottie in Resources */,
+				1A5664742B0B7E9C007E58E4 /* honey.lottie in Resources */,
+				1A5664862B0B7E9C007E58E4 /* sushi.lottie in Resources */,
+				1A5664842B0B7E9C007E58E4 /* beer.lottie in Resources */,
+				1A5664872B0B7E9C007E58E4 /* cancer.lottie in Resources */,
+				1A5664642B0B7E9C007E58E4 /* bananas.lottie in Resources */,
+				1A5664822B0B7E9C007E58E4 /* corn.lottie in Resources */,
+				1A56646A2B0B7E9C007E58E4 /* lemon.lottie in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

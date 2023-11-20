@@ -15,134 +15,134 @@ class LevelImageLibrary{
         ),
 
         LevelImage(
-            prompt: "anguria",
-            correct_answer: "watermelon",
+            prompt: "Birra",
+            correct_answer: "beer",
             sfSymbol: "star.fill",
             variants: [
-                LevelImageVariants(title: "1watermelon"),
-                LevelImageVariants(title: "tomato"),
-                LevelImageVariants(title: "pizza"),
-                LevelImageVariants(title: "ice cream"),
+                LevelImageVariants(title: "apple"),
+                LevelImageVariants(title: "bananas"),
+                LevelImageVariants(title: "beer"),
+                LevelImageVariants(title: "burger"),
             ]
         ),
         
         LevelImage(
-            prompt: "anguria",
-            correct_answer: "watermelon",
+            prompt: "Caramella",
+            correct_answer: "candy",
             sfSymbol: "star.fill",
             variants: [
-                LevelImageVariants(title: "2watermelon"),
-                LevelImageVariants(title: "tomato"),
-                LevelImageVariants(title: "pizza"),
-                LevelImageVariants(title: "ice cream"),
+                LevelImageVariants(title: "cake"),
+                LevelImageVariants(title: "cancer"),
+                LevelImageVariants(title: "candy"),
+                LevelImageVariants(title: "canned food"),
             ]
         ),
 
         LevelImage(
-            prompt: "anguria",
-            correct_answer: "watermelon",
+            prompt: "Formaggio",
+            correct_answer: "cheese",
             sfSymbol: "star.fill",
             variants: [
-                LevelImageVariants(title: "3watermelon"),
-                LevelImageVariants(title: "tomato"),
-                LevelImageVariants(title: "pizza"),
-                LevelImageVariants(title: "ice cream"),
+                LevelImageVariants(title: "carrot"),
+                LevelImageVariants(title: "cheese"),
+                LevelImageVariants(title: "cherry"),
+                LevelImageVariants(title: "chocolate"),
             ]
         ),
         
         LevelImage(
-            prompt: "anguria",
-            correct_answer: "watermelon",
+            prompt: "Mais",
+            correct_answer: "corn",
             sfSymbol: "star.fill",
             variants: [
-                LevelImageVariants(title: "4watermelon"),
-                LevelImageVariants(title: "tomato"),
-                LevelImageVariants(title: "pizza"),
-                LevelImageVariants(title: "ice cream"),
+                LevelImageVariants(title: "corn"),
+                LevelImageVariants(title: "cracker"),
+                LevelImageVariants(title: "croissant"),
+                LevelImageVariants(title: "cupcake"),
             ]
         ),
 
         LevelImage(
-            prompt: "anguria",
-            correct_answer: "watermelon",
+            prompt: "Pescare",
+            correct_answer: "fish",
             sfSymbol: "star.fill",
             variants: [
-                LevelImageVariants(title: "5watermelon"),
-                LevelImageVariants(title: "tomato"),
-                LevelImageVariants(title: "pizza"),
-                LevelImageVariants(title: "ice cream"),
+                LevelImageVariants(title: "donut"),
+                LevelImageVariants(title: "egg"),
+                LevelImageVariants(title: "eggplant"),
+                LevelImageVariants(title: "fish"),
             ]
         ),
         
         LevelImage(
-            prompt: "anguria",
-            correct_answer: "watermelon",
+            prompt: "Miele",
+            correct_answer: "honey",
             sfSymbol: "star.fill",
             variants: [
-                LevelImageVariants(title: "6watermelon"),
-                LevelImageVariants(title: "tomato"),
-                LevelImageVariants(title: "pizza"),
-                LevelImageVariants(title: "ice cream"),
+                LevelImageVariants(title: "fried eggs"),
+                LevelImageVariants(title: "fries"),
+                LevelImageVariants(title: "honey"),
+                LevelImageVariants(title: "hot dog"),
             ]
         ),
 
         LevelImage(
-            prompt: "anguria",
-            correct_answer: "watermelon",
+            prompt: "Limone",
+            correct_answer: "lemon",
             sfSymbol: "star.fill",
             variants: [
-                LevelImageVariants(title: "7watermelon"),
-                LevelImageVariants(title: "tomato"),
-                LevelImageVariants(title: "pizza"),
-                LevelImageVariants(title: "ice cream"),
+                LevelImageVariants(title: "leaf"),
+                LevelImageVariants(title: "lemon"),
+                LevelImageVariants(title: "lemonade"),
+                LevelImageVariants(title: "mashroom"),
             ]
         ),
         
         LevelImage(
-            prompt: "anguria",
-            correct_answer: "watermelon",
+            prompt: "Melone ",
+            correct_answer: "melon",
             sfSymbol: "star.fill",
             variants: [
-                LevelImageVariants(title: "8watermelon"),
-                LevelImageVariants(title: "tomato"),
+                LevelImageVariants(title: "melon"),
+                LevelImageVariants(title: "menu"),
                 LevelImageVariants(title: "pizza"),
-                LevelImageVariants(title: "ice cream"),
+                LevelImageVariants(title: "mixer"),
             ]
         ),
 
         LevelImage(
-            prompt: "anguria",
-            correct_answer: "watermelon",
+            prompt: "pepe",
+            correct_answer: "pepper",
             sfSymbol: "star.fill",
             variants: [
-                LevelImageVariants(title: "9watermelon"),
-                LevelImageVariants(title: "tomato"),
-                LevelImageVariants(title: "pizza"),
-                LevelImageVariants(title: "ice cream"),
+                LevelImageVariants(title: "olive"),
+                LevelImageVariants(title: "pear"),
+                LevelImageVariants(title: "pepper"),
+                LevelImageVariants(title: "pudding"),
             ]
         ),
         
         LevelImage(
-            prompt: "anguria",
-            correct_answer: "watermelon",
+            prompt: "fragola",
+            correct_answer: "strawberry",
             sfSymbol: "star.fill",
             variants: [
-                LevelImageVariants(title: "10watermelon"),
-                LevelImageVariants(title: "tomato"),
-                LevelImageVariants(title: "pizza"),
-                LevelImageVariants(title: "ice cream"),
+                LevelImageVariants(title: "shrimp"),
+                LevelImageVariants(title: "soup"),
+                LevelImageVariants(title: "strawberry"),
+                LevelImageVariants(title: "sushi"),
             ]
         ),
 
         LevelImage(
-            prompt: "anguria",
-            correct_answer: "watermelon",
+            prompt: "tè",
+            correct_answer: "tea",
             sfSymbol: "star.fill",
             variants: [
-                LevelImageVariants(title: "11watermelon"),
-                LevelImageVariants(title: "tomato"),
-                LevelImageVariants(title: "pizza"),
-                LevelImageVariants(title: "ice cream"),
+                LevelImageVariants(title: "taco"),
+                LevelImageVariants(title: "tea"),
+                LevelImageVariants(title: "toaster"),
+                LevelImageVariants(title: "water"),
             ]
         ),
     ]
