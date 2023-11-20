@@ -448,11 +448,18 @@ struct ProgressBar: View {
 struct StartBubble: View {
     var body: some View {
         ZStack {
+            blobText()
+                .fill(.lgBackground)
+                .stroke(.lgDisabledButton, lineWidth: 2)
+                .frame(width: 75, height: 50)
+            
             Text("START")
                 .font(Font.custom("DINNextRoundedLTPro-Bold", size: 16))
                 .foregroundColor(.lgPinkButton)
                 .foregroundColor(.red)
+                .padding(.bottom,5)
         }
+        .offset(y: -40)
     }
 }
 
@@ -488,11 +495,11 @@ struct ItalianFlag: View {
 
 #Preview {
     VStack{
+        Spacer()
+        
         dropButtonRound(titleSymbol: "star.fill", action: {}, style: .standart)
         
         Spacer()
-        
-        LevelsUpBar(action: {}, current_score: 0)
     }
     .padding(.horizontal)
     .frame(maxWidth: .infinity, maxHeight: .infinity)

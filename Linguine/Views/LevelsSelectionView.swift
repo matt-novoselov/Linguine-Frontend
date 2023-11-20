@@ -11,6 +11,7 @@ struct LevelsSelectionView: View {
     @State private var path: [Int] = []
     @State var totalScore: Int = 0
     @State var selectedLevelIndex: Int?
+    var wavePattern: [Int] = generateWavePattern(length: 12 + 1)
     
     func lesson_type(index:Int) -> Style {
         switch index {
@@ -33,22 +34,21 @@ struct LevelsSelectionView: View {
                         .padding(.top)
                     
                     Text(selectedLevelIndex?.description ?? "No level selected").hidden().frame(width: 0,height: 0).frame( maxWidth: 0, maxHeight: 0)
-
-                    ScrollView() {
+                    
+                    ScrollView(showsIndicators: false) {
                         VStack(alignment: .leading){
                             ForEach(Array(levelsLibrary.enumerated()), id: \.element.id) { index, levels in
-                                VStack{
-                                    dropButtonRound(titleSymbol: levels.sfSymbol, action: {
-                                        selectedLevelIndex = index
-                                        path.append(0)
-                                        totalScore = 0
-                                    }, style: lesson_type(index: index))
-                                        .padding(.top)
-                                }
+                                dropButtonRound(titleSymbol: levels.sfSymbol, action: {
+                                    selectedLevelIndex = index
+                                    path.append(0)
+                                    totalScore = 0
+                                }, style: lesson_type(index: index))
+                                .padding(.top)
+                                .padding(.leading, CGFloat(wavePattern[index]))
                             }
-                            .frame(maxWidth: .infinity)
                         }
-                    }.navigationDestination(for: Int.self) { int in
+                    }
+                    .navigationDestination(for: Int.self) { int in
                         LevelContainer(path: $path, count: int, selected_level: lessonBuilderModel.lessons[selectedLevelIndex!], selected_user: selected_user, totalScore: $totalScore, current_score: $current_score)
                     }
                 }

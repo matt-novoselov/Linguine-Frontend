@@ -2,7 +2,6 @@ import Foundation
 
 class LessonBuilderModel {
     var lib: [LevelImage]
-    
     var lessons: [[LevelImage]]
 
     init() {

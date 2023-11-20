@@ -9,11 +9,11 @@ struct Bootstrap: View {
             TabView {
                 LevelsSelectionView(user: $user, selected_user: selected_user)
                     .tabItem {
-                        Label("Home", systemImage: "house.fill")
+                        Label("", systemImage: "house.fill")
                     }
                 LeaderboardView(selected_user: selected_user)
                     .tabItem {
-                        Label("Leaderboard", systemImage: "trophy.fill")
+                        Label("", systemImage: "trophy.fill")
                     }
             }.onAppear(){
                 Task {
