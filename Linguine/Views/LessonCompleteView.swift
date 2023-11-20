@@ -4,7 +4,7 @@ import Auth0
 struct LessonCompleteView: View {
     @Binding var path: [Int]
     var selected_user: User
-    var earnedXP: Int
+    @Binding var totalScore: Int
     
     var body: some View {
         ZStack{
@@ -21,11 +21,13 @@ struct LessonCompleteView: View {
                     .font(Font.custom("DINNextRoundedLTPro-Bold", size: 32))
                     .foregroundColor(.lgPinkButton)
                 
-                summuryBox(earnedXP: earnedXP)
+                summuryBox(earnedXP: totalScore)
                 
                 Spacer()
                 
-                dropButton(title: "Continue", action: {path = []}, style: .standart)
+                dropButton(title: "Continue", action: {
+                    path = []
+                    totalScore=0}, style: .standart)
                     .padding(.bottom)
             }
             .padding(.horizontal)
@@ -34,8 +36,8 @@ struct LessonCompleteView: View {
         .onAppear {
             Task {
                 do {
-                    _ = try await update_score_by_id(user_id: selected_user.id, new_score: earnedXP)
-                    print("Updated score \(earnedXP)")
+                    _ = try await update_score_by_id(user_id: selected_user.id, new_score: totalScore)
+                    print("Updated score \(totalScore)")
                 } catch {
                     print(error)
                 }

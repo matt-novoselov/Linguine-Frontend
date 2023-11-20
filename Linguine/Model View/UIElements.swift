@@ -305,6 +305,7 @@ struct levelResult: View {
     @Binding var path: [Int]
     let count: Int
     @Environment(\.dismiss) var dismiss
+    @Binding var totalScore: Int
     
     var isCorrect: Bool {
         return correctAnswers == selectedAnswer
@@ -346,6 +347,10 @@ struct levelResult: View {
             }
 
             dropButton(title: isCorrect ? "continue" : "got it", action: {
+                if isCorrect{
+                    totalScore+=50
+                    print(totalScore)
+                }
                 path.append(count + 1)
                 self.dismiss()
             }, style: isCorrect ? .correct : .mistake)
@@ -389,22 +394,21 @@ struct LevelsUpBar: View {
     
     var body: some View {
         ZStack {
-//            ///
-//            Rectangle()
-//                .frame(height: 25)
-//                .foregroundColor(.green)
-//                .opacity(0.2)
-//            ///
+            ///
+            Rectangle()
+                .frame(height: 25)
+                .foregroundColor(.green)
+                .opacity(0.2)
+            ///
             
             HStack(alignment: .center, spacing: 0){
                 Text("flag")
                 
                 Spacer()
                 
-                HStack(spacing: 5){
-                    Image(systemName: "bolt.fill")
-                        .font(.system(size: 16))
-                        .fontWeight(.heavy)
+                HStack(spacing: 6){
+                    LightningIcon()
+                        .frame(width: 15,height: 18)
                         .foregroundColor(.lgBlueIcon)
                     
                     Text("\(current_score == nil ? 0 : current_score!) XP")
@@ -463,6 +467,10 @@ struct StartBubble: View {
 #Preview {
     VStack{
         dropButtonRound(titleSymbol: "star.fill", action: {}, style: .standart)
+        
+        Spacer()
+        
+        LevelsUpBar(action: {}, current_score: 0)
     }
     .padding(.horizontal)
     .frame(maxWidth: .infinity, maxHeight: .infinity)

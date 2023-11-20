@@ -6,15 +6,16 @@ struct LevelContainer: View {
     @State var count: Int
     var levels: [String]
     var selected_user: User
+    @Binding var totalScore: Int
     
     
     var body: some View {
-        VStack{
+        VStack{            
             if path.count == levels.count && !isShown{
-                LessonCompleteView(path: $path, selected_user: selected_user, earnedXP: 0)
+                LessonCompleteView(path: $path, selected_user: selected_user, totalScore: $totalScore)
             }
             else {
-                LessonView(levelModel: LevelImageLibrary().levels[count], path: $path, count: count, levels: levels)
+                LessonView(levelModel: LevelImageLibrary().levels[count], path: $path, count: count, levels: levels, totalScore: $totalScore)
                 .onAppear(){
                     isShown.toggle()
                 }

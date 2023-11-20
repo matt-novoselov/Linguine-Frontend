@@ -8,6 +8,7 @@ struct LessonView: View {
     @Binding var path: [Int]
     let count: Int
     var levels: [String]
+    @Binding var totalScore: Int
     
     var body: some View {
         let amountOfMenus = levelModel.variants.count
@@ -49,7 +50,7 @@ struct LessonView: View {
         }
         .background(Color.lgBackground.ignoresSafeArea())
         .sheet(isPresented: $showingCredits) {
-            levelResult(correctAnswers: levelModel.correct_answer, selectedAnswer: levelModel.variants[selectedButtonIndex!].title, path: $path, count: count)
+            levelResult(correctAnswers: levelModel.correct_answer, selectedAnswer: levelModel.variants[selectedButtonIndex!].title, path: $path, count: count, totalScore: $totalScore)
                 .readHeight()
                 .onPreferenceChange(HeightPreferenceKey.self) { height in
                     if let height {
@@ -62,9 +63,3 @@ struct LessonView: View {
         }
     }
 }
-
-
-
-//#Preview {
-//    LessonView(levelModel: <#T##LevelImage#>, path: <#T##[Int]#>, count: <#T##Int#>, levels: <#T##[String]#>)
-//}

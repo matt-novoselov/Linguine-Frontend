@@ -9,6 +9,7 @@ struct LevelsSelectionView: View {
     let levels_completed: Int = 3
     var levels: [String] = ["One","Two","Three","Results"]
     @State private var path: [Int] = []
+    @State var totalScore: Int = 0
     
     func lesson_type(index:Int) -> Style {
         switch index {
@@ -41,7 +42,7 @@ struct LevelsSelectionView: View {
                             .frame(maxWidth: .infinity)
                         }
                     }.navigationDestination(for: Int.self) { int in
-                        LevelContainer(path: $path, count: int, levels: levels, selected_user: selected_user)
+                        LevelContainer(path: $path, count: int, levels: levels, selected_user: selected_user, totalScore: $totalScore)
                     }
                 }
                 .padding(.horizontal)
