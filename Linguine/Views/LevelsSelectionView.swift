@@ -32,7 +32,7 @@ struct LevelsSelectionView: View {
                     LevelsUpBar(action: self.logout, current_score: current_score)
                         .padding(.top)
                     
-                    Text(selectedLevelIndex?.description ?? "No level selected")
+                    Text(selectedLevelIndex?.description ?? "No level selected").hidden().frame(width: 0,height: 0).frame( maxWidth: 0, maxHeight: 0)
 
                     ScrollView() {
                         VStack(alignment: .leading){
@@ -41,6 +41,7 @@ struct LevelsSelectionView: View {
                                     dropButtonRound(titleSymbol: levels.sfSymbol, action: {
                                         selectedLevelIndex = index
                                         path.append(0)
+                                        totalScore = 0
                                     }, style: lesson_type(index: index))
                                         .padding(.top)
                                 }
@@ -48,7 +49,7 @@ struct LevelsSelectionView: View {
                             .frame(maxWidth: .infinity)
                         }
                     }.navigationDestination(for: Int.self) { int in
-                        LevelContainer(path: $path, count: int, selected_level: lessonBuilderModel.lessons[selectedLevelIndex!], selected_user: selected_user, totalScore: $totalScore)
+                        LevelContainer(path: $path, count: int, selected_level: lessonBuilderModel.lessons[selectedLevelIndex!], selected_user: selected_user, totalScore: $totalScore, current_score: $current_score)
                     }
                 }
                 .padding(.horizontal)

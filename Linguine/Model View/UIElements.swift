@@ -349,7 +349,6 @@ struct levelResult: View {
             dropButton(title: isCorrect ? "continue" : "got it", action: {
                 if isCorrect{
                     totalScore+=50
-                    print(totalScore)
                 }
                 path.append(count + 1)
                 self.dismiss()

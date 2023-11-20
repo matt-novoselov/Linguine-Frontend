@@ -5,6 +5,7 @@ struct LessonCompleteView: View {
     @Binding var path: [Int]
     var selected_user: User
     @Binding var totalScore: Int
+    @Binding var current_score: Int
     
     var body: some View {
         ZStack{
@@ -37,6 +38,7 @@ struct LessonCompleteView: View {
             Task {
                 do {
                     _ = try await update_score_by_id(user_id: selected_user.id, new_score: totalScore)
+                    current_score += totalScore
                     print("Updated score \(totalScore)")
                 } catch {
                     print(error)

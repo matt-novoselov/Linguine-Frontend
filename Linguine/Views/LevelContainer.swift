@@ -7,12 +7,13 @@ struct LevelContainer: View {
     var selected_level: [LevelImage]
     var selected_user: User
     @Binding var totalScore: Int
+    @Binding var current_score: Int
     
     
     var body: some View {
         VStack{            
             if path.count == selected_level.count && !isShown{
-                LessonCompleteView(path: $path, selected_user: selected_user, totalScore: $totalScore)
+                LessonCompleteView(path: $path, selected_user: selected_user, totalScore: $totalScore, current_score: $current_score)
             }
             else {
                 LessonView(levelModel: selected_level[count], path: $path, count: count, selected_level: selected_level, totalScore: $totalScore)
