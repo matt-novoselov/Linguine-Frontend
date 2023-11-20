@@ -55,6 +55,7 @@
 		1A5664872B0B7E9C007E58E4 /* cancer.lottie in Resources */ = {isa = PBXBuildFile; fileRef = 1A56645C2B0B7E9C007E58E4 /* cancer.lottie */; };
 		1A5664892B0BB1F6007E58E4 /* WavePatternGenerationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5664882B0BB1F5007E58E4 /* WavePatternGenerationModel.swift */; };
 		1A56648B2B0BB207007E58E4 /* ShapesModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A56648A2B0BB207007E58E4 /* ShapesModelView.swift */; };
+		1A56648D2B0BBCF7007E58E4 /* Haptic Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A56648C2B0BBCF7007E58E4 /* Haptic Model.swift */; };
 		1A5756532B055B9500A60DE7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A5756522B055B9500A60DE7 /* Assets.xcassets */; };
 		1A57565F2B0565FA00A60DE7 /* confetti.lottie in Resources */ = {isa = PBXBuildFile; fileRef = 1A57565E2B0565FA00A60DE7 /* confetti.lottie */; };
 		1A9EA3782B06572B002CFE18 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9EA3772B06572B002CFE18 /* LoginView.swift */; };
@@ -137,6 +138,7 @@
 		1A56645C2B0B7E9C007E58E4 /* cancer.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = cancer.lottie; sourceTree = "<group>"; };
 		1A5664882B0BB1F5007E58E4 /* WavePatternGenerationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WavePatternGenerationModel.swift; sourceTree = "<group>"; };
 		1A56648A2B0BB207007E58E4 /* ShapesModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapesModelView.swift; sourceTree = "<group>"; };
+		1A56648C2B0BBCF7007E58E4 /* Haptic Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Haptic Model.swift"; sourceTree = "<group>"; };
 		1A5756522B055B9500A60DE7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1A57565E2B0565FA00A60DE7 /* confetti.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = confetti.lottie; sourceTree = "<group>"; };
 		1A9EA3772B06572B002CFE18 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -311,6 +313,7 @@
 				1AB574FD2B06172700AB46FC /* APICallModel.swift */,
 				1A9EA3B62B0795E2002CFE18 /* LevelModel.swift */,
 				1A5664882B0BB1F5007E58E4 /* WavePatternGenerationModel.swift */,
+				1A56648C2B0BBCF7007E58E4 /* Haptic Model.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -511,6 +514,7 @@
 				1AB574FE2B06172700AB46FC /* APICallModel.swift in Sources */,
 				1A9EA3782B06572B002CFE18 /* LoginView.swift in Sources */,
 				1A9EA3B92B07966B002CFE18 /* LessonView.swift in Sources */,
+				1A56648D2B0BBCF7007E58E4 /* Haptic Model.swift in Sources */,
 				1A9EA3922B0674F3002CFE18 /* LeaderboardView.swift in Sources */,
 				5C6537272772F5EE0035759D /* UserModel.swift in Sources */,
 				1AE6DFB42B07FC23005D98F7 /* LevelsSelectionView.swift in Sources */,

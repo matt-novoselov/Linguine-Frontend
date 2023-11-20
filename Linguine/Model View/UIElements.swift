@@ -229,7 +229,7 @@ struct dropButtonRound: View {
     }
     
     var body: some View {
-        Button(action: style != Style.disabled ? action : {}){}
+        Button(action: style != Style.disabled ? {action(); lightHaptic()}: {}){}
             .buttonStyle(
                 dropButtonStyle(titleSymbol: titleSymbol, style: style)
             )
@@ -324,6 +324,9 @@ struct levelResult: View {
                     }
                 }
                 .foregroundColor(.lgGreenButton)
+                .onAppear(){
+                    haevyHaptic()
+                }
             }
             else{
                 Group{
