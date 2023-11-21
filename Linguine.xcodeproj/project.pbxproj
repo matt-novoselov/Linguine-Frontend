@@ -12,6 +12,7 @@
 		1A34F2202B0CA3EE009C91FE /* loading.lottie in Resources */ = {isa = PBXBuildFile; fileRef = 1A34F21F2B0CA3EE009C91FE /* loading.lottie */; };
 		1A34F2222B0CB214009C91FE /* LearningModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A34F2212B0CB214009C91FE /* LearningModelView.swift */; };
 		1A3EE7EE2B0D3E2200BEB6C9 /* HDYSLevelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3EE7ED2B0D3E2200BEB6C9 /* HDYSLevelView.swift */; };
+		1A3EE7F02B0D56E600BEB6C9 /* SingleImageLevelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3EE7EF2B0D56E600BEB6C9 /* SingleImageLevelView.swift */; };
 		1A56642D2B0AB8C5007E58E4 /* LessonContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A56642C2B0AB8C5007E58E4 /* LessonContainer.swift */; };
 		1A56645D2B0B7E9C007E58E4 /* taco.lottie in Resources */ = {isa = PBXBuildFile; fileRef = 1A5664322B0B7E9A007E58E4 /* taco.lottie */; };
 		1A56645E2B0B7E9C007E58E4 /* fries.lottie in Resources */ = {isa = PBXBuildFile; fileRef = 1A5664332B0B7E9A007E58E4 /* fries.lottie */; };
@@ -95,6 +96,7 @@
 		1A34F21F2B0CA3EE009C91FE /* loading.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = loading.lottie; sourceTree = "<group>"; };
 		1A34F2212B0CB214009C91FE /* LearningModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearningModelView.swift; sourceTree = "<group>"; };
 		1A3EE7ED2B0D3E2200BEB6C9 /* HDYSLevelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HDYSLevelView.swift; sourceTree = "<group>"; };
+		1A3EE7EF2B0D56E600BEB6C9 /* SingleImageLevelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleImageLevelView.swift; sourceTree = "<group>"; };
 		1A56642C2B0AB8C5007E58E4 /* LessonContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonContainer.swift; sourceTree = "<group>"; };
 		1A5664322B0B7E9A007E58E4 /* taco.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = taco.lottie; sourceTree = "<group>"; };
 		1A5664332B0B7E9A007E58E4 /* fries.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = fries.lottie; sourceTree = "<group>"; };
@@ -297,6 +299,7 @@
 				1A9EA3772B06572B002CFE18 /* LoginView.swift */,
 				1A9EA38A2B0667E2002CFE18 /* LessonCompleteView.swift */,
 				1A9EA3912B0674F3002CFE18 /* LeaderboardView.swift */,
+				1A3EE7EF2B0D56E600BEB6C9 /* SingleImageLevelView.swift */,
 				1A9EA3B82B07966B002CFE18 /* ImageLevelView.swift */,
 				1A3EE7ED2B0D3E2200BEB6C9 /* HDYSLevelView.swift */,
 				1AE6DFB32B07FC23005D98F7 /* MenuView.swift */,
@@ -521,6 +524,7 @@
 				1A9EA3922B0674F3002CFE18 /* LeaderboardView.swift in Sources */,
 				5C6537272772F5EE0035759D /* UserModel.swift in Sources */,
 				1AE6DFB42B07FC23005D98F7 /* MenuView.swift in Sources */,
+				1A3EE7F02B0D56E600BEB6C9 /* SingleImageLevelView.swift in Sources */,
 				5CDD8865277102DC00052307 /* App.swift in Sources */,
 				1A9EA3902B06719C002CFE18 /* CustomSVGModelView.swift in Sources */,
 				1A56642D2B0AB8C5007E58E4 /* LessonContainer.swift in Sources */,
