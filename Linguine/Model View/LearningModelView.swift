@@ -14,28 +14,42 @@ class LessonLibrary{
                     [
                         im_lvl_lib[0],
                         im_lvl_lib[1],
-                        HDYS_lvl_lib[0]
+                        HDYS_lvl_lib[0],
                     ]
             ),
             Lesson(sfSymbol: "star.fill", levels:
                     [
+                        im_lvl_lib[2],
                         im_lvl_lib[3],
-                        im_lvl_lib[4],
-                        im_lvl_lib[5],
+                        HDYS_lvl_lib[1],
                     ]
             ),
             Lesson(sfSymbol: "book.fill", levels:
                     [
-                        im_lvl_lib[6],
-                        im_lvl_lib[7],
-                        im_lvl_lib[8],
+                        im_lvl_lib[4],
+                        im_lvl_lib[5],
+                        HDYS_lvl_lib[2],
                     ]
             ),
             Lesson(sfSymbol: "star.fill", levels:
                     [
+                        im_lvl_lib[6],
+                        im_lvl_lib[7],
+                        HDYS_lvl_lib[3],
+                    ]
+            ),
+            Lesson(sfSymbol: "star.fill", levels:
+                    [
+                        im_lvl_lib[8],
                         im_lvl_lib[9],
+                        HDYS_lvl_lib[4],
+                    ]
+            ),
+            Lesson(sfSymbol: "star.fill", levels:
+                    [
                         im_lvl_lib[10],
                         im_lvl_lib[11],
+                        HDYS_lvl_lib[5],
                     ]
             ),
             
@@ -52,16 +66,6 @@ class LessonLibrary{
                     ]
             ),
             Lesson(sfSymbol: "book.fill", levels:
-                    [
-                        im_lvl_lib[0],
-                    ]
-            ),
-            Lesson(sfSymbol: "star.fill", levels:
-                    [
-                        im_lvl_lib[0],
-                    ]
-            ),
-            Lesson(sfSymbol: "star.fill", levels:
                     [
                         im_lvl_lib[0],
                     ]
@@ -276,6 +280,20 @@ class HDYSLevelLibrary{
                 hdys_card_lib[11]
             ], levelType: .HDYSLevel
             ),
+            
+            HDYSlevel(imageLevelCards: [
+                hdys_card_lib[12],
+                hdys_card_lib[13],
+                hdys_card_lib[14]
+            ], levelType: .HDYSLevel
+            ),
+            
+            HDYSlevel(imageLevelCards: [
+                hdys_card_lib[15],
+                hdys_card_lib[16],
+                hdys_card_lib[17]
+            ], levelType: .HDYSLevel
+            ),
         ]
     }
 }
@@ -294,6 +312,12 @@ class HDYSLevelCardsLibrary{
         HDYSlevelCard(english: "food", italian: "cibo"),
         HDYSlevelCard(english: "friend", italian: "amico"),
         HDYSlevelCard(english: "time", italian: "tempo"),
+        HDYSlevelCard(english: "apple", italian: "mela"),
+        HDYSlevelCard(english: "table", italian: "tavolo"),
+        HDYSlevelCard(english: "flower", italian: "fiore"),
+        HDYSlevelCard(english: "computer", italian: "computer"),
+        HDYSlevelCard(english: "family", italian: "famiglia"),
+        HDYSlevelCard(english: "color", italian: "colore"),
     ]
 }
 
