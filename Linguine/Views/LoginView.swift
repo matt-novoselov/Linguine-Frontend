@@ -27,7 +27,7 @@ struct LoginView: View {
         }
         .background(Color.lgBackground.ignoresSafeArea())
     }
-
+    
     func login() {
         let credentialsManager = CredentialsManager(authentication: Auth0.authentication())
         
@@ -35,7 +35,7 @@ struct LoginView: View {
             switch result {
             case .success(let credentials):
                 self.user = User(from: credentials.idToken)
-
+                
             case .failure(let error):
                 print("Failed with: \(error)")
             }

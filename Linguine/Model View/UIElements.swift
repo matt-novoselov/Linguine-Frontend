@@ -75,7 +75,6 @@ struct leaderboardParticipant: View {
     var xpAmount: Int = 0
     var place: Int = 0
     var isHighlighted: Bool = false
-    var isTemplate: Bool = false
     
     var body: some View {
         ZStack{
@@ -89,7 +88,6 @@ struct leaderboardParticipant: View {
             HStack(spacing: 20){
                 Text("\(place)")
                     .font(Font.custom("DINNextRoundedLTPro-Bold", size: 16))
-                    .redacted(reason: isTemplate ? .placeholder : .invalidated)
                 
                 ZStack{
                     Circle()
@@ -100,16 +98,13 @@ struct leaderboardParticipant: View {
                         .font(Font.custom("DINNextRoundedLTPro-Bold", size: 24))
                         .foregroundColor(.lgBackground)
                         .padding(.top, 4.5)
-                        .opacity(isTemplate ? 0 : 1)
                 }
                 
                 Text("@\(nickname)")
                     .font(Font.custom("DINNextRoundedLTPro-Bold", size: 18  ))
-                    .redacted(reason: isTemplate ? .placeholder : .invalidated)
                 
                 Text("\(xpAmount) XP")
                     .font(Font.custom("DINNextRoundedLTPro-regular", size: 18))
-                    .redacted(reason: isTemplate ? .placeholder : .invalidated)
                     .frame(maxWidth: .infinity, alignment: .trailing)
             }
         }

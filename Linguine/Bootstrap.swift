@@ -5,12 +5,22 @@ struct Bootstrap: View {
     @State var user: User?
     @State private var loadingFinished: Bool = false
     @State var currentScore: Int?
+    @State var listOfUsers: [UUIDSingleUser]?
     
     var body: some View {
         if let selectedUser = self.user {
             VStack{
                 if loadingFinished{
-                    TabViewBootstrap(selectedUser: selectedUser, currentScore: currentScore ?? 0, user: $user)
+                    TabView {
+                        MenuView(user: $user, selectedUser: selectedUser, currentScore: currentScore!)
+                            .tabItem {
+                                Label("", systemImage: "house.fill")
+                            }
+                        LeaderboardView(listOfUsers: listOfUsers!, selectedUser: selectedUser)
+                            .tabItem {
+                                Label("", systemImage: "trophy.fill")
+                            }
+                    }
                 }
                 else{
                     LoadingScreenView()
@@ -21,6 +31,7 @@ struct Bootstrap: View {
                     do {
                         try await addUserToDatabase(userId: selectedUser.id, nickname: selectedUser.nickname)
                         currentScore = try await getScoreById(userId: selectedUser.id)
+                        listOfUsers = try await getStats()
                         loadingFinished = true
                     } catch {
                         print(error)
@@ -33,7 +44,7 @@ struct Bootstrap: View {
                 .onAppear{tokenLogin()}
         }
     }
-
+    
     func tokenLogin() {
         let credentialsManager = CredentialsManager(authentication: Auth0.authentication())
         

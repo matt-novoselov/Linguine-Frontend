@@ -10,7 +10,7 @@ struct MenuView: View {
     
     @State var currentScore: Int //users XP score, retrieved from the database
     @State var totalScore: Int = 0 //score earned from the last lesson
-
+    
     let lessonLibrary: [Lesson] = LessonLibrary().lessons
     var wavePattern: [Int] = generateWavePattern(length: 12 + 1)
     
@@ -86,9 +86,9 @@ struct MenuView: View {
         user: Bootstrap().$user,
         selectedUser:
             User(
-            id: "auth1|6552867564e79113efcb65f7",
-            email: "example@gmail.com",
-            nickname: "example"),
+                id: "auth1|6552867564e79113efcb65f7",
+                email: "example@gmail.com",
+                nickname: "example"),
         currentScore: 0
     )
 }

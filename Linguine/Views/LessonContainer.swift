@@ -9,19 +9,18 @@ struct LessonContainer: View {
     @Binding var totalScore: Int
     @Binding var currentScore: Int
     
-    
     var body: some View {
-        VStack{            
+        VStack{
             if path.count == selectedLevel.levels.count+1 && !isShown{
                 LessonCompleteView(path: $path, selectedUser: selectedUser, totalScore: $totalScore, currentScore: $currentScore)
             }
             else {
                 ImageLevelView(path: $path, count: count, selectedLevel: selectedLevel.levels[count<selectedLevel.levels.count ? count : 0], totalScore: $totalScore)
-                .onAppear(){
-                    isShown.toggle()
-                }
+                    .onAppear(){
+                        isShown.toggle()
+                    }
             }
-
+            
         }
         .navigationBarBackButtonHidden(true)
         .toolbar(.hidden, for: .tabBar)

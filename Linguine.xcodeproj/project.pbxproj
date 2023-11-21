@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		1A2CDD342B039D6E002044D0 /* UIElements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2CDD332B039D6E002044D0 /* UIElements.swift */; };
 		1A34F21C2B0C9DEC009C91FE /* LoadingScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A34F21B2B0C9DEC009C91FE /* LoadingScreenView.swift */; };
-		1A34F21E2B0C9F84009C91FE /* TabViewBootstrap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A34F21D2B0C9F84009C91FE /* TabViewBootstrap.swift */; };
 		1A34F2202B0CA3EE009C91FE /* loading.lottie in Resources */ = {isa = PBXBuildFile; fileRef = 1A34F21F2B0CA3EE009C91FE /* loading.lottie */; };
 		1A34F2222B0CB214009C91FE /* LearningModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A34F2212B0CB214009C91FE /* LearningModelView.swift */; };
 		1A56642D2B0AB8C5007E58E4 /* LessonContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A56642C2B0AB8C5007E58E4 /* LessonContainer.swift */; };
@@ -72,7 +71,6 @@
 		1A9EA3922B0674F3002CFE18 /* LeaderboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9EA3912B0674F3002CFE18 /* LeaderboardView.swift */; };
 		1A9EA39A2B06A606002CFE18 /* cup_demo.lottie in Resources */ = {isa = PBXBuildFile; fileRef = 1A9EA3992B06A606002CFE18 /* cup_demo.lottie */; };
 		1A9EA3AA2B0763AD002CFE18 /* dog_walking.lottie in Resources */ = {isa = PBXBuildFile; fileRef = 1A9EA3A92B0763AD002CFE18 /* dog_walking.lottie */; };
-		1A9EA3AC2B077C58002CFE18 /* LeaderboardTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9EA3AB2B077C58002CFE18 /* LeaderboardTemplate.swift */; };
 		1A9EA3AE2B0791C9002CFE18 /* watermelon.lottie in Resources */ = {isa = PBXBuildFile; fileRef = 1A9EA3AD2B0791C9002CFE18 /* watermelon.lottie */; };
 		1A9EA3B32B0794AE002CFE18 /* pizza.lottie in Resources */ = {isa = PBXBuildFile; fileRef = 1A9EA3B02B0794AE002CFE18 /* pizza.lottie */; };
 		1A9EA3B42B0794AE002CFE18 /* ice_cream.lottie in Resources */ = {isa = PBXBuildFile; fileRef = 1A9EA3B12B0794AE002CFE18 /* ice_cream.lottie */; };
@@ -93,7 +91,6 @@
 /* Begin PBXFileReference section */
 		1A2CDD332B039D6E002044D0 /* UIElements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIElements.swift; sourceTree = "<group>"; };
 		1A34F21B2B0C9DEC009C91FE /* LoadingScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingScreenView.swift; sourceTree = "<group>"; };
-		1A34F21D2B0C9F84009C91FE /* TabViewBootstrap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewBootstrap.swift; sourceTree = "<group>"; };
 		1A34F21F2B0CA3EE009C91FE /* loading.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = loading.lottie; sourceTree = "<group>"; };
 		1A34F2212B0CB214009C91FE /* LearningModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearningModelView.swift; sourceTree = "<group>"; };
 		1A56642C2B0AB8C5007E58E4 /* LessonContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonContainer.swift; sourceTree = "<group>"; };
@@ -156,7 +153,6 @@
 		1A9EA3912B0674F3002CFE18 /* LeaderboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardView.swift; sourceTree = "<group>"; };
 		1A9EA3992B06A606002CFE18 /* cup_demo.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = cup_demo.lottie; sourceTree = "<group>"; };
 		1A9EA3A92B0763AD002CFE18 /* dog_walking.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = dog_walking.lottie; sourceTree = "<group>"; };
-		1A9EA3AB2B077C58002CFE18 /* LeaderboardTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardTemplate.swift; sourceTree = "<group>"; };
 		1A9EA3AD2B0791C9002CFE18 /* watermelon.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = watermelon.lottie; sourceTree = "<group>"; };
 		1A9EA3B02B0794AE002CFE18 /* pizza.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = pizza.lottie; sourceTree = "<group>"; };
 		1A9EA3B12B0794AE002CFE18 /* ice_cream.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = ice_cream.lottie; sourceTree = "<group>"; };
@@ -214,7 +210,6 @@
 				1ADE793F2B03802400F0E915 /* LottieModelView.swift */,
 				1A2CDD332B039D6E002044D0 /* UIElements.swift */,
 				1A9EA38F2B06719C002CFE18 /* CustomSVGModelView.swift */,
-				1A9EA3AB2B077C58002CFE18 /* LeaderboardTemplate.swift */,
 				1A34F2212B0CB214009C91FE /* LearningModelView.swift */,
 			);
 			path = "Model View";
@@ -304,7 +299,6 @@
 				1AE6DFB32B07FC23005D98F7 /* MenuView.swift */,
 				1A56642C2B0AB8C5007E58E4 /* LessonContainer.swift */,
 				1A34F21B2B0C9DEC009C91FE /* LoadingScreenView.swift */,
-				1A34F21D2B0C9F84009C91FE /* TabViewBootstrap.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -527,10 +521,8 @@
 				1A9EA3902B06719C002CFE18 /* CustomSVGModelView.swift in Sources */,
 				1A56642D2B0AB8C5007E58E4 /* LessonContainer.swift in Sources */,
 				1A9EA38B2B0667E2002CFE18 /* LessonCompleteView.swift in Sources */,
-				1A9EA3AC2B077C58002CFE18 /* LeaderboardTemplate.swift in Sources */,
 				1A2CDD342B039D6E002044D0 /* UIElements.swift in Sources */,
 				1ADE79402B03802400F0E915 /* LottieModelView.swift in Sources */,
-				1A34F21E2B0C9F84009C91FE /* TabViewBootstrap.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
