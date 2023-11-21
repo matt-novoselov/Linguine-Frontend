@@ -24,6 +24,8 @@ struct LessonContainer: View {
                     case .HDYSLevel:
                         HDYSLevelView(path: $path, count: count, selectedLevel: selectedLevel as! HDYSlevel, totalScore: $totalScore)
                         
+                    case .SingleImageLevel:
+                        SingleImageLevelView(path: $path, count: count, selectedLevel: selectedLevel as! Imagelevel, totalScore: $totalScore)
                     }
                 }
                 .onAppear(){

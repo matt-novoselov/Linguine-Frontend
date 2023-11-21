@@ -31,3 +31,8 @@ struct HDYSlevel: Level {
     var imageLevelCards: [HDYSlevelCard]
     var levelType: LevelType
 }
+
+struct SingleImagelevel: Level {
+    var imageLevelCards: [ImagelevelCard]
+    var levelType: LevelType
+}

@@ -16,7 +16,6 @@ struct SingleImageLevelView: View {
         self._totalScore = totalScore
         
         let randomImageLevelCard = selectedLevel.imageLevelCards.randomElement()
-        let generatedLevel = ImagelevelGeneration(prompt: randomImageLevelCard?.italian ?? "", correctAnswer: randomImageLevelCard?.english ?? "")
         _randomImageLevelCard = State(initialValue: randomImageLevelCard)
     }
     

@@ -3,11 +3,13 @@ import Foundation
 class LessonLibrary{
     var im_lvl_lib: [Imagelevel]
     var HDYS_lvl_lib: [HDYSlevel]
+    var sing_im_lvl_lib: [Imagelevel]
     var lessons: [Lesson]
     
     init(){
         self.im_lvl_lib = ImageLevelLibrary().levels
         self.HDYS_lvl_lib = HDYSLevelLibrary().levels
+        self.sing_im_lvl_lib = SingleImageLevelLibrary().levels
         
         lessons = [
             Lesson(sfSymbol: "star.fill", levels:
@@ -15,6 +17,7 @@ class LessonLibrary{
                         im_lvl_lib[0],
                         im_lvl_lib[1],
                         HDYS_lvl_lib[0],
+                        sing_im_lvl_lib[0],
                     ]
             ),
             Lesson(sfSymbol: "star.fill", levels:
@@ -321,7 +324,25 @@ class HDYSLevelCardsLibrary{
     ]
 }
 
+class SingleImageLevelLibrary{
+    var im_card_lib: [ImagelevelCard]
+    var levels: [Imagelevel]
+    
+    init() {
+        self.im_card_lib = ImageLevelCardsLibrary().imageLevelCards
+
+        levels = [
+            Imagelevel(imageLevelCards: [im_card_lib[0]], levelType: .SingleImageLevel),
+            Imagelevel(imageLevelCards: [im_card_lib[1]], levelType: .SingleImageLevel),
+            Imagelevel(imageLevelCards: [im_card_lib[2]], levelType: .SingleImageLevel),
+            Imagelevel(imageLevelCards: [im_card_lib[3]], levelType: .SingleImageLevel),
+            Imagelevel(imageLevelCards: [im_card_lib[4]], levelType: .SingleImageLevel),
+        ]
+    }
+}
+
 enum LevelType: String {
     case imageLevel = "Image Level"
     case HDYSLevel = "HDYS Level"
+    case SingleImageLevel = "Single Image Level"
 }
