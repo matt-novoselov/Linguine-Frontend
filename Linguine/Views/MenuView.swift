@@ -3,7 +3,7 @@ import Auth0
 
 struct MenuView: View {
     // Amount of levels user has completed. Will be retrieved from the database in the future
-    let levelsCompleted: Int = 5
+    let levelsCompleted: Int = 6
     
     @Binding var user: User? //used for login and logout
     var selectedUser: User //used to get info about user. Ex: name, email, uid and etc.
@@ -40,7 +40,7 @@ struct MenuView: View {
                     
                     Text(selectedLevelIndex?.description ?? "No level selected").hidden().frame(width: 0,height: 0).frame( maxWidth: 0, maxHeight: 0)
                     
-                    ScrollView(showsIndicators: false) {
+                    ScrollView() {
                         VStack(alignment: .leading){
                             ForEach(Array(lessonLibrary.enumerated()), id: \.element.id) { index, lesson in
                                 dropButtonRound(titleSymbol: lesson.sfSymbol, action: {
@@ -52,6 +52,7 @@ struct MenuView: View {
                                 .padding(.leading, CGFloat(wavePattern[index]))
                             }
                         }
+                        .frame(maxWidth: .infinity)
                     }
                     .navigationDestination(for: Int.self) { int in
                         LessonContainer(path: $path, count: int, selectedLesson: lessonLibrary[selectedLevelIndex!], selectedUser: selectedUser, totalScore: $totalScore, currentScore: $currentScore)

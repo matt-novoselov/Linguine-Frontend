@@ -75,6 +75,16 @@ class LessonLibrary{
                         im_lvl_lib[0],
                     ]
             ),
+            Lesson(sfSymbol: "book.fill", levels:
+                    [
+                        im_lvl_lib[0],
+                    ]
+            ),
+            Lesson(sfSymbol: "star.fill", levels:
+                    [
+                        im_lvl_lib[0],
+                    ]
+            ),
         ]
     }
 }
