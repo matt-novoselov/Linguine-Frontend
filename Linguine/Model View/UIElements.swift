@@ -1,5 +1,12 @@
 import SwiftUI
 
+extension View {
+    func readHeight() -> some View {
+        self
+            .modifier(ReadHeightModifier())
+    }
+}
+
 struct UILottieView: View {
     var lottieName: String
     var playOnce: Bool = false
@@ -100,11 +107,10 @@ struct leaderboardParticipant: View {
                     .font(Font.custom("DINNextRoundedLTPro-Bold", size: 18  ))
                     .redacted(reason: isTemplate ? .placeholder : .invalidated)
                 
-                Spacer()
-                
                 Text("\(xpAmount) XP")
                     .font(Font.custom("DINNextRoundedLTPro-regular", size: 18))
                     .redacted(reason: isTemplate ? .placeholder : .invalidated)
+                    .frame(maxWidth: .infinity, alignment: .trailing)
             }
         }
     }
@@ -134,7 +140,7 @@ enum Style: String, CaseIterable {
     case correct
     case disabled
     case completed
-
+    
     var color: dropButtonCustomStyle {
         switch self {
         case .standart, .completed: return dropButtonCustomStyle(mainColor: .lgPinkButton, dropColor: .lgDropPinkButton, textColor: .lgBackground, symbolColor: .white)
@@ -348,7 +354,7 @@ struct levelResult: View {
                 }
                 .foregroundColor(.lgRedButton)
             }
-
+            
             dropButton(title: isCorrect ? "continue" : "got it", action: {
                 if isCorrect{
                     totalScore+=20
@@ -364,7 +370,7 @@ struct levelResult: View {
 
 struct HeightPreferenceKey: PreferenceKey {
     static var defaultValue: CGFloat?
-
+    
     static func reduce(value: inout CGFloat?, nextValue: () -> CGFloat?) {
         guard let nextValue = nextValue() else { return }
         value = nextValue
@@ -377,16 +383,9 @@ private struct ReadHeightModifier: ViewModifier {
             Color.clear.preference(key: HeightPreferenceKey.self, value: geometry.size.height)
         }
     }
-
+    
     func body(content: Content) -> some View {
         content.background(sizeView)
-    }
-}
-
-extension View {
-    func readHeight() -> some View {
-        self
-            .modifier(ReadHeightModifier())
     }
 }
 
@@ -489,7 +488,7 @@ struct ItalianFlag: View {
             Rectangle()
                 .fill(.white)
                 .frame(width: 12, height: 20)
-
+            
         }
         .frame(width: 30)
     }
@@ -499,7 +498,7 @@ struct ItalianFlag: View {
     VStack{
         Spacer()
         
-        dropButtonRound(titleSymbol: "star.fill", action: {}, style: .standart)
+        leaderboardParticipant(nickname: "matveynovoselov", xpAmount: 4000)
         
         Spacer()
     }

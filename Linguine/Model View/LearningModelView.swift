@@ -36,6 +36,45 @@ class LessonLibrary{
                         im_lvl_lib[11],
                     ]
             ),
+            // vvv Below are empty placeholder levels vvv //
+            
+            Lesson(sfSymbol: "book.fill", levels:
+                    [
+                        im_lvl_lib[0],
+                        im_lvl_lib[1],
+                        im_lvl_lib[2],
+                    ]
+            ),
+            Lesson(sfSymbol: "star.fill", levels:
+                    [
+                        im_lvl_lib[3],
+                        im_lvl_lib[4],
+                        im_lvl_lib[5],
+                    ]
+            ),
+            Lesson(sfSymbol: "book.fill", levels:
+                    [
+                        im_lvl_lib[6],
+                        im_lvl_lib[7],
+                        im_lvl_lib[8],
+                    ]
+            ),
+            Lesson(sfSymbol: "star.fill", levels:
+                    [
+                        im_lvl_lib[9],
+                        im_lvl_lib[10],
+                        im_lvl_lib[11],
+                    ]
+            ),
+            
+            Lesson(sfSymbol: "star.fill", levels:
+                    [
+                        im_lvl_lib[0],
+                        im_lvl_lib[1],
+                        im_lvl_lib[2],
+                    ]
+            ),
+            
         ]
     }
 }
