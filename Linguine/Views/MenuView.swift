@@ -54,7 +54,7 @@ struct MenuView: View {
                         }
                     }
                     .navigationDestination(for: Int.self) { int in
-                        LessonContainer(path: $path, count: int, selectedLevel: lessonLibrary[selectedLevelIndex!], selectedUser: selectedUser, totalScore: $totalScore, currentScore: $currentScore)
+                        LessonContainer(path: $path, count: int, selectedLesson: lessonLibrary[selectedLevelIndex!], selectedUser: selectedUser, totalScore: $totalScore, currentScore: $currentScore)
                     }
                 }
                 .padding(.horizontal)

@@ -4,32 +4,32 @@ struct LessonContainer: View {
     @State private var isShown: Bool = false
     @Binding var path: [Int]
     @State var count: Int
-    var selectedLevel: Lesson
+    var selectedLesson: Lesson
     var selectedUser: User
     @Binding var totalScore: Int
     @Binding var currentScore: Int
     
     var body: some View {
         VStack{
-            if path.count == selectedLevel.levels.count+1 && !isShown{
+            if path.count == selectedLesson.levels.count+1 && !isShown{
                 LessonCompleteView(path: $path, selectedUser: selectedUser, totalScore: $totalScore, currentScore: $currentScore)
             }
             else {
-                switch selectedLevel.levels[count<selectedLevel.levels.count ? count : 0].levelType {
-                case .imageLevel:
-                    ImageLevelView(path: $path, count: count, selectedLevel: selectedLevel.levels[count<selectedLevel.levels.count ? count : 0] as! Imagelevel, totalScore: $totalScore)
-                        .onAppear(){
-                            isShown.toggle()
-                        }
-                    
-                case .HDYSLevel:
-                    HDYSLevelView(path: $path, count: count, selectedLevel: selectedLevel.levels[count<selectedLevel.levels.count ? count : 0] as! HDYSlevel, totalScore: $totalScore)
-                        .onAppear(){
-                            isShown.toggle()
-                        }
+                let selectedLevel = selectedLesson.levels[count<selectedLesson.levels.count ? count : 0]
+                Group{
+                    switch selectedLevel.levelType {
+                    case .imageLevel:
+                        ImageLevelView(path: $path, count: count, selectedLevel: selectedLevel as! Imagelevel, totalScore: $totalScore)
+                        
+                    case .HDYSLevel:
+                        HDYSLevelView(path: $path, count: count, selectedLevel: selectedLevel as! HDYSlevel, totalScore: $totalScore)
+                        
+                    }
+                }
+                .onAppear(){
+                    isShown.toggle()
                 }
             }
-            
         }
         .navigationBarBackButtonHidden(true)
         .toolbar(.hidden, for: .tabBar)
