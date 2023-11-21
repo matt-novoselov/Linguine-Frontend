@@ -8,6 +8,7 @@ struct SingleImageLevelView: View {
     var selectedLevel: Imagelevel
     @Binding var totalScore: Int
     @State private var inputFieldText: String = ""
+    @FocusState var isFocused : Bool
     
     init(path: Binding<[Int]>, count: Int, selectedLevel: Imagelevel, totalScore: Binding<Int>) {
         self._path = path
@@ -51,10 +52,11 @@ struct SingleImageLevelView: View {
                     "Answer",
                     text: $inputFieldText
                 )
+                .focused($isFocused)
                 .textInputAutocapitalization(.never)
                 .disableAutocorrection(true)
                 
-                dropButton(title: "check", action: {showingCredits.toggle()}, style: inputFieldText != "" ? .standart : .disabled)
+                dropButton(title: "check", action: {showingCredits.toggle(); isFocused = false}, style: inputFieldText != "" ? .standart : .disabled)
                     .padding(.bottom)
                 
                 Spacer()

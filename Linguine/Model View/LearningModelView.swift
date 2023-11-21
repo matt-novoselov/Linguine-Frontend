@@ -17,21 +17,20 @@ class LessonLibrary{
                         im_lvl_lib[0],
                         im_lvl_lib[1],
                         HDYS_lvl_lib[0],
-                        sing_im_lvl_lib[0],
                     ]
             ),
             Lesson(sfSymbol: "star.fill", levels:
                     [
                         im_lvl_lib[2],
-                        im_lvl_lib[3],
                         HDYS_lvl_lib[1],
+                        sing_im_lvl_lib[0],
                     ]
             ),
             Lesson(sfSymbol: "book.fill", levels:
                     [
                         im_lvl_lib[4],
-                        im_lvl_lib[5],
                         HDYS_lvl_lib[2],
+                        sing_im_lvl_lib[1],
                     ]
             ),
             Lesson(sfSymbol: "star.fill", levels:
@@ -44,8 +43,8 @@ class LessonLibrary{
             Lesson(sfSymbol: "star.fill", levels:
                     [
                         im_lvl_lib[8],
-                        im_lvl_lib[9],
                         HDYS_lvl_lib[4],
+                        sing_im_lvl_lib[2],
                     ]
             ),
             Lesson(sfSymbol: "star.fill", levels:
@@ -53,6 +52,14 @@ class LessonLibrary{
                         im_lvl_lib[10],
                         im_lvl_lib[11],
                         HDYS_lvl_lib[5],
+                    ]
+            ),
+            
+            Lesson(sfSymbol: "star.fill", levels:
+                    [
+                        im_lvl_lib[9],
+                        sing_im_lvl_lib[3],
+                        im_lvl_lib[3],
                     ]
             ),
             
@@ -64,11 +71,6 @@ class LessonLibrary{
                     ]
             ),
             Lesson(sfSymbol: "star.fill", levels:
-                    [
-                        im_lvl_lib[0],
-                    ]
-            ),
-            Lesson(sfSymbol: "book.fill", levels:
                     [
                         im_lvl_lib[0],
                     ]
@@ -336,7 +338,6 @@ class SingleImageLevelLibrary{
             Imagelevel(imageLevelCards: [im_card_lib[1]], levelType: .SingleImageLevel),
             Imagelevel(imageLevelCards: [im_card_lib[2]], levelType: .SingleImageLevel),
             Imagelevel(imageLevelCards: [im_card_lib[3]], levelType: .SingleImageLevel),
-            Imagelevel(imageLevelCards: [im_card_lib[4]], levelType: .SingleImageLevel),
         ]
     }
 }
