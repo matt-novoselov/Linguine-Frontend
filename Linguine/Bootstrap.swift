@@ -16,6 +16,7 @@ struct Bootstrap: View {
                     LoadingScreenView()
                 }
             }.onAppear(){
+                loadingFinished = false
                 Task {
                     do {
                         try await addUserToDatabase(userId: selectedUser.id, nickname: selectedUser.nickname)
