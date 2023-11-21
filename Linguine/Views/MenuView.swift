@@ -2,16 +2,21 @@ import SwiftUI
 import Auth0
 
 struct LevelsSelectionView: View {
-    @Binding var user: User?
-    @State var current_score: Int
-    var selected_user: User
-    let levelsLibrary: [LevelImage] = LevelImageLibrary().levels
+    // Amount of levels user has completed. Will be retrieved from the database in the future
     let levels_completed: Int = 3
-    var lessonBuilderModel: LessonBuilderModel = LessonBuilderModel()
-    @State private var path: [Int] = []
-    @State var totalScore: Int = 0
-    @State var selectedLevelIndex: Int?
+    
+    @Binding var user: User? //used for login and logout
+    var selected_user: User //used to get info about user. Ex: name, email, uid and etc.
+    
+    @State var current_score: Int //users XP score, retrieved from the database
+    @State var totalScore: Int = 0 //score earned from the last lesson
+
+    let lessonLibrary: [Lesson] = LessonLibrary().lessons
     var wavePattern: [Int] = generateWavePattern(length: 12 + 1)
+    
+    @State var selectedLevelIndex: Int?
+    @State private var path: [Int] = []
+    
     
     func lesson_type(index:Int) -> Style {
         switch index {
@@ -37,8 +42,8 @@ struct LevelsSelectionView: View {
                     
                     ScrollView(showsIndicators: false) {
                         VStack(alignment: .leading){
-                            ForEach(Array(levelsLibrary.enumerated()), id: \.element.id) { index, levels in
-                                dropButtonRound(titleSymbol: levels.sfSymbol, action: {
+                            ForEach(Array(lessonLibrary.enumerated()), id: \.element.id) { index, lesson in
+                                dropButtonRound(titleSymbol: lesson.sfSymbol, action: {
                                     selectedLevelIndex = index
                                     path.append(0)
                                     totalScore = 0
@@ -49,7 +54,7 @@ struct LevelsSelectionView: View {
                         }
                     }
                     .navigationDestination(for: Int.self) { int in
-                        LevelContainer(path: $path, count: int, selected_level: lessonBuilderModel.lessons[selectedLevelIndex!], selected_user: selected_user, totalScore: $totalScore, current_score: $current_score)
+                        LevelContainer(path: $path, count: int, selected_level: lessonLibrary[selectedLevelIndex!], selected_user: selected_user, totalScore: $totalScore, current_score: $current_score)
                     }
                 }
                 .padding(.horizontal)
@@ -78,10 +83,12 @@ struct LevelsSelectionView: View {
 
 #Preview {
     LevelsSelectionView(
-        user: Bootstrap().$user, current_score: 0,
-        selected_user: User(
+        user: Bootstrap().$user,
+        selected_user:
+            User(
             id: "auth1|6552867564e79113efcb65f7",
             email: "example@gmail.com",
-            nickname: "example")
+            nickname: "example"),
+        current_score: 0
     )
 }

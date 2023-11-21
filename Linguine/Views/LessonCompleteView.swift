@@ -49,10 +49,15 @@ struct LessonCompleteView: View {
     }
 }
 
-//#Preview {
-//    LessonCompleteView(path: [], selected_user: User(
-//        id: "auth1|6552867564e79113efcb65f7",
-//        email: "example@gmail.com",
-//        nickname: "example"),
-//    earnedXP: 220)
-//}
+#Preview {
+    LessonCompleteView(
+        path: .constant([]),
+        selected_user:
+            User(
+                id: "auth1|6552867564e79113efcb65f7",
+                email: "example@gmail.com",
+                nickname: "example"),
+        totalScore: .constant(0),
+        current_score: .constant(0)
+    )
+}
