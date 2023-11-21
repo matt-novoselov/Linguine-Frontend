@@ -249,3 +249,55 @@ class ImageLevelCardsLibrary{
         ImagelevelCard(lottie: "water", english: "water", italian: "acqua"),
     ]
 }
+
+class HDYSLevelLibrary{
+    var hdys_card_lib: [HDYSlevelCard]
+    var levels: [HDYSlevel]
+    
+    init() {
+        self.hdys_card_lib = HDYSLevelCardsLibrary().HDYSLevelCards
+
+        levels = [
+            HDYSlevel(imageLevelCards: [
+                hdys_card_lib[0],
+                hdys_card_lib[1],
+                hdys_card_lib[2]
+            ]),
+            
+            HDYSlevel(imageLevelCards: [
+                hdys_card_lib[3],
+                hdys_card_lib[4],
+                hdys_card_lib[5]
+            ]),
+            
+            HDYSlevel(imageLevelCards: [
+                hdys_card_lib[6],
+                hdys_card_lib[7],
+                hdys_card_lib[8]
+            ]),
+            
+            HDYSlevel(imageLevelCards: [
+                hdys_card_lib[9],
+                hdys_card_lib[10],
+                hdys_card_lib[11]
+            ]),
+        ]
+    }
+}
+
+class HDYSLevelCardsLibrary{
+    var HDYSLevelCards: [HDYSlevelCard] = [
+        HDYSlevelCard(english: "girl", italian: "ragazza"),
+        HDYSlevelCard(english: "car", italian: "auto"),
+        HDYSlevelCard(english: "dog", italian: "cane"),
+        HDYSlevelCard(english: "cat", italian: "gatto"),
+        HDYSlevelCard(english: "house", italian: "casa"),
+        HDYSlevelCard(english: "book", italian: "libro"),
+        HDYSlevelCard(english: "tree", italian: "albero"),
+        HDYSlevelCard(english: "sun", italian: "sole"),
+        HDYSlevelCard(english: "water", italian: "acqua"),
+        HDYSlevelCard(english: "food", italian: "cibo"),
+        HDYSlevelCard(english: "friend", italian: "amico"),
+        HDYSlevelCard(english: "time", italian: "tempo"),
+    ]
+}

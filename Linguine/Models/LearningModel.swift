@@ -1,5 +1,14 @@
 import Foundation
 
+struct HDYSlevelCard{
+    var english: String
+    var italian: String
+}
+
+struct HDYSlevel{
+    var imageLevelCards: [HDYSlevelCard]
+}
+
 struct ImagelevelCard{
     var lottie: String
     var english: String

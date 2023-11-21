@@ -239,14 +239,16 @@ struct dropButtonRound: View {
 
 struct cardButton: View {
     var title: String
-    var iconName: String
+    var iconName: String?
     var action: () -> Void
     var style: Style
     
     struct dropButtonStyle: ButtonStyle {
         var title: String
-        var iconName: String
-        let buttonHeight: Double = 260
+        var iconName: String?
+        var buttonHeight: Double {
+            return iconName != nil ? 260 : 45
+        }
         let shadowHeight: Double = 4
         var style: Style
         
@@ -271,20 +273,20 @@ struct cardButton: View {
                         .frame(height: buttonHeight)
                     
                     VStack(){
-                        Spacer()
-                        
-                        UILottieView(lottieName: iconName, playOnce: true)
-                            .frame(height: 100)
-                        
-                        Spacer()
-                        
+                        if let unwrappedIconName = iconName {
+                            Spacer()
+                            UILottieView(lottieName: unwrappedIconName, playOnce: true)
+                                .frame(height: 100)
+                            Spacer()
+                        }
+                                            
                         Text(title)
                             .textCase(.lowercase)
                             .font(Font.custom("DINNextRoundedLTPro-Regular", size: 20))
                             .foregroundColor(.white)
-                            .padding(.bottom)
+                            .padding(.bottom, iconName != nil ? 10 : 0)
                     }
-                    .frame(maxHeight: buttonHeight, alignment: .bottom)
+                    .frame(maxHeight: buttonHeight)
                 }
             }
             .frame(height: buttonHeight+shadowHeight)
@@ -494,6 +496,12 @@ struct ItalianFlag: View {
         Spacer()
         
         leaderboardParticipant(nickname: "matveynovoselov", xpAmount: 4000)
+        
+        dropButton(title: "Test", action: {}, style: .disabled)
+        
+        cardButton(title: "Test", action: {}, style: .disabled)
+        
+        cardButton(title: "Test", iconName: "egg", action: {}, style: .disabled)
         
         Spacer()
     }
