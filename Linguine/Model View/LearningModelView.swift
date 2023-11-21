@@ -198,7 +198,7 @@ class ImageLevelCardsLibrary{
         ImagelevelCard(lottie: "mixer", english: "mixer", italian: "frullatore"),
         ImagelevelCard(lottie: "olive", english: "olive", italian: "oliva"),
         ImagelevelCard(lottie: "pear", english: "pear", italian: "pera"),
-        ImagelevelCard(lottie: "pepper", english: "pepper", italian: "pepe"),
+        ImagelevelCard(lottie: "pepper", english: "pepper", italian: "peperone"),
         ImagelevelCard(lottie: "pudding", english: "pudding", italian: "budino"),
         ImagelevelCard(lottie: "shrimp", english: "shrimp", italian: "gamberetto"),
         ImagelevelCard(lottie: "soup", english: "soup", italian: "zuppa"),
