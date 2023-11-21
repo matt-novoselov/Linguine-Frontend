@@ -3,7 +3,7 @@ import Auth0
 
 struct LeaderboardView: View {
     @State private var listOfUsers: [UUIDSingleUser] = leaderboardTemplate().listOfUsers
-    var selected_user: User
+    var selectedUser: User
     @State private var dataLoaded = false
     
     var body: some View {
@@ -19,15 +19,15 @@ struct LeaderboardView: View {
                 ExtendedDevider()
                 
                 ScrollView {
-                    ForEach(Array(listOfUsers.enumerated()), id: \.element.id) { index, list_user in
-                        leaderboardParticipant(nickname: list_user.name, xpAmount: list_user.score, place: index+1, isHighlighted: list_user.name == selected_user.nickname, isTemplate: !dataLoaded)
+                    ForEach(Array(listOfUsers.enumerated()), id: \.element.id) { index, listUser in
+                        leaderboardParticipant(nickname: listUser.name, xpAmount: listUser.score, place: index+1, isHighlighted: listUser.name == selectedUser.nickname, isTemplate: !dataLoaded)
                             .padding(.horizontal)
                     }
                 }
                 .refreshable {
                     Task {
                         do {
-                            listOfUsers = try await get_stats()
+                            listOfUsers = try await getStats()
                             dataLoaded = true
                         } catch {
                             print(error)
@@ -39,7 +39,7 @@ struct LeaderboardView: View {
         .onAppear {
             Task {
                 do {
-                    listOfUsers = try await get_stats()
+                    listOfUsers = try await getStats()
                     dataLoaded = true
                 } catch {
                     print(error)
@@ -53,7 +53,7 @@ struct LeaderboardView: View {
 
 #Preview {
     LeaderboardView(
-        selected_user: User(
+        selectedUser: User(
             id: "auth1|6552867564e79113efcb65f7",
             email: "example@gmail.com",
             nickname: "example")

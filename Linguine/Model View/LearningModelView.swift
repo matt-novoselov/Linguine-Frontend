@@ -142,7 +142,7 @@ class ImageLevelLibrary{
                 [
                     im_card_lib[10],
                     im_card_lib[22],
-                    im_card_lib[34],
+                    im_card_lib[33],
                     im_card_lib[46],
                 ]
             ),
@@ -158,18 +158,6 @@ class ImageLevelLibrary{
         ]
     }
 }
-
-
-//class B {}
-//
-//class A {
-//    var b: [B] [
-//        ["pizza","pizza","pizza"]
-//    ].map { level in
-//        B(lottie:level[0],english:level[2],italian:level[3])
-//    }
-//}
-
 
 class ImageLevelCardsLibrary{
     var imageLevelCards: [ImagelevelCard] = [
@@ -207,7 +195,6 @@ class ImageLevelCardsLibrary{
         ImagelevelCard(lottie: "mashroom", english: "mashroom", italian: "fungo"),
         ImagelevelCard(lottie: "melon", english: "melon", italian: "melone"),
         ImagelevelCard(lottie: "menu", english: "menu", italian: "menu"),
-        ImagelevelCard(lottie: "pizza", english: "pizza", italian: "pizza"),///
         ImagelevelCard(lottie: "mixer", english: "mixer", italian: "frullatore"),
         ImagelevelCard(lottie: "olive", english: "olive", italian: "oliva"),
         ImagelevelCard(lottie: "pear", english: "pear", italian: "pera"),

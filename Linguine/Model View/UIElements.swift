@@ -238,13 +238,13 @@ struct dropButtonRound: View {
 
 struct cardButton: View {
     var title: String
-    var icon_name: String
+    var iconName: String
     var action: () -> Void
     var style: Style
     
     struct dropButtonStyle: ButtonStyle {
         var title: String
-        var icon_name: String
+        var iconName: String
         let buttonHeight: Double = 260
         let shadowHeight: Double = 4
         var style: Style
@@ -272,7 +272,7 @@ struct cardButton: View {
                     VStack(){
                         Spacer()
                         
-                        UILottieView(lottieName: icon_name, playOnce: true)
+                        UILottieView(lottieName: iconName, playOnce: true)
                             .frame(height: 100)
                         
                         Spacer()
@@ -293,7 +293,7 @@ struct cardButton: View {
     var body: some View {
         Button(action: action){}
             .buttonStyle(
-                dropButtonStyle(title: title, icon_name: icon_name, style: style)
+                dropButtonStyle(title: title, iconName: iconName, style: style)
             )
     }
 }
@@ -392,7 +392,7 @@ extension View {
 
 struct LevelsUpBar: View {
     var action: () -> Void
-    var current_score: Int?
+    var currentScore: Int?
     
     var body: some View {
         ZStack {
@@ -406,7 +406,7 @@ struct LevelsUpBar: View {
                         .frame(width: 15,height: 18)
                         .foregroundColor(.lgBlueIcon)
                     
-                    Text("\(current_score == nil ? 0 : current_score!) XP")
+                    Text("\(currentScore == nil ? 0 : currentScore!) XP")
                         .font(Font.custom("DINNextRoundedLTPro-Bold", size: 18))
                         .foregroundColor(.lgBlueIcon)
                 }

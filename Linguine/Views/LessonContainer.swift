@@ -1,22 +1,22 @@
 import SwiftUI
 
-struct LevelContainer: View {
+struct LessonContainer: View {
     @State private var isShown: Bool = false
     @Binding var path: [Int]
     @State var count: Int
-    var selected_level: Lesson
-    var selected_user: User
+    var selectedLevel: Lesson
+    var selectedUser: User
     @Binding var totalScore: Int
-    @Binding var current_score: Int
+    @Binding var currentScore: Int
     
     
     var body: some View {
         VStack{            
-            if path.count == selected_level.levels.count && !isShown{
-                LessonCompleteView(path: $path, selected_user: selected_user, totalScore: $totalScore, current_score: $current_score)
+            if path.count == selectedLevel.levels.count && !isShown{
+                LessonCompleteView(path: $path, selectedUser: selectedUser, totalScore: $totalScore, currentScore: $currentScore)
             }
             else {
-                ImageLevelView(path: $path, count: count, selected_level: selected_level.levels[count], totalScore: $totalScore)
+                ImageLevelView(path: $path, count: count, selectedLevel: selectedLevel.levels[count], totalScore: $totalScore)
                 .onAppear(){
                     isShown.toggle()
                 }

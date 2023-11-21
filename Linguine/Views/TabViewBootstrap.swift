@@ -1,17 +1,17 @@
 import SwiftUI
 
 struct TabViewBootstrap: View {
-    var selected_user: User
-    var current_score: Int
+    var selectedUser: User
+    var currentScore: Int
     @Binding var user: User?
     
     var body: some View {
         TabView {
-            LevelsSelectionView(user: $user, selected_user: selected_user, current_score: current_score)
+            MenuView(user: $user, selectedUser: selectedUser, currentScore: currentScore)
                 .tabItem {
                     Label("", systemImage: "house.fill")
                 }
-            LeaderboardView(selected_user: selected_user)
+            LeaderboardView(selectedUser: selectedUser)
                 .tabItem {
                     Label("", systemImage: "trophy.fill")
                 }
@@ -21,11 +21,11 @@ struct TabViewBootstrap: View {
 
 #Preview {
     TabViewBootstrap(
-        selected_user:
+        selectedUser:
             User(
             id: "auth1|6552867564e79113efcb65f7",
             email: "example@gmail.com", nickname: "example"),
-        current_score: 0,
+        currentScore: 0,
         user: Bootstrap().$user
     )
 }

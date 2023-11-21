@@ -3,9 +3,9 @@ import Auth0
 
 struct LessonCompleteView: View {
     @Binding var path: [Int]
-    var selected_user: User
+    var selectedUser: User
     @Binding var totalScore: Int
-    @Binding var current_score: Int
+    @Binding var currentScore: Int
     
     var body: some View {
         ZStack{
@@ -37,8 +37,8 @@ struct LessonCompleteView: View {
         .onAppear {
             Task {
                 do {
-                    _ = try await update_score_by_id(user_id: selected_user.id, new_score: totalScore)
-                    current_score += totalScore
+                    _ = try await updateScoreById(userId: selectedUser.id, newScore: totalScore)
+                    currentScore += totalScore
                     print("Updated score \(totalScore)")
                 } catch {
                     print(error)
@@ -52,12 +52,12 @@ struct LessonCompleteView: View {
 #Preview {
     LessonCompleteView(
         path: .constant([]),
-        selected_user:
+        selectedUser:
             User(
                 id: "auth1|6552867564e79113efcb65f7",
                 email: "example@gmail.com",
                 nickname: "example"),
         totalScore: .constant(0),
-        current_score: .constant(0)
+        currentScore: .constant(0)
     )
 }

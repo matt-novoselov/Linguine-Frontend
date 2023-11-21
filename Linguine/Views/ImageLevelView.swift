@@ -6,18 +6,17 @@ struct ImageLevelView: View {
     @State var detentHeight: CGFloat = 0
     @Binding var path: [Int]
     let count: Int
-    var selected_level: Imagelevel
+    var selectedLevel: Imagelevel
     @Binding var totalScore: Int
     
-    init(path: Binding<[Int]>, count: Int, selected_level: Imagelevel, totalScore: Binding<Int>) {
+    init(path: Binding<[Int]>, count: Int, selectedLevel: Imagelevel, totalScore: Binding<Int>) {
         self._path = path
         self.count = count
-        self.selected_level = selected_level
+        self.selectedLevel = selectedLevel
         self._totalScore = totalScore
         
-        // Initialize properties here
-        let randomImageLevelCard = selected_level.imageLevelCards.randomElement()
-        let generatedLevel = ImagelevelGeneration(prompt: randomImageLevelCard?.italian ?? "", correct_answer: randomImageLevelCard?.english ?? "")
+        let randomImageLevelCard = selectedLevel.imageLevelCards.randomElement()
+        let generatedLevel = ImagelevelGeneration(prompt: randomImageLevelCard?.italian ?? "", correctAnswer: randomImageLevelCard?.english ?? "")
         _randomImageLevelCard = State(initialValue: randomImageLevelCard)
         _generatedLevel = State(initialValue: generatedLevel)
     }
@@ -26,7 +25,7 @@ struct ImageLevelView: View {
     @State private var generatedLevel: ImagelevelGeneration?
     
     var body: some View {
-        let amountOfMenus: Int = selected_level.imageLevelCards.count
+        let amountOfMenus: Int = selectedLevel.imageLevelCards.count
         
         VStack{
             VStack(alignment: .leading ,spacing: 20){
@@ -48,13 +47,13 @@ struct ImageLevelView: View {
                 
                 HStack(spacing: 20){
                     ForEach(0..<(amountOfMenus  + 1) / 2, id: \.self) { i in
-                        cardButton(title: selected_level.imageLevelCards[i].english, icon_name: selected_level.imageLevelCards[i].lottie, action: {selectedButtonIndex=i}, style: selectedButtonIndex==i ? .standart : .disabled)
+                        cardButton(title: selectedLevel.imageLevelCards[i].english, iconName: selectedLevel.imageLevelCards[i].lottie, action: {selectedButtonIndex=i}, style: selectedButtonIndex==i ? .standart : .disabled)
                     }
                 }
                 
                 HStack(spacing: 20){
                     ForEach((amountOfMenus  + 1) / 2..<amountOfMenus, id: \.self) { i in
-                        cardButton(title: selected_level.imageLevelCards[i].english, icon_name: selected_level.imageLevelCards[i].lottie, action: {selectedButtonIndex=i}, style: selectedButtonIndex==i ? .standart : .disabled)
+                        cardButton(title: selectedLevel.imageLevelCards[i].english, iconName: selectedLevel.imageLevelCards[i].lottie, action: {selectedButtonIndex=i}, style: selectedButtonIndex==i ? .standart : .disabled)
                     }
                 }
                 
@@ -65,7 +64,7 @@ struct ImageLevelView: View {
         }
         .background(Color.lgBackground.ignoresSafeArea())
         .sheet(isPresented: $showingCredits) {
-            levelResult(correctAnswers: generatedLevel!.correct_answer, selectedAnswer: selected_level.imageLevelCards[selectedButtonIndex!].english, path: $path, count: count, totalScore: $totalScore)
+            levelResult(correctAnswers: generatedLevel!.correctAnswer, selectedAnswer: selectedLevel.imageLevelCards[selectedButtonIndex!].english, path: $path, count: count, totalScore: $totalScore)
                 .readHeight()
                 .onPreferenceChange(HeightPreferenceKey.self) { height in
                     if let height {
@@ -81,18 +80,10 @@ struct ImageLevelView: View {
 
 struct ImagelevelGeneration{
     var prompt: String
-    var correct_answer: String
+    var correctAnswer: String
 }
 
 #Preview {
-    ImageLevelView(path: .constant([]), count: 0, selected_level:             Imagelevel(imageLevelCards:
-                                                                                            [
-                                                                                                ImagelevelCard(lottie: "pizza", english: "pizza", italian: "pizza"),
-                                                                                                ImagelevelCard(lottie: "tomato", english: "tomato", italian: "pomodoro"),
-                                                                                                ImagelevelCard(lottie: "ice_cream", english: "ice cream", italian: "gelato"),
-                                                                                                ImagelevelCard(lottie: "watermelon", english: "watermelon", italian: "anguria"),
-                                                                                            ]
-                                                                                        ),
-                   totalScore: .constant(0)
+    ImageLevelView(path: .constant([]), count: 0, selectedLevel: ImageLevelLibrary().levels[0], totalScore: .constant(0)
     )
 }

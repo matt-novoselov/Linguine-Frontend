@@ -4,13 +4,13 @@ import Auth0
 struct Bootstrap: View {
     @State var user: User?
     @State private var loadingFinished: Bool = false
-    @State var current_score: Int?
+    @State var currentScore: Int?
     
     var body: some View {
-        if let selected_user = self.user {
+        if let selectedUser = self.user {
             VStack{
                 if loadingFinished{
-                    TabViewBootstrap(selected_user: selected_user, current_score: current_score ?? 0, user: $user)
+                    TabViewBootstrap(selectedUser: selectedUser, currentScore: currentScore ?? 0, user: $user)
                 }
                 else{
                     LoadingScreenView()
@@ -18,8 +18,8 @@ struct Bootstrap: View {
             }.onAppear(){
                 Task {
                     do {
-                        try await add_user_to_database(user_id: selected_user.id, nickname: selected_user.nickname)
-                        current_score = try await get_score_by_id(user_id: selected_user.id)
+                        try await addUserToDatabase(userId: selectedUser.id, nickname: selectedUser.nickname)
+                        currentScore = try await getScoreById(userId: selectedUser.id)
                         loadingFinished = true
                     } catch {
                         print(error)
@@ -29,11 +29,11 @@ struct Bootstrap: View {
         }
         else {
             LoginView(user: $user)
-                .onAppear{token_login()}
+                .onAppear{tokenLogin()}
         }
     }
 
-    func token_login() {
+    func tokenLogin() {
         let credentialsManager = CredentialsManager(authentication: Auth0.authentication())
         
         credentialsManager.credentials { result in
