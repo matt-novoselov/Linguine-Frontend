@@ -12,11 +12,11 @@ struct LessonContainer: View {
     
     var body: some View {
         VStack{            
-            if path.count == selectedLevel.levels.count && !isShown{
+            if path.count == selectedLevel.levels.count+1 && !isShown{
                 LessonCompleteView(path: $path, selectedUser: selectedUser, totalScore: $totalScore, currentScore: $currentScore)
             }
             else {
-                ImageLevelView(path: $path, count: count, selectedLevel: selectedLevel.levels[count], totalScore: $totalScore)
+                ImageLevelView(path: $path, count: count, selectedLevel: selectedLevel.levels[count<selectedLevel.levels.count ? count : 0], totalScore: $totalScore)
                 .onAppear(){
                     isShown.toggle()
                 }
