@@ -2,17 +2,19 @@ import Foundation
 
 class LessonLibrary{
     var im_lvl_lib: [Imagelevel]
+    var HDYS_lvl_lib: [HDYSlevel]
     var lessons: [Lesson]
     
     init(){
         self.im_lvl_lib = ImageLevelLibrary().levels
+        self.HDYS_lvl_lib = HDYSLevelLibrary().levels
         
         lessons = [
             Lesson(sfSymbol: "star.fill", levels:
                     [
                         im_lvl_lib[0],
                         im_lvl_lib[1],
-                        im_lvl_lib[2],
+                        HDYS_lvl_lib[0]
                     ]
             ),
             Lesson(sfSymbol: "star.fill", levels:
@@ -36,45 +38,34 @@ class LessonLibrary{
                         im_lvl_lib[11],
                     ]
             ),
+            
             // vvv Below are empty placeholder levels vvv //
             
             Lesson(sfSymbol: "book.fill", levels:
                     [
                         im_lvl_lib[0],
-                        im_lvl_lib[1],
-                        im_lvl_lib[2],
                     ]
             ),
             Lesson(sfSymbol: "star.fill", levels:
                     [
-                        im_lvl_lib[3],
-                        im_lvl_lib[4],
-                        im_lvl_lib[5],
+                        im_lvl_lib[0],
                     ]
             ),
             Lesson(sfSymbol: "book.fill", levels:
                     [
-                        im_lvl_lib[6],
-                        im_lvl_lib[7],
-                        im_lvl_lib[8],
+                        im_lvl_lib[0],
                     ]
             ),
-            Lesson(sfSymbol: "star.fill", levels:
-                    [
-                        im_lvl_lib[9],
-                        im_lvl_lib[10],
-                        im_lvl_lib[11],
-                    ]
-            ),
-            
             Lesson(sfSymbol: "star.fill", levels:
                     [
                         im_lvl_lib[0],
-                        im_lvl_lib[1],
-                        im_lvl_lib[2],
                     ]
             ),
-            
+            Lesson(sfSymbol: "star.fill", levels:
+                    [
+                        im_lvl_lib[0],
+                    ]
+            ),
         ]
     }
 }
@@ -93,7 +84,7 @@ class ImageLevelLibrary{
                     im_card_lib[12],
                     im_card_lib[24],
                     im_card_lib[36],
-                ]
+                ], levelType: .imageLevel
             ),
             
             Imagelevel(imageLevelCards:
@@ -102,7 +93,7 @@ class ImageLevelLibrary{
                     im_card_lib[13],
                     im_card_lib[25],
                     im_card_lib[37],
-                ]
+                ], levelType: .imageLevel
             ),
             
             Imagelevel(imageLevelCards:
@@ -111,7 +102,7 @@ class ImageLevelLibrary{
                     im_card_lib[14],
                     im_card_lib[26],
                     im_card_lib[38],
-                ]
+                ], levelType: .imageLevel
             ),
             
             Imagelevel(imageLevelCards:
@@ -120,7 +111,7 @@ class ImageLevelLibrary{
                     im_card_lib[15],
                     im_card_lib[27],
                     im_card_lib[39],
-                ]
+                ], levelType: .imageLevel
             ),
             
             Imagelevel(imageLevelCards:
@@ -129,7 +120,7 @@ class ImageLevelLibrary{
                     im_card_lib[16],
                     im_card_lib[28],
                     im_card_lib[40],
-                ]
+                ], levelType: .imageLevel
             ),
             
             Imagelevel(imageLevelCards:
@@ -138,7 +129,7 @@ class ImageLevelLibrary{
                     im_card_lib[17],
                     im_card_lib[29],
                     im_card_lib[41],
-                ]
+                ], levelType: .imageLevel
             ),
             
             Imagelevel(imageLevelCards:
@@ -147,7 +138,7 @@ class ImageLevelLibrary{
                     im_card_lib[18],
                     im_card_lib[30],
                     im_card_lib[42],
-                ]
+                ], levelType: .imageLevel
             ),
             
             Imagelevel(imageLevelCards:
@@ -156,7 +147,7 @@ class ImageLevelLibrary{
                     im_card_lib[19],
                     im_card_lib[31],
                     im_card_lib[43],
-                ]
+                ], levelType: .imageLevel
             ),
             
             Imagelevel(imageLevelCards:
@@ -165,7 +156,7 @@ class ImageLevelLibrary{
                     im_card_lib[20],
                     im_card_lib[32],
                     im_card_lib[44],
-                ]
+                ], levelType: .imageLevel
             ),
             
             Imagelevel(imageLevelCards:
@@ -174,7 +165,7 @@ class ImageLevelLibrary{
                     im_card_lib[21],
                     im_card_lib[33],
                     im_card_lib[45],
-                ]
+                ], levelType: .imageLevel
             ),
             
             Imagelevel(imageLevelCards:
@@ -183,7 +174,7 @@ class ImageLevelLibrary{
                     im_card_lib[22],
                     im_card_lib[34],
                     im_card_lib[46],
-                ]
+                ], levelType: .imageLevel
             ),
             
             Imagelevel(imageLevelCards:
@@ -192,7 +183,7 @@ class ImageLevelLibrary{
                     im_card_lib[23],
                     im_card_lib[35],
                     im_card_lib[46],
-                ]
+                ], levelType: .imageLevel
             ),
         ]
     }
@@ -262,25 +253,29 @@ class HDYSLevelLibrary{
                 hdys_card_lib[0],
                 hdys_card_lib[1],
                 hdys_card_lib[2]
-            ]),
+            ], levelType: .HDYSLevel
+            ),
             
             HDYSlevel(imageLevelCards: [
                 hdys_card_lib[3],
                 hdys_card_lib[4],
                 hdys_card_lib[5]
-            ]),
+            ], levelType: .HDYSLevel
+            ),
             
             HDYSlevel(imageLevelCards: [
                 hdys_card_lib[6],
                 hdys_card_lib[7],
                 hdys_card_lib[8]
-            ]),
+            ], levelType: .HDYSLevel
+            ),
             
             HDYSlevel(imageLevelCards: [
                 hdys_card_lib[9],
                 hdys_card_lib[10],
                 hdys_card_lib[11]
-            ]),
+            ], levelType: .HDYSLevel
+            ),
         ]
     }
 }
@@ -300,4 +295,9 @@ class HDYSLevelCardsLibrary{
         HDYSlevelCard(english: "friend", italian: "amico"),
         HDYSlevelCard(english: "time", italian: "tempo"),
     ]
+}
+
+enum LevelType: String {
+    case imageLevel = "Image Level"
+    case HDYSLevel = "HDYS Level"
 }

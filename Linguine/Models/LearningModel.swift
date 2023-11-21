@@ -1,12 +1,14 @@
 import Foundation
 
-struct HDYSlevelCard{
-    var english: String
-    var italian: String
+struct Lesson: Identifiable{
+    var id = UUID()
+    var sfSymbol: String
+    var levels: [Level]
 }
 
-struct HDYSlevel{
-    var imageLevelCards: [HDYSlevelCard]
+protocol Level {
+    var levelType: LevelType { get }
+    // Add any other common properties or methods here
 }
 
 struct ImagelevelCard{
@@ -15,12 +17,17 @@ struct ImagelevelCard{
     var italian: String
 }
 
-struct Imagelevel{
+struct Imagelevel: Level {
     var imageLevelCards: [ImagelevelCard]
+    var levelType: LevelType
 }
 
-struct Lesson: Identifiable{
-    var id = UUID()
-    var sfSymbol: String
-    var levels: [Imagelevel]
+struct HDYSlevelCard{
+    var english: String
+    var italian: String
+}
+
+struct HDYSlevel: Level {
+    var imageLevelCards: [HDYSlevelCard]
+    var levelType: LevelType
 }

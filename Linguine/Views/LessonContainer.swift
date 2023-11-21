@@ -15,10 +15,19 @@ struct LessonContainer: View {
                 LessonCompleteView(path: $path, selectedUser: selectedUser, totalScore: $totalScore, currentScore: $currentScore)
             }
             else {
-                ImageLevelView(path: $path, count: count, selectedLevel: selectedLevel.levels[count<selectedLevel.levels.count ? count : 0], totalScore: $totalScore)
-                    .onAppear(){
-                        isShown.toggle()
-                    }
+                switch selectedLevel.levels[count<selectedLevel.levels.count ? count : 0].levelType {
+                case .imageLevel:
+                    ImageLevelView(path: $path, count: count, selectedLevel: selectedLevel.levels[count<selectedLevel.levels.count ? count : 0] as! Imagelevel, totalScore: $totalScore)
+                        .onAppear(){
+                            isShown.toggle()
+                        }
+                    
+                case .HDYSLevel:
+                    HDYSLevelView(path: $path, count: count, selectedLevel: selectedLevel.levels[count<selectedLevel.levels.count ? count : 0] as! HDYSlevel, totalScore: $totalScore)
+                        .onAppear(){
+                            isShown.toggle()
+                        }
+                }
             }
             
         }
