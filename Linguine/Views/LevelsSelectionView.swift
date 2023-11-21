@@ -3,7 +3,7 @@ import Auth0
 
 struct LevelsSelectionView: View {
     @Binding var user: User?
-    @State private var current_score = 0
+    @State var current_score: Int
     var selected_user: User
     let levelsLibrary: [LevelImage] = LevelImageLibrary().levels
     let levels_completed: Int = 3
@@ -57,16 +57,6 @@ struct LevelsSelectionView: View {
             }
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .onAppear(){
-            Task {
-                do {
-                    current_score = try await get_score_by_id(user_id: selected_user.id)
-                    print("Fetched score \(current_score)")
-                } catch {
-                    print(error)
-                }
-            }
-        }
     }
     
     func logout() {
@@ -88,7 +78,7 @@ struct LevelsSelectionView: View {
 
 #Preview {
     LevelsSelectionView(
-        user: Bootstrap().$user,
+        user: Bootstrap().$user, current_score: 0,
         selected_user: User(
             id: "auth1|6552867564e79113efcb65f7",
             email: "example@gmail.com",

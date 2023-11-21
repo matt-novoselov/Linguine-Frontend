@@ -409,7 +409,6 @@ struct LevelsUpBar: View {
                     Text("\(current_score == nil ? 0 : current_score!) XP")
                         .font(Font.custom("DINNextRoundedLTPro-Bold", size: 18))
                         .foregroundColor(.lgBlueIcon)
-                        .redacted(reason: current_score == nil ? .placeholder : .invalidated)
                 }
                 
                 Spacer()

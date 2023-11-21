@@ -3,24 +3,24 @@ import Auth0
 
 struct Bootstrap: View {
     @State var user: User?
+    @State private var loadingFinished: Bool = false
+    @State var current_score: Int?
     
     var body: some View {
         if let selected_user = self.user {
-            TabView {
-                LevelsSelectionView(user: $user, selected_user: selected_user)
-                    .tabItem {
-                        Label("", systemImage: "house.fill")
-                    }
-                LeaderboardView(selected_user: selected_user)
-                    .tabItem {
-                        Label("", systemImage: "trophy.fill")
-                    }
+            VStack{
+                if loadingFinished{
+                    TabViewBootstrap(selected_user: selected_user, current_score: current_score ?? 0, user: $user)
+                }
+                else{
+                    LoadingScreenView()
+                }
             }.onAppear(){
                 Task {
                     do {
-                        print(selected_user.id)
-                        print(selected_user.nickname)
                         try await add_user_to_database(user_id: selected_user.id, nickname: selected_user.nickname)
+                        current_score = try await get_score_by_id(user_id: selected_user.id)
+                        loadingFinished = true
                     } catch {
                         print(error)
                     }

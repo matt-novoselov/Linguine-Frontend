@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		1A2CDD342B039D6E002044D0 /* UIElements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2CDD332B039D6E002044D0 /* UIElements.swift */; };
+		1A34F21C2B0C9DEC009C91FE /* LoadingScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A34F21B2B0C9DEC009C91FE /* LoadingScreenView.swift */; };
+		1A34F21E2B0C9F84009C91FE /* TabViewBootstrap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A34F21D2B0C9F84009C91FE /* TabViewBootstrap.swift */; };
+		1A34F2202B0CA3EE009C91FE /* loading.lottie in Resources */ = {isa = PBXBuildFile; fileRef = 1A34F21F2B0CA3EE009C91FE /* loading.lottie */; };
 		1A56642D2B0AB8C5007E58E4 /* LevelContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A56642C2B0AB8C5007E58E4 /* LevelContainer.swift */; };
 		1A5664312B0B6D21007E58E4 /* LessonBuilderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5664302B0B6D21007E58E4 /* LessonBuilderModel.swift */; };
 		1A56645D2B0B7E9C007E58E4 /* taco.lottie in Resources */ = {isa = PBXBuildFile; fileRef = 1A5664322B0B7E9A007E58E4 /* taco.lottie */; };
@@ -91,6 +94,9 @@
 
 /* Begin PBXFileReference section */
 		1A2CDD332B039D6E002044D0 /* UIElements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIElements.swift; sourceTree = "<group>"; };
+		1A34F21B2B0C9DEC009C91FE /* LoadingScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingScreenView.swift; sourceTree = "<group>"; };
+		1A34F21D2B0C9F84009C91FE /* TabViewBootstrap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewBootstrap.swift; sourceTree = "<group>"; };
+		1A34F21F2B0CA3EE009C91FE /* loading.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = loading.lottie; sourceTree = "<group>"; };
 		1A56642C2B0AB8C5007E58E4 /* LevelContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelContainer.swift; sourceTree = "<group>"; };
 		1A5664302B0B6D21007E58E4 /* LessonBuilderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonBuilderModel.swift; sourceTree = "<group>"; };
 		1A5664322B0B7E9A007E58E4 /* taco.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = taco.lottie; sourceTree = "<group>"; };
@@ -234,6 +240,7 @@
 		1A9EA3AF2B079439002CFE18 /* SVGs */ = {
 			isa = PBXGroup;
 			children = (
+				1A34F21F2B0CA3EE009C91FE /* loading.lottie */,
 				1A9EA3B02B0794AE002CFE18 /* pizza.lottie */,
 				1A9EA3B22B0794AE002CFE18 /* tomato.lottie */,
 				1A9EA3B12B0794AE002CFE18 /* ice_cream.lottie */,
@@ -302,6 +309,8 @@
 				1A9EA3B82B07966B002CFE18 /* LessonView.swift */,
 				1AE6DFB32B07FC23005D98F7 /* LevelsSelectionView.swift */,
 				1A56642C2B0AB8C5007E58E4 /* LevelContainer.swift */,
+				1A34F21B2B0C9DEC009C91FE /* LoadingScreenView.swift */,
+				1A34F21D2B0C9F84009C91FE /* TabViewBootstrap.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -423,6 +432,7 @@
 				1A56647D2B0B7E9C007E58E4 /* tea.lottie in Resources */,
 				1A5664712B0B7E9C007E58E4 /* olive.lottie in Resources */,
 				1A5664622B0B7E9C007E58E4 /* cheese.lottie in Resources */,
+				1A34F2202B0CA3EE009C91FE /* loading.lottie in Resources */,
 				1A56645D2B0B7E9C007E58E4 /* taco.lottie in Resources */,
 				1A5664852B0B7E9C007E58E4 /* shrimp.lottie in Resources */,
 				1A9EA3832B065C24002CFE18 /* DINNextRoundedLTPro-Medium.otf in Resources */,
@@ -512,6 +522,7 @@
 				1A5664312B0B6D21007E58E4 /* LessonBuilderModel.swift in Sources */,
 				5CDD8867277102DC00052307 /* Bootstrap.swift in Sources */,
 				1AB574FE2B06172700AB46FC /* APICallModel.swift in Sources */,
+				1A34F21C2B0C9DEC009C91FE /* LoadingScreenView.swift in Sources */,
 				1A9EA3782B06572B002CFE18 /* LoginView.swift in Sources */,
 				1A9EA3B92B07966B002CFE18 /* LessonView.swift in Sources */,
 				1A56648D2B0BBCF7007E58E4 /* Haptic Model.swift in Sources */,
@@ -527,6 +538,7 @@
 				1ADE79402B03802400F0E915 /* LottieModelView.swift in Sources */,
 				1AE6DFB02B079F69005D98F7 /* LevelModelView.swift in Sources */,
 				1A56648B2B0BB207007E58E4 /* ShapesModelView.swift in Sources */,
+				1A34F21E2B0C9F84009C91FE /* TabViewBootstrap.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
