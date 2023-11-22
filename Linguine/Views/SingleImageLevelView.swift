@@ -58,6 +58,9 @@ struct SingleImageLevelView: View {
                 .textFieldStyle(WhiteBorder())
                 .textInputAutocapitalization(.never)
                 .disableAutocorrection(true)
+                .onTapGesture {
+                    isFocused = true
+                }
                 
                 Spacer()
                 
