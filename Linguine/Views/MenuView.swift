@@ -3,7 +3,7 @@ import Auth0
 
 struct MenuView: View {
     // Amount of levels user has completed. Will be retrieved from the database in the future
-    let levelsCompleted: Int = 0
+    let levelsCompleted: Int = 6
     
     @Binding var user: User? //used for login and logout
     var selectedUser: User //used to get info about user. Ex: name, email, uid and etc.
