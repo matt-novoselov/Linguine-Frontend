@@ -85,9 +85,10 @@ struct leaderboardParticipant: View {
                 .foregroundColor(.lgLeaderboardHighlight)
                 .opacity(isHighlighted ? 1 : 0)
             
-            HStack(spacing: 20){
+            HStack(spacing: 10){
                 Text("\(place)")
                     .font(Font.custom("DINNextRoundedLTPro-Bold", size: 16))
+                    .frame(width: 18, alignment: .leading)
                 
                 ZStack{
                     Circle()
@@ -99,13 +100,16 @@ struct leaderboardParticipant: View {
                         .foregroundColor(.lgBackground)
                         .padding(.top, 4.5)
                 }
+                .padding(.trailing, 5)
                 
                 Text("@\(nickname)")
-                    .font(Font.custom("DINNextRoundedLTPro-Bold", size: 18  ))
+                    .font(Font.custom("DINNextRoundedLTPro-Bold", size: 18))
+                
+                Spacer()
                 
                 Text("\(xpAmount) XP")
                     .font(Font.custom("DINNextRoundedLTPro-regular", size: 18))
-                    .frame(maxWidth: .infinity, alignment: .trailing)
+                    .frame(alignment: .trailing)
             }
         }
     }
@@ -510,9 +514,7 @@ struct WhiteBorder: TextFieldStyle {
     VStack{        
         Spacer()
         
-        leaderboardParticipant(nickname: "matveynovoselov", xpAmount: 4000)
         
-        dropButton(title: "test", action: {}, style: .disabled)
         
         Spacer()
     }
