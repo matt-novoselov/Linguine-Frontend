@@ -33,6 +33,8 @@ struct SingleImageLevelView: View {
                         .padding(.top)
                 }
                 
+                Spacer()
+                
                 ZStack{
                     let borderSize: Double = 180
                     VStack(spacing: 20){
@@ -57,12 +59,15 @@ struct SingleImageLevelView: View {
                 .textInputAutocapitalization(.never)
                 .disableAutocorrection(true)
                 
+                Spacer()
+                
                 dropButton(title: "check", action: {showingCredits.toggle(); isFocused = false}, style: inputFieldText != "" ? .standart : .disabled)
                     .padding(.bottom)
-                
-                Spacer()
             }
             .padding(.horizontal)
+        }
+        .onTapGesture {
+                hideKeyboard()
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Color.lgBackground.ignoresSafeArea())
@@ -79,6 +84,13 @@ struct SingleImageLevelView: View {
                 .background(.lgLeaderboardHighlight)
                 .interactiveDismissDisabled()
         }
+    }
+}
+
+extension View {
+    func hideKeyboard() {
+        let resign = #selector(UIResponder.resignFirstResponder)
+        UIApplication.shared.sendAction(resign, to: nil, from: nil, for: nil)
     }
 }
 
