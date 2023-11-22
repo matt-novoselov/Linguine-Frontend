@@ -117,12 +117,10 @@ struct leaderboardParticipant: View {
 
 struct ExtendedDevider: View {
     var body: some View {
-        VStack {
-            Rectangle()
-                .frame(height: 3)
-                .foregroundColor(.lgLeaderboardHighlight)
-                .padding(.horizontal, -50)
-        }
+        Rectangle()
+            .frame(height: 3)
+            .foregroundColor(.lgLeaderboardHighlight)
+            .padding(.horizontal, -50)
     }
 }
 
@@ -496,6 +494,8 @@ struct WhiteBorder: TextFieldStyle {
         Spacer()
         
         ProgressBar()
+        
+        ExtendedDevider()
         
         Spacer()
     }

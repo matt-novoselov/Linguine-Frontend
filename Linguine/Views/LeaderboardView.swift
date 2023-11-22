@@ -32,6 +32,8 @@ struct LeaderboardView: View {
                         }
                     }
                 }
+                
+                ExtendedDevider()
             }
         }
         .onAppear {
