@@ -3,7 +3,7 @@ import Auth0
 
 struct MenuView: View {
     // Amount of levels user has completed. Will be retrieved from the database in the future
-    let levelsCompleted: Int = 6
+    let levelsCompleted: Int = 0
     
     @Binding var user: User? //used for login and logout
     var selectedUser: User //used to get info about user. Ex: name, email, uid and etc.
@@ -41,6 +41,9 @@ struct MenuView: View {
                     Text(selectedLevelIndex?.description ?? "No level selected").hidden().frame(width: 0,height: 0).frame( maxWidth: 0, maxHeight: 0)
                     
                     ScrollView() {
+                        Spacer()
+                            .frame(height: levelsCompleted==0 ? 40 : 0)
+                        
                         VStack(alignment: .leading){
                             ForEach(Array(lessonLibrary.enumerated()), id: \.element.id) { index, lesson in
                                 dropButtonRound(titleSymbol: lesson.sfSymbol, action: {
