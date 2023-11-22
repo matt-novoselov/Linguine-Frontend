@@ -71,6 +71,7 @@ struct ImageLevelView: View {
                         self.detentHeight = height
                     }
                 }
+                .frame(maxHeight: .infinity)
                 .presentationDetents([.height(self.detentHeight)])
                 .background(.lgLeaderboardHighlight)
                 .interactiveDismissDisabled()
