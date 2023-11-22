@@ -425,9 +425,6 @@ struct LevelsUpBar: View {
 }
 
 struct ProgressBar: View {
-    @State private var offsetY: CGFloat = 0.0
-    let animationDuration: Double = 1.5
-    
     var body: some View {
         ZStack {
             Ellipse()
@@ -446,38 +443,6 @@ struct ProgressBar: View {
         }
         .frame(width: 90, height: 85)
         .padding(.bottom, 8)
-        .overlay(
-            StartBubble()
-            .offset(y: offsetY)
-            .onAppear {
-                animateLoop()
-            },
-            alignment: .top
-        )
-    }
-    
-    func animateLoop() {
-        withAnimation(Animation.easeInOut(duration: animationDuration).repeatForever(autoreverses: true)) {
-            self.offsetY = 5 // Adjust the value based on your desired animation range
-        }
-    }
-}
-
-struct StartBubble: View {
-    var body: some View {
-        ZStack {
-            blobText()
-                .fill(.lgBackground)
-                .stroke(.lgDisabledButton, lineWidth: 2)
-                .frame(width: 75, height: 50)
-            
-            Text("START")
-                .font(Font.custom("DINNextRoundedLTPro-Bold", size: 16))
-                .foregroundColor(.lgPinkButton)
-                .foregroundColor(.red)
-                .padding(.bottom,5)
-        }
-        .offset(y: -40)
     }
 }
 
