@@ -12,14 +12,20 @@ struct Bootstrap: View {
             VStack{
                 if loadingFinished{
                     TabView {
-                        MenuView(user: $user, selectedUser: selectedUser, currentScore: currentScore!)
-                            .tabItem {
-                                Label("", systemImage: "house.fill")
-                            }
-                        LeaderboardView(listOfUsers: listOfUsers!, selectedUser: selectedUser)
-                            .tabItem {
-                                Label("", systemImage: "trophy.fill")
-                            }
+                        Group{
+                            MenuView(user: $user, selectedUser: selectedUser, currentScore: currentScore!)
+                                .tabItem {
+                                    Label("Home", systemImage: "house.fill")
+                                }
+                            LeaderboardView(listOfUsers: listOfUsers!, selectedUser: selectedUser)
+                                .tabItem {
+                                    Label("Leaderboard", systemImage: "trophy.fill")
+                                }
+                        }
+                        .toolbar(.visible, for: .tabBar)
+                        .toolbarBackground(
+                            Color.lgBackground,
+                                for: .tabBar)
                     }
                 }
                 else{
