@@ -13,7 +13,6 @@
 		1A34F2222B0CB214009C91FE /* LearningModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A34F2212B0CB214009C91FE /* LearningModelView.swift */; };
 		1A3EE7EE2B0D3E2200BEB6C9 /* HDYSLevelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3EE7ED2B0D3E2200BEB6C9 /* HDYSLevelView.swift */; };
 		1A3EE7F02B0D56E600BEB6C9 /* SingleImageLevelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3EE7EF2B0D56E600BEB6C9 /* SingleImageLevelView.swift */; };
-		1A3EE7F62B0E30E900BEB6C9 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3EE7F52B0E30E900BEB6C9 /* SwiftUIView.swift */; };
 		1A56642D2B0AB8C5007E58E4 /* LessonContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A56642C2B0AB8C5007E58E4 /* LessonContainer.swift */; };
 		1A56645D2B0B7E9C007E58E4 /* taco.lottie in Resources */ = {isa = PBXBuildFile; fileRef = 1A5664322B0B7E9A007E58E4 /* taco.lottie */; };
 		1A56645E2B0B7E9C007E58E4 /* fries.lottie in Resources */ = {isa = PBXBuildFile; fileRef = 1A5664332B0B7E9A007E58E4 /* fries.lottie */; };
@@ -98,7 +97,6 @@
 		1A34F2212B0CB214009C91FE /* LearningModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearningModelView.swift; sourceTree = "<group>"; };
 		1A3EE7ED2B0D3E2200BEB6C9 /* HDYSLevelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HDYSLevelView.swift; sourceTree = "<group>"; };
 		1A3EE7EF2B0D56E600BEB6C9 /* SingleImageLevelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleImageLevelView.swift; sourceTree = "<group>"; };
-		1A3EE7F52B0E30E900BEB6C9 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
 		1A56642C2B0AB8C5007E58E4 /* LessonContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonContainer.swift; sourceTree = "<group>"; };
 		1A5664322B0B7E9A007E58E4 /* taco.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = taco.lottie; sourceTree = "<group>"; };
 		1A5664332B0B7E9A007E58E4 /* fries.lottie */ = {isa = PBXFileReference; lastKnownFileType = file; path = fries.lottie; sourceTree = "<group>"; };
@@ -307,7 +305,6 @@
 				1AE6DFB32B07FC23005D98F7 /* MenuView.swift */,
 				1A56642C2B0AB8C5007E58E4 /* LessonContainer.swift */,
 				1A34F21B2B0C9DEC009C91FE /* LoadingScreenView.swift */,
-				1A3EE7F52B0E30E900BEB6C9 /* SwiftUIView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -522,7 +519,6 @@
 				1A34F21C2B0C9DEC009C91FE /* LoadingScreenView.swift in Sources */,
 				1A9EA3782B06572B002CFE18 /* LoginView.swift in Sources */,
 				1A9EA3B92B07966B002CFE18 /* ImageLevelView.swift in Sources */,
-				1A3EE7F62B0E30E900BEB6C9 /* SwiftUIView.swift in Sources */,
 				1A56648D2B0BBCF7007E58E4 /* Haptic Model.swift in Sources */,
 				1A3EE7EE2B0D3E2200BEB6C9 /* HDYSLevelView.swift in Sources */,
 				1A9EA3922B0674F3002CFE18 /* LeaderboardView.swift in Sources */,

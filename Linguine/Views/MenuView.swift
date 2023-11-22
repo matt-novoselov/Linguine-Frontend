@@ -34,7 +34,7 @@ struct MenuView: View {
     var body: some View {
         VStack{
             NavigationStack(path: $path) {
-                VStack(spacing: 0){
+                VStack{
                     LevelsUpBar(action: self.logout, currentScore: currentScore)
                         .padding(.top)
                     
@@ -58,7 +58,6 @@ struct MenuView: View {
                     .navigationDestination(for: Int.self) { int in
                         LessonContainer(path: $path, count: int, selectedLesson: lessonLibrary[selectedLevelIndex!], selectedUser: selectedUser, totalScore: $totalScore, currentScore: $currentScore)
                     }
-                    ExtendedDevider()
                 }
                 .padding(.horizontal)
                 .background(Color.lgBackground.ignoresSafeArea())
