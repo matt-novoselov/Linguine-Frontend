@@ -47,12 +47,13 @@ struct SingleImageLevelView: View {
                         .stroke(.lgDisabledButton, lineWidth: 2)
                         .frame(width: borderSize, height: borderSize)
                 }
-
+                
                 TextField(
-                    "Answer",
+                    "Type in Italian",
                     text: $inputFieldText
                 )
                 .focused($isFocused)
+                .textFieldStyle(WhiteBorder())
                 .textInputAutocapitalization(.never)
                 .disableAutocorrection(true)
                 

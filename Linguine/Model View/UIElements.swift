@@ -491,17 +491,28 @@ struct ItalianFlag: View {
     }
 }
 
+struct WhiteBorder: TextFieldStyle {
+    func _body(configuration: TextField<Self._Label>) -> some View {
+        configuration
+            .font(Font.custom("DINNextRoundedLTPro-Regular", size: 18))
+            .foregroundColor(.white)
+            .padding()
+            .background(.lgLeaderboardHighlight)
+            .cornerRadius(10)
+            .overlay(
+                RoundedRectangle(cornerRadius: 10)
+                    .stroke(.lgDisabledButton, lineWidth:2)
+            )
+    }
+}
+
 #Preview {
-    VStack{
+    VStack{        
         Spacer()
         
         leaderboardParticipant(nickname: "matveynovoselov", xpAmount: 4000)
         
-        dropButton(title: "Test", action: {}, style: .disabled)
-        
-        cardButton(title: "Test", action: {}, style: .disabled)
-        
-        cardButton(title: "Test", iconName: "egg", action: {}, style: .disabled)
+        dropButton(title: "test", action: {}, style: .disabled)
         
         Spacer()
     }
