@@ -43,6 +43,7 @@ struct MenuView: View {
                     ScrollView() {                        
                         VStack(alignment: .leading){
                             ForEach(Array(lessonLibrary.enumerated()), id: \.element.id) { index, lesson in
+                                
                                 dropButtonRound(titleSymbol: lesson.sfSymbol, action: {
                                     selectedLevelIndex = index
                                     path.append(0)
