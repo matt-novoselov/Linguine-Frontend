@@ -311,7 +311,7 @@ struct levelResult: View {
     @Binding var totalScore: Int
     
     var isCorrect: Bool {
-        return correctAnswers == selectedAnswer
+        return correctAnswers.trimmingCharacters(in: .whitespaces) == selectedAnswer.trimmingCharacters(in: .whitespaces)
     }
     
     var body: some View {
