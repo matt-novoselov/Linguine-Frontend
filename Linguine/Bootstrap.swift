@@ -16,10 +16,12 @@ struct Bootstrap: View {
                             .tabItem {
                                 Label("Home", systemImage: "house.fill")
                             }
+                            .accessibilityLabel("Home")
                         LeaderboardView(listOfUsers: listOfUsers!, selectedUser: selectedUser)
                             .tabItem {
                                 Label("Leaderboard", systemImage: "trophy.fill")
                             }
+                            .accessibilityLabel("Leaderboard")
                     }
                 }
                 else{

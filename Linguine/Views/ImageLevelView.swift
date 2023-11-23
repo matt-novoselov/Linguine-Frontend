@@ -35,10 +35,14 @@ struct ImageLevelView: View {
                         .fontWeight(.medium)
                         .foregroundColor(.lgDisabledTitle)
                         .padding(.top)
+                        .accessibilityLabel("Exit level")
+                        .accessibilitySortPriority(-1)
                 }
                 
                 Text("Select the correct image")
                     .font(Font.custom("DINNextRoundedLTPro-Bold", size: 24))
+                    .accessibilitySortPriority(1)
+                    .accessibilityLabel("Select the correct answer")
                 
                 Text(generatedLevel!.prompt)
                     .font(Font.custom("DINNextRoundedLTPro-Medium", size: 20))

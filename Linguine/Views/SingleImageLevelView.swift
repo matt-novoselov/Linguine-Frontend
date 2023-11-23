@@ -31,6 +31,8 @@ struct SingleImageLevelView: View {
                         .fontWeight(.medium)
                         .foregroundColor(.lgDisabledTitle)
                         .padding(.top)
+                        .accessibilityLabel("Exit level")
+                        .accessibilitySortPriority(-1)
                 }
                 
                 Spacer()
@@ -43,6 +45,8 @@ struct SingleImageLevelView: View {
                         
                         Text(randomImageLevelCard!.english)
                             .font(Font.custom("DINNextRoundedLTPro-Regular", size: 20))
+                            .accessibilitySortPriority(1)
+                            .accessibilityLabel("Type in italian: \(randomImageLevelCard!.english)")
                     }.frame(maxHeight: borderSize)
                                         
                     RoundedRectangle(cornerRadius: 10)

@@ -13,6 +13,7 @@ struct LeaderboardView: View {
             Text("Leaderboard")
                 .font(Font.custom("DINNextRoundedLTPro-Bold", size: 24))
                 .padding(.top, -20)
+                .accessibilitySortPriority(1)
             
             VStack(spacing:0){
                 ExtendedDevider()

@@ -9,6 +9,7 @@ struct LoadingScreenView: View {
                 
                 Text("Counting bones...")
                     .font(Font.custom("DINNextRoundedLTPro-Medium", size: 24))
+                    .accessibilityHidden(true)
             }
             .padding(.horizontal)
         }

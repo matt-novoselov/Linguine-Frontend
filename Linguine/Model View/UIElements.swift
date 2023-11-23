@@ -112,6 +112,8 @@ struct leaderboardParticipant: View {
                     .frame(alignment: .trailing)
             }
         }
+        .accessibilityElement(children: .ignore)
+        .accessibilityLabel("Pace \(place) - \(nickname). \(xpAmount) XP")
     }
 }
 
@@ -190,6 +192,7 @@ struct dropButton: View {
             .buttonStyle(
                 dropButtonStyle(title: title, style: style)
             )
+            .accessibilityHidden(style == Style.disabled)
     }
 }
 
@@ -231,11 +234,13 @@ struct dropButtonRound: View {
         }
     }
     
+    
     var body: some View {
         Button(action: style != Style.disabled ? {action(); lightHaptic()}: {}){}
             .buttonStyle(
                 dropButtonStyle(titleSymbol: titleSymbol, style: style)
             )
+            .accessibilityLabel("Level")
     }
 }
 
@@ -323,6 +328,7 @@ struct levelResult: View {
                     HStack{
                         Image(systemName: "checkmark.circle.fill")
                             .font(.system(size: 24))
+                            .accessibilityHidden(true)
                         
                         Text("Excellent!")
                             .font(Font.custom("DINNextRoundedLTPro-Bold", size: 24))
@@ -338,6 +344,7 @@ struct levelResult: View {
                     HStack{
                         Image(systemName: "xmark.circle.fill")
                             .font(.system(size: 24))
+                            .accessibilityHidden(true)
                         
                         Text("Incorrect")
                             .font(Font.custom("DINNextRoundedLTPro-Bold", size: 24))
@@ -407,6 +414,7 @@ struct LevelsUpBar: View {
                     Text("\(currentScore == nil ? 0 : currentScore!) XP")
                         .font(Font.custom("DINNextRoundedLTPro-Bold", size: 18))
                         .foregroundColor(.lgBlueIcon)
+                        .accessibilitySortPriority(0)
                 }
                 
                 Spacer()
@@ -416,6 +424,8 @@ struct LevelsUpBar: View {
                         .font(.system(size: 18))
                         .fontWeight(.heavy)
                         .foregroundColor(.lgDropRedButton)
+                        .accessibilityLabel("Logout")
+                        .accessibilitySortPriority(0)
                 }
             }
         }
