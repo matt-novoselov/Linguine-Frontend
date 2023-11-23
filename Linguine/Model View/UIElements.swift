@@ -113,7 +113,7 @@ struct leaderboardParticipant: View {
             }
         }
         .accessibilityElement(children: .ignore)
-        .accessibilityLabel("Pace \(place) - \(nickname). \(xpAmount) XP")
+        .accessibilityLabel("Place \(place) - \(nickname). \(xpAmount) XP")
     }
 }
 
