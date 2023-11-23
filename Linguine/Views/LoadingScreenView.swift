@@ -7,7 +7,7 @@ struct LoadingScreenView: View {
                 UILottieView(lottieName: "loading")
                     .frame(height: 140)
                 
-                Text("Loading...")
+                Text("Counting bones...")
                     .font(Font.custom("DINNextRoundedLTPro-Medium", size: 24))
             }
             .padding(.horizontal)
