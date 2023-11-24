@@ -286,7 +286,7 @@ struct cardButton: View {
                                 .frame(height: 100)
                             Spacer()
                         }
-                                            
+                        
                         Text(title)
                             .textCase(.lowercase)
                             .font(Font.custom("DINNextRoundedLTPro-Regular", size: 20))
@@ -499,13 +499,49 @@ struct WhiteBorder: TextFieldStyle {
     }
 }
 
+struct LevelprogressBar: View {
+    @State private var size: CGSize = .zero
+    @State var progress: Double
+    
+    var body: some View {
+        ZStack (alignment: .leading){
+            RoundedRectangle(cornerRadius: 90)
+                .frame(height: 20)
+                .foregroundColor(.lgDisabledButton)
+                
+            ZStack{
+                RoundedRectangle(cornerRadius: 90)
+                    .frame(height: 20)
+                    .foregroundColor(.lgGreenButton)
+                
+                RoundedRectangle(cornerRadius: 90)
+                    .frame(height: 5)
+                    .foregroundColor(.white)
+                    .opacity(0.2)
+                    .padding(.horizontal)
+                    .padding(.bottom, 6)
+            }
+            .frame(width: CGFloat(size.width) * CGFloat(progress==0 ? 0.1 : progress))
+        
+            
+            
+
+            
+            GeometryReader { proxy in
+                HStack {}
+                    .onAppear {
+                        size = proxy.size
+                    }
+            }
+        }
+    }
+}
+
 #Preview {
-    VStack{        
+    VStack{
         Spacer()
         
-        ProgressBar()
-        
-        ExtendedDevider()
+        LevelprogressBar(progress: 0.5)
         
         Spacer()
     }
