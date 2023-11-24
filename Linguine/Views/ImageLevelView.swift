@@ -28,17 +28,7 @@ struct ImageLevelView: View {
         let amountOfMenus: Int = selectedLevel.imageLevelCards.count
         
         VStack{
-            VStack(alignment: .leading ,spacing: 20){
-                Button(action:{path = []}){
-                    Image(systemName: "xmark")
-                        .font(.system(size: 30))
-                        .fontWeight(.medium)
-                        .foregroundColor(.lgDisabledTitle)
-                        .padding(.top)
-                        .accessibilityLabel("Exit level")
-                        .accessibilitySortPriority(-1)
-                }
-                
+            VStack(alignment: .leading ,spacing: 20){                
                 Text("Select the correct image")
                     .font(Font.custom("DINNextRoundedLTPro-Bold", size: 24))
                     .accessibilitySortPriority(1)

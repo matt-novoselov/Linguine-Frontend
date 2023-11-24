@@ -16,18 +16,33 @@ struct LessonContainer: View {
             }
             else {
                 let selectedLevel = selectedLesson.levels[count<selectedLesson.levels.count ? count : 0]
-                Group{
-                    switch selectedLevel.levelType {
-                    case .imageLevel:
-                        ImageLevelView(path: $path, count: count, selectedLevel: selectedLevel as! Imagelevel, totalScore: $totalScore)
-                        
-                    case .HDYSLevel:
-                        HDYSLevelView(path: $path, count: count, selectedLevel: selectedLevel as! HDYSlevel, totalScore: $totalScore)
-                        
-                    case .SingleImageLevel:
-                        SingleImageLevelView(path: $path, count: count, selectedLevel: selectedLevel as! Imagelevel, totalScore: $totalScore)
+                
+                VStack(alignment: .leading ,spacing: 20){
+                    Button(action:{path = []}){
+                        Image(systemName: "xmark")
+                            .font(.system(size: 30))
+                            .fontWeight(.medium)
+                            .foregroundColor(.lgDisabledTitle)
+                            .padding(.top)
+                            .accessibilityLabel("Exit level")
+                            .accessibilitySortPriority(-1)
+                    }
+                    .padding(.horizontal)
+                    
+                    Group{
+                        switch selectedLevel.levelType {
+                        case .imageLevel:
+                            ImageLevelView(path: $path, count: count, selectedLevel: selectedLevel as! Imagelevel, totalScore: $totalScore)
+                            
+                        case .HDYSLevel:
+                            HDYSLevelView(path: $path, count: count, selectedLevel: selectedLevel as! HDYSlevel, totalScore: $totalScore)
+                            
+                        case .SingleImageLevel:
+                            SingleImageLevelView(path: $path, count: count, selectedLevel: selectedLevel as! Imagelevel, totalScore: $totalScore)
+                        }
                     }
                 }
+                .background(Color.lgBackground.ignoresSafeArea())
                 .onAppear(){
                     isShown.toggle()
                 }

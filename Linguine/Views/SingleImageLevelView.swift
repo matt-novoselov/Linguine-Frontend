@@ -25,16 +25,6 @@ struct SingleImageLevelView: View {
     var body: some View {        
         VStack{
             VStack(alignment: .leading ,spacing: 20){
-                Button(action:{path = []}){
-                    Image(systemName: "xmark")
-                        .font(.system(size: 30))
-                        .fontWeight(.medium)
-                        .foregroundColor(.lgDisabledTitle)
-                        .padding(.top)
-                        .accessibilityLabel("Exit level")
-                        .accessibilitySortPriority(-1)
-                }
-                
                 Spacer()
                 
                 ZStack{

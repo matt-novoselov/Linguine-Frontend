@@ -28,16 +28,6 @@ struct HDYSLevelView: View {
         
         VStack{
             VStack(alignment: .leading ,spacing: 20){
-                Button(action:{path = []}){
-                    Image(systemName: "xmark")
-                        .font(.system(size: 30))
-                        .fontWeight(.medium)
-                        .foregroundColor(.lgDisabledTitle)
-                        .padding(.top)
-                        .accessibilityLabel("Exit level")
-                        .accessibilitySortPriority(-1)
-                }
-                
                 Text("How do you say \"\(generatedLevel!.correctAnswer)\"?")
                     .font(Font.custom("DINNextRoundedLTPro-Bold", size: 24))
                     .accessibilitySortPriority(1)
