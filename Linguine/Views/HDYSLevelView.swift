@@ -48,7 +48,14 @@ struct HDYSLevelView: View {
         }
         .background(Color.lgBackground.ignoresSafeArea())
         .sheet(isPresented: $showingCredits) {
-            levelResult(correctAnswers: generatedLevel!.prompt, selectedAnswer: selectedLevel.imageLevelCards[selectedButtonIndex!].italian, path: $path, count: count, totalScore: $totalScore)
+            let isAnswerCorrect = isAnswerCorrect(correctAnswer: generatedLevel!.prompt, selectedAnswer: selectedLevel.imageLevelCards[selectedButtonIndex!].italian)
+            
+            levelResult(correctAnswer: generatedLevel!.prompt, action: {
+                if isAnswerCorrect{
+                    totalScore+=20
+                }
+                path.append(count + 1)
+            }, isCorrect: isAnswerCorrect)
                 .readHeight()
                 .onPreferenceChange(HeightPreferenceKey.self) { height in
                     if let height {

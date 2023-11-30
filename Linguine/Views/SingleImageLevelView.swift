@@ -69,7 +69,14 @@ struct SingleImageLevelView: View {
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Color.lgBackground.ignoresSafeArea())
         .sheet(isPresented: $showingCredits) {
-            levelResult(correctAnswers: randomImageLevelCard!.italian, selectedAnswer: inputFieldText.lowercased(), path: $path, count: count, totalScore: $totalScore)
+            let isAnswerCorrect = isAnswerCorrect(correctAnswer: randomImageLevelCard!.italian, selectedAnswer: inputFieldText.lowercased())
+            
+            levelResult(correctAnswer: randomImageLevelCard!.italian, action: {
+                if isAnswerCorrect{
+                    totalScore+=20
+                }
+                path.append(count + 1)
+            }, isCorrect: isAnswerCorrect)
                 .readHeight()
                 .onPreferenceChange(HeightPreferenceKey.self) { height in
                     if let height {

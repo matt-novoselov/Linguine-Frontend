@@ -58,7 +58,14 @@ struct ImageLevelView: View {
         }
         .background(Color.lgBackground.ignoresSafeArea())
         .sheet(isPresented: $showingCredits) {
-            levelResult(correctAnswers: generatedLevel!.correctAnswer, selectedAnswer: selectedLevel.imageLevelCards[selectedButtonIndex!].english, path: $path, count: count, totalScore: $totalScore)
+            let isAnswerCorrect = isAnswerCorrect(correctAnswer: generatedLevel!.correctAnswer, selectedAnswer: selectedLevel.imageLevelCards[selectedButtonIndex!].english)
+            
+            levelResult(correctAnswer: generatedLevel!.correctAnswer, action: {
+                if isAnswerCorrect{
+                    totalScore+=20
+                }
+                path.append(count + 1)
+            }, isCorrect: isAnswerCorrect)
                 .readHeight()
                 .onPreferenceChange(HeightPreferenceKey.self) { height in
                     if let height {

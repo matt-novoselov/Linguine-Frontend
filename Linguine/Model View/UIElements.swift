@@ -309,18 +309,52 @@ struct cardButton: View {
 }
 
 struct levelResult: View {
-    var correctAnswers: String
-    var selectedAnswer: String
+    let completionMessages: [String] = [
+        "Great job!",
+        "Well done!",
+        "Awesome!",
+        "Good work!",
+        "Fantastic!",
+        "Super!",
+        "Nice job!",
+        "Outstanding!",
+        "Wonderful!",
+        "Amazing!",
+        "Superb!",
+        "Impressive!",
+        "Good going!",
+        "Perfect!",
+        "Excellent!",
+    ]
+    
+    let incorrectMessages: [String] = [
+        "Incorrect",
+        "Oops, try next time",
+        "Not quite right",
+        "Uh-oh, that's not it",
+        "Keep trying",
+        "Wrong answer",
+        "Almost there, but not quite",
+        "Try again",
+        "Not the correct solution",
+        "Close, but not there yet",
+        "Incorrect, give it another shot",
+        "That's a miss",
+        "Wrong move",
+        "Not the right answer",
+        "You'll get it next time",
+        "Incorrect choice"
+    ]
+
+    var correctAnswer: String
     @State var size: CGSize = .zero
-    @Binding var path: [Int]
-    let count: Int
     @Environment(\.dismiss) var dismiss
-    @Binding var totalScore: Int
-    
-    var isCorrect: Bool {
-        return correctAnswers.trimmingCharacters(in: .whitespaces) == selectedAnswer.trimmingCharacters(in: .whitespaces)
-    }
-    
+    @State private var completionMessage: String = ""
+    @State private var incorrectMessage: String = ""
+    var showExplanation: Bool = true
+    var action: () -> Void
+    var isCorrect: Bool
+
     var body: some View {
         VStack(alignment: .leading ,spacing: 20){
             if isCorrect{
@@ -330,7 +364,7 @@ struct levelResult: View {
                             .font(.system(size: 24))
                             .accessibilityHidden(true)
                         
-                        Text("Excellent!")
+                        Text(completionMessage)
                             .font(Font.custom("DINNextRoundedLTPro-Bold", size: 24))
                     }
                 }
@@ -346,31 +380,31 @@ struct levelResult: View {
                             .font(.system(size: 24))
                             .accessibilityHidden(true)
                         
-                        Text("Incorrect")
+                        Text(incorrectMessage)
                             .font(Font.custom("DINNextRoundedLTPro-Bold", size: 24))
                     }
                     
-                    HStack(spacing:0){
-                        Text("Correct Answer: ")
-                            .font(Font.custom("DINNextRoundedLTPro-Bold", size: 20))
-                        
-                        Text(correctAnswers)
-                            .font(Font.custom("DINNextRoundedLTPro-Regular", size: 20))
+                    if showExplanation{
+                        HStack(spacing:0){
+                            Text("Correct Answer: ")
+                                .font(Font.custom("DINNextRoundedLTPro-Bold", size: 20))
+                            
+                            Text(correctAnswer)
+                                .font(Font.custom("DINNextRoundedLTPro-Regular", size: 20))
+                        }
                     }
                 }
                 .foregroundColor(.lgRedButton)
             }
             
-            dropButton(title: isCorrect ? "continue" : "got it", action: {
-                if isCorrect{
-                    totalScore+=20
-                }
-                path.append(count + 1)
-                self.dismiss()
-            }, style: isCorrect ? .correct : .mistake)
+            dropButton(title: isCorrect ? "continue" : "got it", action: {self.dismiss(); action()}, style: isCorrect ? .correct : .mistake)
         }
         .padding(.horizontal)
         .padding(.top)
+        .onAppear(){
+            completionMessage=completionMessages.randomElement()!
+            incorrectMessage=incorrectMessages.randomElement()!
+        }
     }
 }
 
