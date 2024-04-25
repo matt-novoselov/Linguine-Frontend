@@ -1,7 +1,17 @@
+//
+//
+//
+//
+//
+//
+
 import SwiftUI
 import Auth0
 
+// Leaderboard view is used to display the statistics of the scores of users
 struct LeaderboardView: View {
+    
+    // The list of users retrieved from the database
     @State var listOfUsers: [UUIDSingleUser]
     var selectedUser: User
     
@@ -16,36 +26,41 @@ struct LeaderboardView: View {
                 .accessibilitySortPriority(1)
             
             VStack(spacing:0){
-                ExtendedDevider()
+                ExtendedDivider()
                 
                 ScrollView {
                     ForEach(Array(listOfUsers.enumerated()), id: \.element.id) { index, listUser in
-                        leaderboardParticipant(nickname: listUser.name, xpAmount: listUser.score, place: index+1, isHighlighted: listUser.name == selectedUser.nickname)
+                        LeaderboardParticipant(nickname: listUser.name, scoreAmount: listUser.score, place: index+1, isHighlighted: listUser.name == selectedUser.nickname)
                             .padding(.horizontal)
                     }
                 }
+                
+                // Make new request for the list of users on list refresh
                 .refreshable {
-                    Task {
-                        do {
-                            listOfUsers = try await getStats()
-                        } catch {
-                            print(error)
-                        }
-                    }
+                    retrieveUsers()
                 }
-            }
-        }
-        .onAppear {
-            Task {
-                do {
-                    listOfUsers = try await getStats()
-                } catch {
-                    print(error)
-                }
+                
             }
         }
         .frame(maxHeight: .infinity)
-        .background(Color.lgBackground.ignoresSafeArea())
+        .background(.lgBackground)
+        
+        // Make new request for the list of users on initial appear
+        .onAppear {
+            retrieveUsers()
+        }
+
+    }
+    
+    // Function that retrieves list of users from the database
+    func retrieveUsers(){
+        Task {
+            do {
+                listOfUsers = try await getStats()
+            } catch {
+                print(error)
+            }
+        }
     }
 }
 

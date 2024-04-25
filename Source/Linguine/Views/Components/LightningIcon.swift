@@ -1,5 +1,13 @@
+//
+//
+//
+//
+//
+//
+
 import SwiftUI
 
+// The path that describes Lightning Icon SVG
 struct LightningIcon: Shape {
     func path(in rect: CGRect) -> Path {
         var path = Path()

@@ -1,6 +1,16 @@
+//
+//
+//
+//
+//
+//
+
 import SwiftUI
 
+// Single image level shows you an english word and X variants of the word translation
+// The user's goal is to select the correct translation of the word
 struct HDYSLevelView: View {
+    
     @State private var selectedButtonIndex: Int?
     @State private var showingCredits = false
     @State var detentHeight: CGFloat = 0
@@ -9,6 +19,7 @@ struct HDYSLevelView: View {
     var selectedLevel: HDYSlevel
     @Binding var totalScore: Int
     
+    // Initialize all properties
     init(path: Binding<[Int]>, count: Int, selectedLevel: HDYSlevel, totalScore: Binding<Int>) {
         self._path = path
         self.count = count
@@ -26,46 +37,46 @@ struct HDYSLevelView: View {
     
     var body: some View {
         
-        VStack{
-            VStack(alignment: .leading ,spacing: 20){
-                Text("How do you say \"\(generatedLevel!.correctAnswer)\"?")
-                    .font(Font.custom("DINNextRoundedLTPro-Bold", size: 24))
-                    .accessibilitySortPriority(1)
-                
-                Spacer()
-                
-                ForEach(0..<selectedLevel.imageLevelCards.count, id: \.self) { i in
-                    cardButton(title: selectedLevel.imageLevelCards[i].italian, action: {selectedButtonIndex=i}, style: selectedButtonIndex==i ? .standart : .disabled)
-                }
-                
-                Spacer()
-                
-                dropButton(title: "check", action: {showingCredits.toggle()}, style: selectedButtonIndex != nil ? .standart : .disabled)
-                    .padding(.bottom)
+        VStack(alignment: .leading ,spacing: 20){
+            Text("How do you say \"\(generatedLevel!.correctAnswer)\"?")
+                .font(Font.custom("DINNextRoundedLTPro-Bold", size: 24))
+                .accessibilitySortPriority(1)
+            
+            Spacer()
+            
+            ForEach(0..<selectedLevel.imageLevelCards.count, id: \.self) { i in
+                CardButton(title: selectedLevel.imageLevelCards[i].italian, action: {selectedButtonIndex=i}, style: selectedButtonIndex==i ? .standard : .disabled)
             }
-            .padding(.horizontal)
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            
+            Spacer()
+            
+            DropButton(title: "check", action: {showingCredits.toggle()}, style: selectedButtonIndex != nil ? .standard : .disabled)
+                .padding(.bottom)
         }
-        .background(Color.lgBackground.ignoresSafeArea())
+        .padding(.horizontal)
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(.lgBackground)
+        
+        // Present sheet after user submitted an answer
         .sheet(isPresented: $showingCredits) {
             let isAnswerCorrect = isAnswerCorrect(correctAnswer: generatedLevel!.prompt, selectedAnswer: selectedLevel.imageLevelCards[selectedButtonIndex!].italian)
             
-            levelResult(correctAnswer: generatedLevel!.prompt, action: {
+            LevelResult(correctAnswer: generatedLevel!.prompt, action: {
                 if isAnswerCorrect{
                     totalScore+=20
                 }
                 path.append(count + 1)
             }, isCorrect: isAnswerCorrect)
-                .readHeight()
-                .onPreferenceChange(HeightPreferenceKey.self) { height in
-                    if let height {
-                        self.detentHeight = height
-                    }
+            .readHeight()
+            .onPreferenceChange(HeightPreferenceKey.self) { height in
+                if let height {
+                    self.detentHeight = height
                 }
-                .frame(maxHeight: .infinity)
-                .presentationDetents([.height(self.detentHeight)])
-                .background(.lgLeaderboardHighlight)
-                .interactiveDismissDisabled()
+            }
+            .frame(maxHeight: .infinity)
+            .presentationDetents([.height(self.detentHeight)])
+            .background(.lgLeaderboardHighlight)
+            .interactiveDismissDisabled()
         }
     }
 }

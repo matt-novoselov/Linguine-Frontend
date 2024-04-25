@@ -1,5 +1,13 @@
+//
+//
+//
+//
+//
+//
+
 import Foundation
 
+// Store all available levels in the Lesson Library
 class LessonLibrary{
     var im_lvl_lib: [Imagelevel]
     var HDYS_lvl_lib: [HDYSlevel]
@@ -89,6 +97,7 @@ class LessonLibrary{
     }
 }
 
+// Construct levels for the level type: Image Level
 class ImageLevelLibrary{
     var im_card_lib: [ImagelevelCard]
     var levels: [Imagelevel]
@@ -208,6 +217,7 @@ class ImageLevelLibrary{
     }
 }
 
+// Construct levels for the level type: Image Level
 class ImageLevelCardsLibrary{
     var imageLevelCards: [ImagelevelCard] = [
         ImagelevelCard(lottie: "pizza", english: "pizza", italian: "pizza"),
@@ -260,6 +270,7 @@ class ImageLevelCardsLibrary{
     ]
 }
 
+// Construct levels for the level type: How Do You Say?
 class HDYSLevelLibrary{
     var hdys_card_lib: [HDYSlevelCard]
     var levels: [HDYSlevel]
@@ -313,6 +324,7 @@ class HDYSLevelLibrary{
     }
 }
 
+// Construct levels for the level type: How Do You Say?
 class HDYSLevelCardsLibrary{
     var HDYSLevelCards: [HDYSlevelCard] = [
         HDYSlevelCard(english: "girl", italian: "ragazza"),
@@ -336,6 +348,7 @@ class HDYSLevelCardsLibrary{
     ]
 }
 
+// Construct levels for the level type: Single Image Level
 class SingleImageLevelLibrary{
     var im_card_lib: [ImagelevelCard]
     var levels: [Imagelevel]
