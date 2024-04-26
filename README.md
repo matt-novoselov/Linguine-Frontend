@@ -9,7 +9,9 @@
 
 Frontend code for Linguine - your online language-learning companion, designed to transform education into an enjoyable, gamified experience. Dive into complete lessons and engage in friendly competition with your peers!
 
-<img src="https://github.com/matt-novoselov/Linguine-Backend/blob/b9a6f794c6286ffa10ee1c40ce3a817e1ed780b2/LinguineApp.png" alt="GIF">
+<a href="https://youtu.be/bDzZPEOf0J8" target="_blank">
+  <img src="https://github.com/matt-novoselov/Linguine-Backend/blob/b9a6f794c6286ffa10ee1c40ce3a817e1ed780b2/LinguineApp.png" alt="GIF">
+</a>
 
 ## Description
 The frontend of Linguine was developed using SwiftUI. The app incorporates Lottie Files to animate its interface and relies on Auth0 for user authentication. Internet connectivity is essential for its functionality, as it interfaces with the [custom backend server](https://github.com/matt-novoselov/Linguine-backend), developed using FastAPI. Users' scores are stored in the database, enabling sign-in and sign-out functionality, as well as displaying a leaderboard showcasing top-ranking users.
