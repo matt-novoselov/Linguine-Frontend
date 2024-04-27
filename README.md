@@ -10,7 +10,7 @@
 Frontend code for Linguine - your online language-learning companion, designed to transform education into an enjoyable, gamified experience. Dive into complete lessons and engage in friendly competition with your peers!
 
 <a href="https://youtu.be/bDzZPEOf0J8" target="_blank">
-  <img src="https://github.com/matt-novoselov/Linguine-Backend/blob/b9a6f794c6286ffa10ee1c40ce3a817e1ed780b2/LinguineApp.png" alt="GIF">
+  <img src="https://github.com/matt-novoselov/Linguine-Backend/assets/59065228/02f11e91-ef30-4784-91ee-b525a6ad4429" alt="GIF">
 </a>
 
 [![](https://github.com/matt-novoselov/matt-novoselov/blob/34555effedede5dd5aa24ae675218d989e976cf6/Files/YouTube_Badge.svg)](https://youtu.be/bDzZPEOf0J8)
