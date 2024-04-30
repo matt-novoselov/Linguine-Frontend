@@ -26,7 +26,7 @@ For secure authentication and authorization, the app uses **Auth0**. Auth0 meets
 
 A custom backend server, developed using FastAPI, is required to manage user registration, score updates, and leaderboard management. Detailed information on deploying your own Linguine backend server can be found in the [Readme file of the Linguine backend repository](https://github.com/matt-novoselov/Linguine-backend). The app uses the API endpoint of that server to pass the data.
 
-Our app incorporates accessibility features to assist our users.
+Our app incorporates accessibility features to assist our users, including support for VoiceOver.
 
 ## Requirements
 - iOS 17.0+
