@@ -16,7 +16,17 @@ Frontend code for Linguine - your online language-learning companion, designed t
 [![](https://github.com/matt-novoselov/matt-novoselov/blob/34555effedede5dd5aa24ae675218d989e976cf6/Files/YouTube_Badge.svg)](https://youtu.be/bDzZPEOf0J8)
 
 ## Description
-The frontend of Linguine was developed using SwiftUI. The app incorporates Lottie Files to animate its interface and relies on Auth0 for user authentication. Internet connectivity is essential for its functionality, as it interfaces with the [custom backend server](https://github.com/matt-novoselov/Linguine-backend), developed using FastAPI. Users' scores are stored in the database, enabling sign-in and sign-out functionality, as well as displaying a leaderboard showcasing top-ranking users.
+The app was built using **SwiftUI** to create a visual interface, which was inspired by [Duolingo](https://www.duolingo.com/).
+
+Linguine includes **7 levels and 21 lessons** to help you learn foreign languages. As of now, Italian is the only language available for learning in the app.
+
+**Lottie Files** are used to render vector-based animations, with these animations stored as `.lottie` files in the Resources folder of the project.
+
+For secure authentication and authorization, the app uses **Auth0**. Auth0 meets all requirements and certificates, including GDPR and HIPAA. The login process involves storing the user’s nickname and score in the database to enable functionality of a leaderboard showcasing top-ranking users. Additionally, sign-in and sign-out functionality help synchronize user progress across various devices.
+
+A custom backend server, developed using FastAPI, is required to manage user registration, score updates, and leaderboard management. Detailed information on deploying your own Linguine backend server can be found in the [Readme file of the Linguine backend repository](https://github.com/matt-novoselov/Linguine-backend). The app uses the API endpoint of that server to pass the data.
+
+Our app incorporates accessibility features to assist our users.
 
 ## Requirements
 - iOS 17.0+
@@ -37,8 +47,6 @@ The frontend of Linguine was developed using SwiftUI. The app incorporates Lotti
 <br>
 
 ## Credits
-Design was inspired by [Duolingo](https://www.duolingo.com/).
-
 Distributed under the MIT license. See **LICENSE** for more information.
 
 Developed with ❤️ by Matt Novoselov
