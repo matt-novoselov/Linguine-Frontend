@@ -7,7 +7,7 @@
 
 <img src="https://github.com/matt-novoselov/matt-novoselov/blob/79c191afd3a463f993688531e61d04f7e41002bd/Files/ios17.svg" alt="SwiftUI" style="height: 30px"> <img src="https://github.com/matt-novoselov/matt-novoselov/blob/79c191afd3a463f993688531e61d04f7e41002bd/Files/SwiftUI.svg" alt="SwiftUI" style="height: 30px">
 
-Frontend code for Linguine - your online language-learning companion, designed to transform education into an enjoyable, gamified experience. Dive into complete lessons and engage in friendly competition with your peers!
+Frontend code for Linguine - an online language-learning app designed to make education an enjoyable gamified experience. Complete lessons, practice, earn points, and compete with your friends for the highest score!
 
 <a href="https://youtu.be/bDzZPEOf0J8" target="_blank">
   <img src="https://github.com/matt-novoselov/Linguine-Backend/assets/59065228/02f11e91-ef30-4784-91ee-b525a6ad4429" alt="GIF">
@@ -26,7 +26,7 @@ For secure authentication and authorization, the app uses **Auth0**. Auth0 meets
 
 A custom backend server, developed using FastAPI, is required to manage user registration, score updates, and leaderboard management. Detailed information on deploying your own Linguine backend server can be found in the [Readme file of the Linguine backend repository](https://github.com/matt-novoselov/Linguine-backend). The app uses the API endpoint of that server to pass the data.
 
-Our app incorporates accessibility features to assist our users, including support for VoiceOver.
+Linguine incorporates accessibility features to assist our users, including support for VoiceOver.
 
 ## Requirements
 - iOS 17.0+
@@ -37,7 +37,7 @@ Our app incorporates accessibility features to assist our users, including suppo
 2. Click on **"Clone Git Repository"**.
 3. Paste the following URL: `https://github.com/matt-novoselov/Linguine-Frontend.git`
 4. Click **"Clone"**.
-5. Install and run the backend server [following instructions](https://github.com/matt-novoselov/Linguine-backend).
+5. Install and run the backend server [following instructions](https://github.com/matt-novoselov/Linguine-Backend#installation).
 6. Build and run the project in Xcode.
 
 ## Dependencies
