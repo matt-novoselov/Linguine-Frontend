@@ -15,16 +15,17 @@ Frontend code for Linguine - an online language-learning app designed to make ed
 
 [![](https://github.com/matt-novoselov/matt-novoselov/blob/34555effedede5dd5aa24ae675218d989e976cf6/Files/YouTube_Badge.svg)](https://youtu.be/bDzZPEOf0J8)
 
-## Description
-The app was built using **SwiftUI** to create a visual interface, which was inspired by [Duolingo](https://www.duolingo.com/).
+## Features
 
-Linguine includes **7 levels and 21 lessons** to help you learn foreign languages. As of now, Italian is the only language available for learning in the app.
+### Interactive lessons
+The app was built using **SwiftUI** to create a visual interface, which was inspired by [Duolingo](https://www.duolingo.com/). Linguine includes **7 levels and 21 lessons** to help you learn foreign languages. As of now, Italian is the only language available for learning in the app. **Lottie Files** are used to render vector-based animations, with these animations stored as `.lottie` files in the Resources folder of the project.
 
-**Lottie Files** are used to render vector-based animations, with these animations stored as `.lottie` files in the Resources folder of the project.
-
+### Online leaderboard
 For secure authentication and authorization, the app uses **Auth0**. Auth0 meets all requirements and certificates, including GDPR and HIPAA. The login process involves storing the user’s nickname and score in the database to enable functionality of a leaderboard showcasing top-ranking users. Additionally, sign-in and sign-out functionality help synchronize user progress across various devices.
 
 A custom backend server, developed using FastAPI, is required to manage user registration, score updates, and leaderboard management. Detailed information on deploying your own Linguine backend server can be found in the [Readme file of the Linguine backend repository](https://github.com/matt-novoselov/Linguine-backend). The app uses the API endpoint of that server to pass the data.
+
+<br>
 
 Linguine incorporates accessibility features to assist our users, including support for VoiceOver.
 
